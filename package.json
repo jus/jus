@@ -1,0 +1,44 @@
+{
+  "name": "chipper",
+  "version": "1.0.0",
+  "description": "Load a tree of markdown and HTML files into an object in memory",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeke/chipper.git"
+  },
+  "keywords": [
+    "markdown",
+    "marky-markdown",
+    "tree",
+    "directory",
+    "static",
+    "website",
+    "content"
+  ],
+  "author": "zeke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeke/chipper/issues"
+  },
+  "homepage": "https://github.com/zeke/chipper#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "cheerio": "^0.19.0",
+    "code": "^1.5.0",
+    "mocha": "^2.2.5",
+    "standard": "^5.0.0"
+  },
+  "dependencies": {
+    "html-frontmatter": "^1.5.1",
+    "lodash": "^3.10.1",
+    "marky-markdown": "^5.3.0",
+    "walkdir": "0.0.10"
+  }
+}
