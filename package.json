@@ -9,10 +9,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zeke/chipper.git"
-  },
+  "repository": "github:zeke/chipper",
   "keywords": [
     "markdown",
     "marky-markdown",
@@ -20,7 +17,8 @@
     "directory",
     "static",
     "website",
-    "content"
+    "content",
+    "CMS"
   ],
   "author": "zeke",
   "license": "ISC",
@@ -29,9 +27,7 @@
   },
   "homepage": "https://github.com/zeke/chipper#readme",
   "devDependencies": {
-    "chai": "^3.2.0",
     "cheerio": "^0.19.0",
-    "code": "^1.5.0",
     "mocha": "^2.2.5",
     "standard": "^5.0.0"
   },
@@ -39,6 +35,7 @@
     "html-frontmatter": "^1.5.1",
     "lodash": "^3.10.1",
     "marky-markdown": "^5.3.0",
+    "titlecase": "^1.0.2",
     "walkdir": "0.0.10"
   }
 }

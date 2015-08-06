@@ -1,5 +1,4 @@
 <!--
-title: Papayas!
 keywords: [fruit, tropical]
 -->
 
