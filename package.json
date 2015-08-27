@@ -1,7 +1,7 @@
 {
-  "name": "chipper",
+  "name": "@zeke/juicer",
   "version": "1.0.0",
-  "description": "Load a tree of markdown and HTML files into an object in memory",
+  "description": "Squeeze metadata out of a directory full of markup and media files.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "repository": "github:zeke/chipper",
+  "repository": "github:zeke/juicer",
   "keywords": [
     "markdown",
     "marky-markdown",
@@ -23,9 +23,9 @@
   "author": "zeke",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zeke/chipper/issues"
+    "url": "https://github.com/zeke/juicer/issues"
   },
-  "homepage": "https://github.com/zeke/chipper#readme",
+  "homepage": "https://github.com/zeke/juicer#readme",
   "devDependencies": {
     "cheerio": "^0.19.0",
     "mocha": "^2.2.5",

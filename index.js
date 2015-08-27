@@ -5,16 +5,16 @@ const marky = require('marky-markdown')
 const frontmatter = require('html-frontmatter')
 const titlecase = require('titlecase').toLaxTitleCase
 const merge = require('lodash').merge
-// const uniq = require('lodash').uniq
-// const pluck = require('lodash').pluck
+
 const patterns = {
   markupExtensions: /\.(md|markdown|html)$/i,
   imageFile: /\.(gif|jpg|png|svg)$/i,
   nested: /\/\w+\//
 }
-module.exports = function chipper (baseDir, cb) {
+
+module.exports = function juicer (baseDir, cb) {
   var emitter = walkdir(baseDir)
-  var content = {
+  var result = {
     sections: {},
     pages: {}
   }
@@ -32,19 +32,22 @@ module.exports = function chipper (baseDir, cb) {
       modified: fs.statSync(filepath).mtime,
       fullPath: filepath,
       relativePath: filepath.replace(baseDir, ''),
-      content: fs.readFileSync(filepath, 'utf8')
+      content: {
+        original: fs.readFileSync(filepath, 'utf8'),
+        processed: null
+      }
     }
 
     // Look for HTML frontmatter
-    merge(page, frontmatter(page.content))
+    merge(page, frontmatter(page.content.original))
 
     // Convert markdown to HTML
-    var $dom = marky(page.content, {
+    var $dom = marky(page.content.original, {
       sanitize: false, // allow script tags and stuff
-      prefixHeadingIds: false // don't apply safe prefixes to h1/h2... DOM ids
+      prefixHeadingIds: false
     })
 
-    page.content = $dom.html()
+    page.content.processed = $dom.html()
 
     // Is this an index page?
     page.isIndex = !!path.basename(page.relativePath).match(/^index\./i)
@@ -69,15 +72,15 @@ module.exports = function chipper (baseDir, cb) {
       page.section = page.href.split('/')[1]
 
       // Create section
-      if (!content.sections[page.section]) {
-        content.sections[page.section] = {
+      if (!result.sections[page.section]) {
+        result.sections[page.section] = {
           title: titlecase(page.section),
           pages: {}
         }
       }
 
       // Add page to section
-      content.sections[page.section].pages[page.href] = page
+      result.sections[page.section].pages[page.href] = page
     }
 
     // Look for images in the page's directory
@@ -100,11 +103,11 @@ module.exports = function chipper (baseDir, cb) {
     }
 
     // Add page to pages
-    content.pages[page.href] = page
+    result.pages[page.href] = page
   })
 
   emitter.on('end', function () {
-    cb(null, content)
+    cb(null, result)
   })
 
 }

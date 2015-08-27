@@ -3,15 +3,15 @@
 const assert = require('assert')
 const cheerio = require('cheerio')
 const _ = require('lodash')
-const chipper = require('..')
+const juicer = require('..')
 
-describe('chipper', function () {
+describe('juicer', function () {
   it('is a function', function () {
-    assert.equal(typeof chipper, 'function')
+    assert.equal(typeof juicer, 'function')
   })
 
   it('expects a directory and a callback function', function (done) {
-    chipper(__dirname + '/fixtures', function (err, content) {
+    juicer(__dirname + '/fixtures', function (err, content) {
       assert(!err)
       assert(content)
       done()
@@ -22,7 +22,7 @@ describe('chipper', function () {
     var sections
 
     before(function (done) {
-      chipper(__dirname + '/fixtures', function (err, content) {
+      juicer(__dirname + '/fixtures', function (err, content) {
         sections = content.sections
         done()
       })
@@ -53,7 +53,7 @@ describe('chipper', function () {
     var pages
 
     before(function (done) {
-      chipper(__dirname + '/fixtures', function (err, content) {
+      juicer(__dirname + '/fixtures', function (err, content) {
         pages = content.pages
         done()
       })
@@ -98,9 +98,13 @@ describe('chipper', function () {
         assert.deepEqual(pages['/apples'].keywords, ['fruit', 'doctors'])
       })
 
-      it('converts markdown into HTML `content`', function () {
-        const $ = cheerio.load(pages['/other/papayas'].content)
+      it('converts markdown into HTML in `content.processed`', function () {
+        const $ = cheerio.load(pages['/other/papayas'].content.processed)
         assert.equal($('a[href="https://digestion.com"]').text(), 'digestion')
+      })
+
+      it('preserves original content in `content.original`', function () {
+        assert.equal(typeof pages['/other/papayas'].content.original, 'string')
       })
 
       describe('title', function(){
