@@ -24,7 +24,6 @@ describe('chipper', function () {
     before(function (done) {
       chipper(__dirname + '/fixtures', function (err, content) {
         sections = content.sections
-        console.log(sections)
         done()
       })
     })
@@ -37,7 +36,7 @@ describe('chipper', function () {
     it('has one section for each top-level content directory', function () {
       assert.deepEqual(
         Object.keys(sections),
-        ['other']
+        ['other', 'thumbs']
       )
     })
 
@@ -56,8 +55,6 @@ describe('chipper', function () {
     before(function (done) {
       chipper(__dirname + '/fixtures', function (err, content) {
         pages = content.pages
-        // console.log(_.pick(pages, ['title', 'filename']))
-        // console.log(pages)
         done()
       })
     })
@@ -92,8 +89,8 @@ describe('chipper', function () {
         assert.equal(pages['/other/papayas'].section, 'other')
       })
 
-      it('preserves `filename`', function () {
-        assert.equal(pages['/other/papayas'].filename, '/other/papayas.markdown')
+      it('has a relativePath', function () {
+        assert.equal(pages['/other/papayas'].relativePath, '/other/papayas.markdown')
       })
 
       it('ingests HTML fronmatter', function () {
@@ -120,14 +117,39 @@ describe('chipper', function () {
         })
       })
 
-      // describe('isIndex', function(){
-      //   it('is true if file is a directory index', function () {
-      //     assert(pages['/other'].isIndex)
-      //   })
-      //   it('is false if file is NOT a directory index', function () {
-      //     assert.fail(pages['/other/papayas'].isIndex)
-      //   })
-      // })
+      describe('isIndex', function(){
+        it('is true if file is a directory index', function () {
+          assert(pages['/other'].isIndex)
+        })
+        it('is false if file is NOT a directory index', function () {
+          assert(!pages['/other/papayas'].isIndex)
+        })
+      })
+
+      describe('images', function(){
+        it("builds an images object with a key for each image in the page's directory", function () {
+          assert.equal(pages['/thumbs/png'].images.thumb.href, '/thumbs/png/thumb.png')
+        })
+
+        it('can be an svg', function () {
+          assert.equal(pages['/thumbs/svg'].images.thumbnail.href, '/thumbs/svg/thumbnail.svg')
+        })
+
+        it('can be a jpg', function () {
+          assert.equal(pages['/thumbs/jpg'].images.thumb.href, '/thumbs/jpg/thumb.jpg')
+          assert.equal(pages['/thumbs/jpg'].images.cosmico.href, '/thumbs/jpg/cosmico.jpg')
+        })
+
+        it('can be a gif', function () {
+          assert.equal(pages['/thumbs/gif'].images.thumb.href, '/thumbs/gif/thumb.gif')
+        })
+
+        it('includes width and height dimensions for each image')
+
+        it('includes exif data, if available')
+
+        it('includes color data, if available')
+      })
 
       describe('section', function(){
         it('is derived from top-level directory', function () {

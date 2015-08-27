@@ -8,10 +8,11 @@ const merge = require('lodash').merge
 // const uniq = require('lodash').uniq
 // const pluck = require('lodash').pluck
 const patterns = {
-  extensions: /\.(md|markdown|html)$/i,
+  markupExtensions: /\.(md|markdown|html)$/i,
+  imageFile: /\.(gif|jpg|png|svg)$/i,
   nested: /\/\w+\//
 }
-module.exports = function chip (baseDir, cb) {
+module.exports = function chipper (baseDir, cb) {
   var emitter = walkdir(baseDir)
   var content = {
     sections: {},
@@ -21,15 +22,16 @@ module.exports = function chip (baseDir, cb) {
   emitter.on('file', function (filepath, stat) {
     if (filepath.match(/readme\.md/i)) return
     if (filepath.match(/node_modules/)) return
-    if (!filepath.match(patterns.extensions)) return
+    if (!filepath.match(patterns.markupExtensions)) return
 
     var page = {
       title: null,
       heading: null,
       section: null,
       href: null,
-      filename: filepath.replace(baseDir, ''),
       modified: fs.statSync(filepath).mtime,
+      fullPath: filepath,
+      relativePath: filepath.replace(baseDir, ''),
       content: fs.readFileSync(filepath, 'utf8')
     }
 
@@ -44,11 +46,13 @@ module.exports = function chip (baseDir, cb) {
 
     page.content = $dom.html()
 
-    // href is same as filename, without extension
-    page.href = page.filename
-      .replace(patterns.extensions, '')
-      .replace(/\/index$/, '')
+    // Is this an index page?
+    page.isIndex = !!path.basename(page.relativePath).match(/^index\./i)
 
+    // href is same as relative path, without extension
+    page.href = page.relativePath
+      .replace(patterns.markupExtensions, '')
+      .replace(/\/index$/, '')
 
     // Look for title in HTML if not specified in frontmatter
     if (!page.title) {
@@ -61,8 +65,8 @@ module.exports = function chip (baseDir, cb) {
     }
 
     // Infer section from page's parent directory
-    if (page.filename.match(patterns.nested)) {
-      page.section = page.filename.split('/')[1]
+    if (page.href.match(patterns.nested)) {
+      page.section = page.href.split('/')[1]
 
       // Create section
       if (!content.sections[page.section]) {
@@ -74,10 +78,24 @@ module.exports = function chip (baseDir, cb) {
 
       // Add page to section
       content.sections[page.section].pages[page.href] = page
+    }
 
-      // Is this an index page?
-      if (page.href === '/'+page.section){
-        page.isIndex = true
+    // Look for images in the page's directory
+    if (page.isIndex) {
+      var images = fs.readdirSync(path.dirname(page.fullPath))
+        .filter(function (file) {
+          return !!file.match(patterns.imageFile)
+        })
+
+      if (images.length) {
+        page.images = {}
+        images.forEach(function (image) {
+          var key = path.basename(image).replace(patterns.imageFile, '')
+          var value = {
+            href: page.href + "/" + path.basename(image)
+          }
+          page.images[key] = value
+        })
       }
     }
 
