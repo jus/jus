@@ -64,15 +64,15 @@ describe('juicer', function () {
       assert.equal(typeof pages, 'object')
     })
 
-    it('finds .md files', function () {
+    it('includes .md files', function () {
       assert(pages['/apples'])
     })
 
-    it('finds .markdown files', function () {
+    it('includes .markdown files', function () {
       assert(pages['/other/papayas'])
     })
 
-    it('finds .html files', function () {
+    it('includes .html files', function () {
       assert(pages['/oranges'])
     })
 
@@ -93,7 +93,7 @@ describe('juicer', function () {
         assert.equal(pages['/other/papayas'].relativePath, '/other/papayas.markdown')
       })
 
-      it('ingests HTML fronmatter', function () {
+      it('ingests HTML frontmatter', function () {
         assert.equal(pages['/apples'].title, 'Apples!')
         assert.deepEqual(pages['/apples'].keywords, ['fruit', 'doctors'])
       })
