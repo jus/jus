@@ -35,7 +35,10 @@
   },
   "dependencies": {
     "exif": "^0.4.0",
+    "get-pixels": "^3.2.3",
+    "get-rgba-palette": "^2.0.0",
     "html-frontmatter": "^1.5.1",
+    "image-palette": "^1.0.3",
     "lodash": "^3.10.1",
     "marky-markdown": "^5.4.0",
     "titlecase": "^1.0.2",

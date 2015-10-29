@@ -141,7 +141,6 @@ describe('juicer', function () {
 
         it('can be a jpg', function () {
           assert.equal(pages['/thumbs/jpg'].images.thumb.href, '/thumbs/jpg/thumb.jpg')
-          assert.equal(pages['/thumbs/jpg'].images.cosmico.href, '/thumbs/jpg/cosmico.jpg')
         })
 
         it('can be a gif', function () {
