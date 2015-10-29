@@ -34,6 +34,7 @@
     "standard": "^5.0.0"
   },
   "dependencies": {
+    "chroma-js": "^1.1.1",
     "exif": "^0.4.0",
     "get-pixels": "^3.2.3",
     "get-rgba-palette": "^2.0.0",

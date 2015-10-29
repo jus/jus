@@ -151,7 +151,12 @@ describe('juicer', function () {
 
         it('includes exif data, if available')
 
-        it('includes color data, if available')
+        it('includes color data in hex format, if available', function(){
+          var palette = pages['/thumbs/gif'].images.thumb.palette
+          assert(Array.isArray(palette))
+          assert(palette.length)
+          assert(palette[0].match(/^#[0-9a-f]{3,6}$/i))
+        })
       })
 
       describe('section', function(){
