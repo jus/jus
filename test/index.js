@@ -147,14 +147,19 @@ describe('juicer', function () {
           assert.equal(pages['/thumbs/gif'].images.thumb.href, '/thumbs/gif/thumb.gif')
         })
 
-        it('includes width and height dimensions for each image')
+        it('includes width and height dimensions for each image', function() {
+          const jpg = pages['/thumbs/jpg'].images.thumb
+          assert(jpg.dimensions)
+          assert.equal(jpg.dimensions.width, 170)
+          assert.equal(jpg.dimensions.height, 170)
+        })
 
         it('includes exif data, if available', function(){
           const jpg = pages['/thumbs/jpg'].images.thumb
           assert(jpg.exif)
           assert(jpg.exif.imageSize)
-          assert(jpg.exif.imageSize.width)
-          assert(jpg.exif.imageSize.height)
+          assert.equal(jpg.exif.imageSize.width, 170)
+          assert.equal(jpg.exif.imageSize.height, 170)
         })
 
         it('includes color data as chroma-js objects, if available', function(){
