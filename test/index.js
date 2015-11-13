@@ -149,7 +149,13 @@ describe('juicer', function () {
 
         it('includes width and height dimensions for each image')
 
-        it('includes exif data, if available')
+        it('includes exif data, if available', function(){
+          const jpg = pages['/thumbs/jpg'].images.thumb
+          assert(jpg.exif)
+          assert(jpg.exif.imageSize)
+          assert(jpg.exif.imageSize.width)
+          assert(jpg.exif.imageSize.height)
+        })
 
         it('includes color data as chroma-js objects, if available', function(){
           var colors = pages['/thumbs/gif'].images.thumb.colors
