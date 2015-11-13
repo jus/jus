@@ -4,15 +4,19 @@ const assert = require('assert')
 const cheerio = require('cheerio')
 const _ = require('lodash')
 const juicer = require('..')
+var content
 
 describe('juicer', function () {
+  this.timeout(5000)
+
   it('is a function', function () {
     assert.equal(typeof juicer, 'function')
   })
 
   it('expects a directory and a callback function', function (done) {
-    juicer(__dirname + '/fixtures', function (err, content) {
+    juicer(__dirname + '/fixtures', function (err, _content) {
       assert(!err)
+      content = _content
       assert(content)
       done()
     })
@@ -21,11 +25,8 @@ describe('juicer', function () {
   describe('sections', function () {
     var sections
 
-    before(function (done) {
-      juicer(__dirname + '/fixtures', function (err, content) {
-        sections = content.sections
-        done()
-      })
+    before(function () {
+      sections = content.sections
     })
 
     it('is an object', function () {
@@ -52,11 +53,8 @@ describe('juicer', function () {
   describe('pages', function () {
     var pages
 
-    before(function (done) {
-      juicer(__dirname + '/fixtures', function (err, content) {
-        pages = content.pages
-        done()
-      })
+    before(function () {
+      pages = content.pages
     })
 
     it('is an object', function () {
@@ -152,6 +150,11 @@ describe('juicer', function () {
           assert(jpg.dimensions)
           assert.equal(jpg.dimensions.width, 170)
           assert.equal(jpg.dimensions.height, 170)
+
+          // const svg = pages['/thumbs/svg'].images.thumbnail
+          // assert(svg.dimensions)
+          // assert.equal(svg.dimensions.width, 170)
+          // assert.equal(svg.dimensions.height, 170)
         })
 
         it('includes exif data, if available', function(){
