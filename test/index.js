@@ -151,11 +151,11 @@ describe('juicer', function () {
 
         it('includes exif data, if available')
 
-        it('includes color data in hex format, if available', function(){
-          var palette = pages['/thumbs/gif'].images.thumb.palette
-          assert(Array.isArray(palette))
-          assert(palette.length)
-          assert(palette[0].match(/^#[0-9a-f]{3,6}$/i))
+        it('includes color data as chroma-js objects, if available', function(){
+          var colors = pages['/thumbs/gif'].images.thumb.colors
+          assert(Array.isArray(colors))
+          assert(colors.length)
+          assert(colors[0].hex().match(/^#[0-9a-f]{3,6}$/i))
         })
       })
 

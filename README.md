@@ -12,6 +12,13 @@ npm install zeke/juicer --save
 
 ## What it does
 
+- Finds all HTML and markdown files in a given directory.
+- Supports [clean URLs](https://surge.sh/help/using-clean-urls-automatically)
+- Extracts HTML Frontmatter from HTML and Markdown files
+- Extracts color palettes from images
+- Extracts EXIF data from images
+
+
 ```
 juicer
    ✓ is a function
