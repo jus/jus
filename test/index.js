@@ -83,6 +83,7 @@ describe('juicer', function () {
     })
 
     describe('each page', function () {
+
       it('infers `section` from top-level directory', function () {
         assert.equal(pages['/other/papayas'].section, 'other')
       })
@@ -103,6 +104,62 @@ describe('juicer', function () {
 
       it('preserves original content in `content.original`', function () {
         assert.equal(typeof pages['/other/papayas'].content.original, 'string')
+      })
+
+      describe('`src` attributes in the DOM', function() {
+        var content
+
+        before(function() {
+          content = pages['/other'].content
+        })
+
+        it('converts relative', function(){
+          assert(~content.original.indexOf('<img src="guava.png">'))
+          assert(~content.processed.indexOf('<img src="/other/guava.png">'))
+
+          assert(~content.original.indexOf('<script src="banana.js">'))
+          assert(~content.processed.indexOf('<script src="/other/banana.js">'))
+        })
+
+        it('ignores absolute', function(){
+          assert(~content.original.indexOf('<img src="https://guava.com/logo.png">'))
+          assert(~content.processed.indexOf('<img src="https://guava.com/logo.png">'))
+        })
+
+        it('ignores protocol-relative', function(){
+          assert(~content.original.indexOf('<img src="//guava-relative.com/logo.png">'))
+          assert(~content.processed.indexOf('<img src="//guava-relative.com/logo.png">'))
+        })
+
+      })
+
+      describe('`href` attributes in the DOM', function() {
+        var content
+
+        before(function() {
+          content = pages['/other'].content
+        })
+
+        it('converts relative', function(){
+          assert(~content.original.indexOf('<a href="papayas">papayas</a>'))
+          assert(~content.processed.indexOf('<a href="/other/papayas">papayas</a>'))
+        })
+
+        it('converts relative with leading slash', function(){
+          assert(~content.original.indexOf('<a href="/grapes">grapes</a>'))
+          assert(~content.processed.indexOf('<a href="/other/grapes">grapes</a>'))
+        })
+
+        it('ignores absolute', function(){
+          assert(~content.original.indexOf('<a href="http://mango.com">mango.com</a>'))
+          assert(~content.processed.indexOf('<a href="http://mango.com">mango.com</a>'))
+        })
+
+        it('ignores protocol-relative', function(){
+          assert(~content.original.indexOf('<a href="//coconut-cdn.com">coconut-cdn.com</a>'))
+          assert(~content.processed.indexOf('<a href="//coconut-cdn.com">coconut-cdn.com</a>'))
+        })
+
       })
 
       describe('title', function(){
