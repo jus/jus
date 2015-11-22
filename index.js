@@ -2,8 +2,8 @@ const walkdir = require('walkdir')
 
 const patterns = require('./lib/patterns')
 const deriveSections = require('./lib/sections')
-const parsePage = require('./lib/page')
-const parseImage = require('./lib/image')
+const parsePage = require('./lib/parsers/page')
+const parseImage = require('./lib/parsers/image')
 const attachImagesToPages = require('./lib/page-images')
 
 module.exports = function juicer (baseDir, cb) {
