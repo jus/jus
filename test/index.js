@@ -214,7 +214,7 @@ describe('juicer', function () {
           // assert.equal(svg.dimensions.height, 170)
         })
 
-        it('includes exif data, if available', function(){
+        it('includes exif data', function(){
           const jpg = pages['/thumbs/jpg'].images.thumb
           assert(jpg.exif)
           assert(jpg.exif.imageSize)
@@ -222,11 +222,11 @@ describe('juicer', function () {
           assert.equal(jpg.exif.imageSize.height, 170)
         })
 
-        it('includes color data as chroma-js objects, if available', function(){
+        it('includes color data as hex strings', function(){
           var colors = pages['/thumbs/gif'].images.thumb.colors
           assert(Array.isArray(colors))
           assert(colors.length)
-          assert(colors[0].hex().match(/^#[0-9a-f]{3,6}$/i))
+          assert(colors[0].match(/^#[0-9a-f]{3,6}$/i))
         })
       })
 
