@@ -1,10 +1,10 @@
 {
-  "/thumbs/svg/thumbnail.svg": {
-    "href": "/thumbs/svg/thumbnail.svg",
-    "modified": "2015-11-13T04:41:44.000Z",
-    "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-    "relativePath": "/thumbs/svg/thumbnail.svg",
-    "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
+  "/other/guava.png": {
+    "href": "/other/guava.png",
+    "modified": "2015-11-17T02:43:34.000Z",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
+    "relativePath": "/other/guava.png",
+    "processRelativePath": "test/fixtures/other/guava.png",
     "stats": {
       "dev": 16777220,
       "mode": 33188,
@@ -13,20 +13,26 @@
       "gid": 20,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 3870950,
-      "size": 29346,
-      "blocks": 64,
+      "ino": 21547208,
+      "size": 1264961,
+      "blocks": 2472,
       "atime": "2015-11-22T05:06:26.000Z",
-      "mtime": "2015-11-13T04:41:44.000Z",
-      "ctime": "2015-11-13T04:41:44.000Z",
-      "birthtime": "2015-08-13T02:21:10.000Z"
+      "mtime": "2015-11-17T02:43:34.000Z",
+      "ctime": "2015-11-17T02:43:44.000Z",
+      "birthtime": "2015-11-17T02:43:34.000Z"
     },
     "dimensions": {
-      "width": 81,
-      "height": 49,
-      "type": "svg"
+      "width": 1094,
+      "height": 1080,
+      "type": "png"
     },
-    "colors": []
+    "colors": [
+      "#df9f77",
+      "#fbfbfb",
+      "#e25554",
+      "#987a2f",
+      "#778150"
+    ]
   },
   "/thumbs/gif/thumb.gif": {
     "href": "/thumbs/gif/thumb.gif",
@@ -143,12 +149,12 @@
       "#758fa8"
     ]
   },
-  "/other/guava.png": {
-    "href": "/other/guava.png",
-    "modified": "2015-11-17T02:43:34.000Z",
-    "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-    "relativePath": "/other/guava.png",
-    "processRelativePath": "test/fixtures/other/guava.png",
+  "/thumbs/svg/thumbnail.svg": {
+    "href": "/thumbs/svg/thumbnail.svg",
+    "modified": "2015-11-13T04:41:44.000Z",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
+    "relativePath": "/thumbs/svg/thumbnail.svg",
+    "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
     "stats": {
       "dev": 16777220,
       "mode": 33188,
@@ -157,25 +163,19 @@
       "gid": 20,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 21547208,
-      "size": 1264961,
-      "blocks": 2472,
+      "ino": 3870950,
+      "size": 29346,
+      "blocks": 64,
       "atime": "2015-11-22T05:06:26.000Z",
-      "mtime": "2015-11-17T02:43:34.000Z",
-      "ctime": "2015-11-17T02:43:44.000Z",
-      "birthtime": "2015-11-17T02:43:34.000Z"
+      "mtime": "2015-11-13T04:41:44.000Z",
+      "ctime": "2015-11-13T04:41:44.000Z",
+      "birthtime": "2015-08-13T02:21:10.000Z"
     },
     "dimensions": {
-      "width": 1094,
-      "height": 1080,
-      "type": "png"
+      "width": 81,
+      "height": 49,
+      "type": "svg"
     },
-    "colors": [
-      "#df9f77",
-      "#fbfbfb",
-      "#e25554",
-      "#987a2f",
-      "#778150"
-    ]
+    "colors": []
   }
 }
