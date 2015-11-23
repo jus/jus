@@ -1,10 +1,12 @@
 {
-  "/other/guava.png": {
-    "href": "/other/guava.png",
-    "modified": "2015-11-17T02:43:34.000Z",
-    "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-    "relativePath": "/other/guava.png",
-    "processRelativePath": "test/fixtures/other/guava.png",
+  "/thumbs/svg/thumbnail.svg": {
+    "title": "thumbnail",
+    "href": "/thumbs/svg/thumbnail.svg",
+    "modified": "2015-11-13T04:41:44.000Z",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
+    "relativePath": "/thumbs/svg/thumbnail.svg",
+    "relativeDirName": "/thumbs/svg",
+    "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
     "stats": {
       "dev": 16777220,
       "mode": 33188,
@@ -13,32 +15,28 @@
       "gid": 20,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 21547208,
-      "size": 1264961,
-      "blocks": 2472,
-      "atime": "2015-11-22T05:06:26.000Z",
-      "mtime": "2015-11-17T02:43:34.000Z",
-      "ctime": "2015-11-17T02:43:44.000Z",
-      "birthtime": "2015-11-17T02:43:34.000Z"
+      "ino": 3870950,
+      "size": 29346,
+      "blocks": 64,
+      "atime": "2015-11-23T02:54:56.000Z",
+      "mtime": "2015-11-13T04:41:44.000Z",
+      "ctime": "2015-11-13T04:41:44.000Z",
+      "birthtime": "2015-08-13T02:21:10.000Z"
     },
     "dimensions": {
-      "width": 1094,
-      "height": 1080,
-      "type": "png"
+      "width": 81,
+      "height": 49,
+      "type": "svg"
     },
-    "colors": [
-      "#df9f77",
-      "#fbfbfb",
-      "#e25554",
-      "#987a2f",
-      "#778150"
-    ]
+    "colors": []
   },
   "/thumbs/gif/thumb.gif": {
+    "title": "thumb",
     "href": "/thumbs/gif/thumb.gif",
     "modified": "2015-10-29T02:28:41.000Z",
     "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
     "relativePath": "/thumbs/gif/thumb.gif",
+    "relativeDirName": "/thumbs/gif",
     "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
     "stats": {
       "dev": 16777220,
@@ -51,7 +49,7 @@
       "ino": 18333433,
       "size": 4269,
       "blocks": 16,
-      "atime": "2015-11-22T05:06:26.000Z",
+      "atime": "2015-11-23T02:54:56.000Z",
       "mtime": "2015-10-29T02:28:41.000Z",
       "ctime": "2015-10-29T02:29:12.000Z",
       "birthtime": "2015-10-29T02:28:41.000Z"
@@ -70,10 +68,12 @@
     ]
   },
   "/thumbs/jpg/thumb.jpg": {
+    "title": "thumb",
     "href": "/thumbs/jpg/thumb.jpg",
     "modified": "2015-10-29T02:24:27.000Z",
     "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
     "relativePath": "/thumbs/jpg/thumb.jpg",
+    "relativeDirName": "/thumbs/jpg",
     "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
     "stats": {
       "dev": 16777220,
@@ -86,7 +86,7 @@
       "ino": 18332267,
       "size": 6690,
       "blocks": 16,
-      "atime": "2015-11-22T05:06:26.000Z",
+      "atime": "2015-11-23T02:54:56.000Z",
       "mtime": "2015-10-29T02:24:27.000Z",
       "ctime": "2015-10-29T02:24:32.000Z",
       "birthtime": "2015-10-29T02:24:27.000Z"
@@ -115,10 +115,12 @@
     ]
   },
   "/thumbs/png/thumb.png": {
+    "title": "thumb",
     "href": "/thumbs/png/thumb.png",
     "modified": "2015-10-29T02:18:38.000Z",
     "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
     "relativePath": "/thumbs/png/thumb.png",
+    "relativeDirName": "/thumbs/png",
     "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
     "stats": {
       "dev": 16777220,
@@ -131,7 +133,7 @@
       "ino": 18331027,
       "size": 121957,
       "blocks": 240,
-      "atime": "2015-11-22T05:06:26.000Z",
+      "atime": "2015-11-23T02:54:56.000Z",
       "mtime": "2015-10-29T02:18:38.000Z",
       "ctime": "2015-10-29T02:18:46.000Z",
       "birthtime": "2015-10-29T02:18:38.000Z"
@@ -149,12 +151,14 @@
       "#758fa8"
     ]
   },
-  "/thumbs/svg/thumbnail.svg": {
-    "href": "/thumbs/svg/thumbnail.svg",
-    "modified": "2015-11-13T04:41:44.000Z",
-    "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-    "relativePath": "/thumbs/svg/thumbnail.svg",
-    "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
+  "/other/guava.png": {
+    "title": "guava",
+    "href": "/other/guava.png",
+    "modified": "2015-11-17T02:43:34.000Z",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
+    "relativePath": "/other/guava.png",
+    "relativeDirName": "/other",
+    "processRelativePath": "test/fixtures/other/guava.png",
     "stats": {
       "dev": 16777220,
       "mode": 33188,
@@ -163,19 +167,25 @@
       "gid": 20,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 3870950,
-      "size": 29346,
-      "blocks": 64,
-      "atime": "2015-11-22T05:06:26.000Z",
-      "mtime": "2015-11-13T04:41:44.000Z",
-      "ctime": "2015-11-13T04:41:44.000Z",
-      "birthtime": "2015-08-13T02:21:10.000Z"
+      "ino": 21547208,
+      "size": 1264961,
+      "blocks": 2472,
+      "atime": "2015-11-23T02:54:56.000Z",
+      "mtime": "2015-11-17T02:43:34.000Z",
+      "ctime": "2015-11-17T02:43:44.000Z",
+      "birthtime": "2015-11-17T02:43:34.000Z"
     },
     "dimensions": {
-      "width": 81,
-      "height": 49,
-      "type": "svg"
+      "width": 1094,
+      "height": 1080,
+      "type": "png"
     },
-    "colors": []
+    "colors": [
+      "#df9f77",
+      "#fbfbfb",
+      "#e25554",
+      "#987a2f",
+      "#778150"
+    ]
   }
 }

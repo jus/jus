@@ -3,17 +3,20 @@ const path = require('path')
 const walkdir = require('walkdir')
 
 const patterns = require('./lib/patterns')
-const deriveSections = require('./lib/sections')
+const parseJSON = require('./lib/parsers/json')
 const parsePage = require('./lib/parsers/page')
 const parseImage = require('./lib/parsers/image')
 const associateImagesWithPages = require('./lib/page-images')
+const associateDataWithPages = require('./lib/page-data')
+const deriveSections = require('./lib/sections')
 
 module.exports = function juicer (baseDir, cb) {
   var tryToWrapItUpInterval
   var emitter = walkdir(baseDir)
+  var data = {}
   var pages = {}
-  var imageCount = 0
   var images = {}
+  var imageCount = 0
   var cacheFile = path.join(baseDir, '/.juicer-cache.json')
   if (fs.existsSync(cacheFile)) var cache = require(cacheFile)
 
@@ -28,8 +31,13 @@ module.exports = function juicer (baseDir, cb) {
 
     associateImagesWithPages(images, pages)
 
+    associateDataWithPages(data, pages)
+
     // Call back with the fully juiced tree
-    cb(null, {sections: deriveSections(pages), pages: pages})
+    cb(null, {
+      sections: deriveSections(pages),
+      pages: pages
+    })
   }
 
   emitter.on('file', function (filepath, stat) {
@@ -49,6 +57,13 @@ module.exports = function juicer (baseDir, cb) {
         images[image.href] = image
       })
     }
+
+    // Extract metadata from JSON files
+    if (filepath.match(patterns.json)) {
+      var json = parseJSON(filepath, baseDir)
+      data[json.href] = json
+    }
+
   })
 
   emitter.on('end', function () {

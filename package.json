@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "rm test/fixtures/.juicer-cache.json && mocha"
   },
   "repository": "github:zeke/juicer",
   "keywords": [

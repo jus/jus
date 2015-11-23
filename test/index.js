@@ -230,6 +230,15 @@ describe('juicer', function () {
         })
       })
 
+      describe('data', function(){
+        it("attaches data from JSON files to pages in the same directory", function () {
+          var page = pages['/thumbs']
+          assert(page.data)
+          assert(page.data.somedata)
+          assert.equal(page.data.somedata.name, "cookie monster")
+        })
+      })
+
       describe('section', function(){
         it('is derived from top-level directory', function () {
           assert.equal(pages['/other/papayas'].section, 'other')
