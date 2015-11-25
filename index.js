@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const walkdir = require('walkdir')
+const stringify = require('json-stringify-safe')
 
 const patterns = require('./lib/patterns')
 const parseJSON = require('./lib/parsers/json')
@@ -8,6 +9,7 @@ const parsePage = require('./lib/parsers/page')
 const parseImage = require('./lib/parsers/image')
 const associateImagesWithPages = require('./lib/page-images')
 const associateDataWithPages = require('./lib/page-data')
+const injectDataIntoTemplates = require('./lib/templates')
 const deriveSections = require('./lib/sections')
 
 module.exports = function juicer (baseDir, cb) {
@@ -28,12 +30,17 @@ module.exports = function juicer (baseDir, cb) {
 
     clearInterval(tryToWrapItUpInterval)
 
-    var content = {images:images, pages:pages}
-    fs.writeFileSync(cacheFile, JSON.stringify(content, null, 2))
-
     associateImagesWithPages(images, pages)
     associateDataWithPages(data, pages)
-    content.sections = deriveSections(pages)
+    injectDataIntoTemplates(pages)
+
+    var content = {
+      images:images,
+      pages:pages,
+      sections: deriveSections(pages)
+    }
+
+    fs.writeFileSync(cacheFile, stringify(content, null, 2))
 
     cb(null, content)
   }

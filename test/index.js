@@ -237,6 +237,11 @@ describe('juicer', function () {
           assert(page.data.somedata)
           assert.equal(page.data.somedata.name, "cookie monster")
         })
+
+        it('injects data into handlebarsy templates', function(){
+          var page = pages['/thumbs']
+          assert(page.content.processed.indexOf('His name is cookie monster') > -1)
+        })
       })
 
       describe('section', function(){
