@@ -18,8 +18,10 @@ module.exports = function juicer (baseDir, cb) {
   var images = {}
   var imageCount = 0
   var cacheFile = path.join(baseDir, '/.juicer-cache.json')
-  if (fs.existsSync(cacheFile)) var cache = require(cacheFile)
-
+  if (fs.existsSync(cacheFile)) {
+    var cache = require(cacheFile)
+  }
+  
   function tryToWrapItUp() {
     // Wait until all asynchronous image processing is complete
     if (imageCount !== Object.keys(images).length) return
@@ -27,7 +29,9 @@ module.exports = function juicer (baseDir, cb) {
     clearInterval(tryToWrapItUpInterval)
 
     // Rewrite the cache file
-    fs.writeFileSync(cacheFile, JSON.stringify(images, null, 2))
+    // console.log("about to cache pages", Object.keys(pages))
+    var content = {images:images, pages:pages}
+    fs.writeFileSync(cacheFile, JSON.stringify(content, null, 2))
 
     associateImagesWithPages(images, pages)
 
@@ -46,7 +50,7 @@ module.exports = function juicer (baseDir, cb) {
 
     // Extract metadata from HTML and Markdown files
     if (filepath.match(patterns.page)) {
-      var page = parsePage(filepath, baseDir)
+      var page = parsePage(filepath, baseDir, cache)
       pages[page.href] = page
     }
 
