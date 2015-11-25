@@ -21,27 +21,21 @@ module.exports = function juicer (baseDir, cb) {
   if (fs.existsSync(cacheFile)) {
     var cache = require(cacheFile)
   }
-  
+
   function tryToWrapItUp() {
     // Wait until all asynchronous image processing is complete
     if (imageCount !== Object.keys(images).length) return
 
     clearInterval(tryToWrapItUpInterval)
 
-    // Rewrite the cache file
-    // console.log("about to cache pages", Object.keys(pages))
     var content = {images:images, pages:pages}
     fs.writeFileSync(cacheFile, JSON.stringify(content, null, 2))
 
     associateImagesWithPages(images, pages)
-
     associateDataWithPages(data, pages)
+    content.sections = deriveSections(pages)
 
-    // Call back with the fully juiced tree
-    cb(null, {
-      sections: deriveSections(pages),
-      pages: pages
-    })
+    cb(null, content)
   }
 
   emitter.on('file', function (filepath, stat) {
