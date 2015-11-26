@@ -238,7 +238,7 @@ describe('juicer', function () {
           assert.equal(page.data.somedata.name, "cookie monster")
         })
 
-        it('injects data into handlebarsy templates', function(){
+        it('injects data into templates, if present', function(){
           var page = pages['/thumbs']
           assert(page.content.processed.indexOf('His name is cookie monster') > -1)
         })
