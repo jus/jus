@@ -1,2676 +1,82 @@
 {
-  "images": {
-    "/other/guava.png": {
-      "title": "guava",
-      "href": "/other/guava.png",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-      "relativePath": "/other/guava.png",
-      "relativeDirName": "/other",
-      "processRelativePath": "test/fixtures/other/guava.png",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 21547208,
-        "size": 1264961,
-        "blocks": 2472,
-        "atime": "2015-11-27T01:34:11.000Z",
-        "mtime": "2015-11-17T02:43:34.000Z",
-        "ctime": "2015-11-17T02:43:44.000Z",
-        "birthtime": "2015-11-17T02:43:34.000Z"
-      },
-      "dimensions": {
-        "width": 1094,
-        "height": 1080,
-        "type": "png"
-      },
-      "colors": [
-        "#df9f77",
-        "#fbfbfb",
-        "#e25554",
-        "#987a2f",
-        "#778150"
-      ]
+  "/oranges": {
+    "title": "We are Oranges",
+    "heading": null,
+    "section": null,
+    "href": "/oranges",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/oranges.html",
+    "extension": ".html",
+    "filename": "oranges.html",
+    "relativePath": "/oranges.html",
+    "parent": "/",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3773990,
+      "size": 54,
+      "blocks": 8,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-08-06T04:23:00.000Z",
+      "ctime": "2015-08-06T04:23:00.000Z",
+      "birthtime": "2015-08-05T04:35:40.000Z"
     },
-    "/thumbs/gif/thumb.gif": {
-      "title": "thumb",
-      "href": "/thumbs/gif/thumb.gif",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
-      "relativePath": "/thumbs/gif/thumb.gif",
-      "relativeDirName": "/thumbs/gif",
-      "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33184,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 18333433,
-        "size": 4269,
-        "blocks": 16,
-        "atime": "2015-11-27T01:34:11.000Z",
-        "mtime": "2015-10-29T02:28:41.000Z",
-        "ctime": "2015-10-29T02:29:12.000Z",
-        "birthtime": "2015-10-29T02:28:41.000Z"
-      },
-      "dimensions": {
-        "width": 200,
-        "height": 200,
-        "type": "gif"
-      },
-      "colors": [
-        "#f27494",
-        "#98723e",
-        "#fcf6f7",
-        "#b38e5c",
-        "#f4acc4"
-      ]
+    "content": {
+      "original": "<title>We are Oranges</title>\nNothing rhymes with us.\n",
+      "processed": "<title>We are Oranges</title>\nNothing rhymes with us.\n"
     },
-    "/thumbs/jpg/thumb.jpg": {
-      "title": "thumb",
-      "href": "/thumbs/jpg/thumb.jpg",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
-      "relativePath": "/thumbs/jpg/thumb.jpg",
-      "relativeDirName": "/thumbs/jpg",
-      "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 18332267,
-        "size": 6690,
-        "blocks": 16,
-        "atime": "2015-11-27T01:34:11.000Z",
-        "mtime": "2015-10-29T02:24:27.000Z",
-        "ctime": "2015-10-29T02:24:32.000Z",
-        "birthtime": "2015-10-29T02:24:27.000Z"
-      },
-      "dimensions": {
-        "height": 170,
-        "width": 170,
-        "type": "jpg"
-      },
-      "exif": {
-        "startMarker": {
-          "offset": 0
+    "isIndex": false,
+    "images": {},
+    "data": {
+      ".juicer-cache": {
+        "/oranges": {
+          "title": "We are Oranges",
+          "heading": null,
+          "section": null,
+          "href": "/oranges",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/oranges.html",
+          "extension": ".html",
+          "filename": "oranges.html",
+          "relativePath": "/oranges.html",
+          "parent": "/",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3773990,
+            "size": 54,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-06T04:23:00.000Z",
+            "ctime": "2015-08-06T04:23:00.000Z",
+            "birthtime": "2015-08-05T04:35:40.000Z"
+          },
+          "content": {
+            "original": "<title>We are Oranges</title>\nNothing rhymes with us.\n",
+            "processed": "<title>We are Oranges</title>\nNothing rhymes with us.\n"
+          },
+          "isIndex": false,
+          "images": {},
+          "data": {}
         },
-        "tags": {},
-        "imageSize": {
-          "height": 170,
-          "width": 170
-        }
-      },
-      "colors": [
-        "#909a3f",
-        "#e0e4dd",
-        "#443615",
-        "#d3d78d",
-        "#44540c"
-      ]
-    },
-    "/thumbs/png/thumb.png": {
-      "title": "thumb",
-      "href": "/thumbs/png/thumb.png",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
-      "relativePath": "/thumbs/png/thumb.png",
-      "relativeDirName": "/thumbs/png",
-      "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 18331027,
-        "size": 121957,
-        "blocks": 240,
-        "atime": "2015-11-27T01:34:11.000Z",
-        "mtime": "2015-10-29T02:18:38.000Z",
-        "ctime": "2015-10-29T02:18:46.000Z",
-        "birthtime": "2015-10-29T02:18:38.000Z"
-      },
-      "dimensions": {
-        "width": 501,
-        "height": 198,
-        "type": "png"
-      },
-      "colors": [
-        "#762c29",
-        "#1f1b1c",
-        "#b4cdbe",
-        "#e6412e",
-        "#758fa8"
-      ]
-    },
-    "/thumbs/svg/thumbnail.svg": {
-      "title": "thumbnail",
-      "href": "/thumbs/svg/thumbnail.svg",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-      "relativePath": "/thumbs/svg/thumbnail.svg",
-      "relativeDirName": "/thumbs/svg",
-      "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3870950,
-        "size": 29346,
-        "blocks": 64,
-        "atime": "2015-11-27T01:34:11.000Z",
-        "mtime": "2015-11-13T04:41:44.000Z",
-        "ctime": "2015-11-13T04:41:44.000Z",
-        "birthtime": "2015-08-13T02:21:10.000Z"
-      },
-      "dimensions": {
-        "width": 81,
-        "height": 49,
-        "type": "svg"
-      },
-      "colors": []
-    }
-  },
-  "pages": {
-    "/apples": {
-      "title": "Apples!",
-      "heading": null,
-      "section": null,
-      "href": "/apples",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/apples.md",
-      "relativePath": "/apples.md",
-      "relativeDirName": "/",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3773988,
-        "size": 74,
-        "blocks": 8,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-08-06T04:24:09.000Z",
-        "ctime": "2015-08-06T04:24:09.000Z",
-        "birthtime": "2015-08-05T04:35:31.000Z"
-      },
-      "content": {
-        "original": "<!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n\nHow do you like them?\n",
-        "processed": "<meta name=\"title\" content=\"Apples!\"><meta name=\"keywords\" content=\"fruit,doctors\"><!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n<p>How do you like them?</p>\n"
-      },
-      "keywords": [
-        "fruit",
-        "doctors"
-      ],
-      "isIndex": false,
-      "images": {},
-      "data": {
-        ".juicer-cache": {
-          "images": {
-            "/thumbs/svg/thumbnail.svg": {
-              "title": "thumbnail",
-              "href": "/thumbs/svg/thumbnail.svg",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-              "relativePath": "/thumbs/svg/thumbnail.svg",
-              "relativeDirName": "/thumbs/svg",
-              "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3870950,
-                "size": 29346,
-                "blocks": 64,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-11-13T04:41:44.000Z",
-                "ctime": "2015-11-13T04:41:44.000Z",
-                "birthtime": "2015-08-13T02:21:10.000Z"
-              },
-              "dimensions": {
-                "width": 81,
-                "height": 49,
-                "type": "svg"
-              },
-              "colors": []
-            },
-            "/thumbs/gif/thumb.gif": {
-              "title": "thumb",
-              "href": "/thumbs/gif/thumb.gif",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
-              "relativePath": "/thumbs/gif/thumb.gif",
-              "relativeDirName": "/thumbs/gif",
-              "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33184,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 18333433,
-                "size": 4269,
-                "blocks": 16,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-10-29T02:28:41.000Z",
-                "ctime": "2015-10-29T02:29:12.000Z",
-                "birthtime": "2015-10-29T02:28:41.000Z"
-              },
-              "dimensions": {
-                "width": 200,
-                "height": 200,
-                "type": "gif"
-              },
-              "colors": [
-                "#f27494",
-                "#98723e",
-                "#fcf6f7",
-                "#b38e5c",
-                "#f4acc4"
-              ]
-            },
-            "/thumbs/jpg/thumb.jpg": {
-              "title": "thumb",
-              "href": "/thumbs/jpg/thumb.jpg",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
-              "relativePath": "/thumbs/jpg/thumb.jpg",
-              "relativeDirName": "/thumbs/jpg",
-              "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 18332267,
-                "size": 6690,
-                "blocks": 16,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-10-29T02:24:27.000Z",
-                "ctime": "2015-10-29T02:24:32.000Z",
-                "birthtime": "2015-10-29T02:24:27.000Z"
-              },
-              "dimensions": {
-                "height": 170,
-                "width": 170,
-                "type": "jpg"
-              },
-              "exif": {
-                "startMarker": {
-                  "offset": 0
-                },
-                "tags": {},
-                "imageSize": {
-                  "height": 170,
-                  "width": 170
-                }
-              },
-              "colors": [
-                "#909a3f",
-                "#e0e4dd",
-                "#443615",
-                "#d3d78d",
-                "#44540c"
-              ]
-            },
-            "/thumbs/png/thumb.png": {
-              "title": "thumb",
-              "href": "/thumbs/png/thumb.png",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
-              "relativePath": "/thumbs/png/thumb.png",
-              "relativeDirName": "/thumbs/png",
-              "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 18331027,
-                "size": 121957,
-                "blocks": 240,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-10-29T02:18:38.000Z",
-                "ctime": "2015-10-29T02:18:46.000Z",
-                "birthtime": "2015-10-29T02:18:38.000Z"
-              },
-              "dimensions": {
-                "width": 501,
-                "height": 198,
-                "type": "png"
-              },
-              "colors": [
-                "#762c29",
-                "#1f1b1c",
-                "#b4cdbe",
-                "#e6412e",
-                "#758fa8"
-              ]
-            },
-            "/other/guava.png": {
-              "title": "guava",
-              "href": "/other/guava.png",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-              "relativePath": "/other/guava.png",
-              "relativeDirName": "/other",
-              "processRelativePath": "test/fixtures/other/guava.png",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 21547208,
-                "size": 1264961,
-                "blocks": 2472,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-11-17T02:43:34.000Z",
-                "ctime": "2015-11-17T02:43:44.000Z",
-                "birthtime": "2015-11-17T02:43:34.000Z"
-              },
-              "dimensions": {
-                "width": 1094,
-                "height": 1080,
-                "type": "png"
-              },
-              "colors": [
-                "#df9f77",
-                "#fbfbfb",
-                "#e25554",
-                "#987a2f",
-                "#778150"
-              ]
-            }
-          },
-          "pages": {
-            "/oranges": {
-              "title": "We are Oranges",
-              "heading": null,
-              "section": null,
-              "href": "/oranges",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/oranges.html",
-              "relativePath": "/oranges.html",
-              "relativeDirName": "/",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3773990,
-                "size": 54,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-06T04:23:00.000Z",
-                "ctime": "2015-08-06T04:23:00.000Z",
-                "birthtime": "2015-08-05T04:35:40.000Z"
-              },
-              "content": {
-                "original": "<title>We are Oranges</title>\nNothing rhymes with us.\n",
-                "processed": "<title>We are Oranges</title>\nNothing rhymes with us.\n"
-              },
-              "isIndex": false,
-              "images": {},
-              "data": {
-                ".juicer-cache": "[Circular ~.pages./apples.data..juicer-cache]"
-              }
-            },
-            "/apples": "[Circular ~.pages./apples]",
-            "/other/UPPERCASE": {
-              "title": "UPPERCASE",
-              "heading": null,
-              "section": "other",
-              "href": "/other/UPPERCASE",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/UPPERCASE.HTML",
-              "relativePath": "/other/UPPERCASE.HTML",
-              "relativeDirName": "/other",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3775416,
-                "size": 14,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-05T05:18:45.000Z",
-                "ctime": "2015-08-05T05:18:45.000Z",
-                "birthtime": "2015-08-05T05:18:17.000Z"
-              },
-              "content": {
-                "original": "I am so loud.\n",
-                "processed": "<p>I am so loud.</p>\n"
-              },
-              "isIndex": false,
-              "images": {
-                "guava": {
-                  "title": "guava",
-                  "href": "/other/guava.png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                  "relativePath": "/other/guava.png",
-                  "relativeDirName": "/other",
-                  "processRelativePath": "test/fixtures/other/guava.png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 21547208,
-                    "size": 1264961,
-                    "blocks": 2472,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-11-17T02:43:34.000Z",
-                    "ctime": "2015-11-17T02:43:44.000Z",
-                    "birthtime": "2015-11-17T02:43:34.000Z"
-                  },
-                  "dimensions": {
-                    "width": 1094,
-                    "height": 1080,
-                    "type": "png"
-                  },
-                  "colors": [
-                    "#df9f77",
-                    "#fbfbfb",
-                    "#e25554",
-                    "#987a2f",
-                    "#778150"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/other": {
-              "title": "Other",
-              "heading": null,
-              "section": null,
-              "href": "/other",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/index.md",
-              "relativePath": "/other/index.md",
-              "relativeDirName": "/other",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3774010,
-                "size": 560,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-11-17T04:27:45.000Z",
-                "ctime": "2015-11-17T04:27:45.000Z",
-                "birthtime": "2015-08-05T04:36:14.000Z"
-              },
-              "content": {
-                "original": "I am the other index.\n\nWhen juicer runs, it should update the relative paths, but not the absolute ones.\n\n## things with href\n\n- absolute: <a href=\"http://mango.com\">mango.com</a>\n- protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a>\n- relative: <a href=\"papayas\">papayas</a>\n- relative with leading slash: <a href=\"/grapes\">grapes</a>\n\n## things with src\n\n- absolute: <img src=\"https://guava.com/logo.png\">\n- protocol-relative: <img src=\"//guava-relative.com/logo.png\">\n- relative: <img src=\"guava.png\">\n- script, too: <script src=\"banana.js\">\n",
-                "processed": "<p>I am the other index.</p>\n<p>When juicer runs, it should update the relative paths, but not the absolute ones.</p>\n<h2 id=\"things-with-href\" class=\"deep-link\"><a href=\"/other/#things-with-href\">things with href</a></h2>\n<ul>\n<li>absolute: <a href=\"http://mango.com\">mango.com</a></li>\n<li>protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a></li>\n<li>relative: <a href=\"/other/papayas\">papayas</a></li>\n<li>relative with leading slash: <a href=\"/other/grapes\">grapes</a></li>\n</ul>\n<h2 id=\"things-with-src\" class=\"deep-link\"><a href=\"/other/#things-with-src\">things with src</a></h2>\n<ul>\n<li>absolute: <img src=\"https://guava.com/logo.png\"></li>\n<li>protocol-relative: <img src=\"//guava-relative.com/logo.png\"></li>\n<li>relative: <img src=\"/other/guava.png\"></li>\n<li>script, too: <script src=\"/other/banana.js\"></li>\n</ul>\n</script></li></ul>"
-              },
-              "isIndex": true,
-              "images": {
-                "guava": {
-                  "title": "guava",
-                  "href": "/other/guava.png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                  "relativePath": "/other/guava.png",
-                  "relativeDirName": "/other",
-                  "processRelativePath": "test/fixtures/other/guava.png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 21547208,
-                    "size": 1264961,
-                    "blocks": 2472,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-11-17T02:43:34.000Z",
-                    "ctime": "2015-11-17T02:43:44.000Z",
-                    "birthtime": "2015-11-17T02:43:34.000Z"
-                  },
-                  "dimensions": {
-                    "width": 1094,
-                    "height": 1080,
-                    "type": "png"
-                  },
-                  "colors": [
-                    "#df9f77",
-                    "#fbfbfb",
-                    "#e25554",
-                    "#987a2f",
-                    "#778150"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/other/papayas": {
-              "title": "Papayas",
-              "heading": null,
-              "section": "other",
-              "href": "/other/papayas",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/papayas.markdown",
-              "relativePath": "/other/papayas.markdown",
-              "relativeDirName": "/other",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3774007,
-                "size": 111,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-06T04:24:58.000Z",
-                "ctime": "2015-08-06T04:24:58.000Z",
-                "birthtime": "2015-08-05T04:36:09.000Z"
-              },
-              "content": {
-                "original": "<!--\nkeywords: [fruit, tropical]\n-->\n\nWe contain enzymes that aid in human [digestion](https://digestion.com).\n",
-                "processed": "<meta name=\"keywords\" content=\"fruit,tropical\"><!--\nkeywords: [fruit, tropical]\n-->\n<p>We contain enzymes that aid in human <a href=\"https://digestion.com\">digestion</a>.</p>\n"
-              },
-              "keywords": [
-                "fruit",
-                "tropical"
-              ],
-              "isIndex": false,
-              "images": {
-                "guava": {
-                  "title": "guava",
-                  "href": "/other/guava.png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                  "relativePath": "/other/guava.png",
-                  "relativeDirName": "/other",
-                  "processRelativePath": "test/fixtures/other/guava.png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 21547208,
-                    "size": 1264961,
-                    "blocks": 2472,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-11-17T02:43:34.000Z",
-                    "ctime": "2015-11-17T02:43:44.000Z",
-                    "birthtime": "2015-11-17T02:43:34.000Z"
-                  },
-                  "dimensions": {
-                    "width": 1094,
-                    "height": 1080,
-                    "type": "png"
-                  },
-                  "colors": [
-                    "#df9f77",
-                    "#fbfbfb",
-                    "#e25554",
-                    "#987a2f",
-                    "#778150"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/thumbs": {
-              "title": "Thumbs",
-              "heading": null,
-              "section": null,
-              "href": "/thumbs",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/index.html",
-              "relativePath": "/thumbs/index.html",
-              "relativeDirName": "/thumbs",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 21546320,
-                "size": 78,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-11-25T06:04:48.000Z",
-                "ctime": "2015-11-25T06:04:48.000Z",
-                "birthtime": "2015-11-17T02:40:13.000Z"
-              },
-              "content": {
-                "original": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is {{somedata.name}}\n",
-                "processed": "<p>I am the thumbs index.</p>\n<p>Here comes a reference</p>\n<p>His name is cookie monster</p>\n"
-              },
-              "isIndex": true,
-              "images": {},
-              "data": {
-                "somedata": {
-                  "name": "cookie monster",
-                  "food": "cookies"
-                }
-              }
-            },
-            "/thumbs/gif": {
-              "title": "Gif",
-              "heading": null,
-              "section": "thumbs",
-              "href": "/thumbs/gif",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/index.md",
-              "relativePath": "/thumbs/gif/index.md",
-              "relativeDirName": "/thumbs/gif",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3871472,
-                "size": 0,
-                "blocks": 0,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-13T03:15:14.000Z",
-                "ctime": "2015-08-13T03:15:14.000Z",
-                "birthtime": "2015-08-13T03:15:14.000Z"
-              },
-              "content": {
-                "original": "",
-                "processed": ""
-              },
-              "isIndex": true,
-              "images": {
-                "thumb": {
-                  "title": "thumb",
-                  "href": "/thumbs/gif/thumb.gif",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
-                  "relativePath": "/thumbs/gif/thumb.gif",
-                  "relativeDirName": "/thumbs/gif",
-                  "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33184,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 18333433,
-                    "size": 4269,
-                    "blocks": 16,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-10-29T02:28:41.000Z",
-                    "ctime": "2015-10-29T02:29:12.000Z",
-                    "birthtime": "2015-10-29T02:28:41.000Z"
-                  },
-                  "dimensions": {
-                    "width": 200,
-                    "height": 200,
-                    "type": "gif"
-                  },
-                  "colors": [
-                    "#f27494",
-                    "#98723e",
-                    "#fcf6f7",
-                    "#b38e5c",
-                    "#f4acc4"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/thumbs/png": {
-              "title": "Png",
-              "heading": null,
-              "section": "thumbs",
-              "href": "/thumbs/png",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/index.md",
-              "relativePath": "/thumbs/png/index.md",
-              "relativeDirName": "/thumbs/png",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3870942,
-                "size": 0,
-                "blocks": 0,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-13T02:20:40.000Z",
-                "ctime": "2015-08-13T02:20:40.000Z",
-                "birthtime": "2015-08-13T02:20:40.000Z"
-              },
-              "content": {
-                "original": "",
-                "processed": ""
-              },
-              "isIndex": true,
-              "images": {
-                "thumb": {
-                  "title": "thumb",
-                  "href": "/thumbs/png/thumb.png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
-                  "relativePath": "/thumbs/png/thumb.png",
-                  "relativeDirName": "/thumbs/png",
-                  "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 18331027,
-                    "size": 121957,
-                    "blocks": 240,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-10-29T02:18:38.000Z",
-                    "ctime": "2015-10-29T02:18:46.000Z",
-                    "birthtime": "2015-10-29T02:18:38.000Z"
-                  },
-                  "dimensions": {
-                    "width": 501,
-                    "height": 198,
-                    "type": "png"
-                  },
-                  "colors": [
-                    "#762c29",
-                    "#1f1b1c",
-                    "#b4cdbe",
-                    "#e6412e",
-                    "#758fa8"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/thumbs/jpg": {
-              "title": "Jpg",
-              "heading": null,
-              "section": "thumbs",
-              "href": "/thumbs/jpg",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/index.html",
-              "relativePath": "/thumbs/jpg/index.html",
-              "relativeDirName": "/thumbs/jpg",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3871485,
-                "size": 0,
-                "blocks": 0,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-13T03:15:40.000Z",
-                "ctime": "2015-08-13T03:15:40.000Z",
-                "birthtime": "2015-08-13T03:15:40.000Z"
-              },
-              "content": {
-                "original": "",
-                "processed": ""
-              },
-              "isIndex": true,
-              "images": {
-                "thumb": {
-                  "title": "thumb",
-                  "href": "/thumbs/jpg/thumb.jpg",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
-                  "relativePath": "/thumbs/jpg/thumb.jpg",
-                  "relativeDirName": "/thumbs/jpg",
-                  "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 18332267,
-                    "size": 6690,
-                    "blocks": 16,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-10-29T02:24:27.000Z",
-                    "ctime": "2015-10-29T02:24:32.000Z",
-                    "birthtime": "2015-10-29T02:24:27.000Z"
-                  },
-                  "dimensions": {
-                    "height": 170,
-                    "width": 170,
-                    "type": "jpg"
-                  },
-                  "exif": {
-                    "startMarker": {
-                      "offset": 0
-                    },
-                    "tags": {},
-                    "imageSize": {
-                      "height": 170,
-                      "width": 170
-                    }
-                  },
-                  "colors": [
-                    "#909a3f",
-                    "#e0e4dd",
-                    "#443615",
-                    "#d3d78d",
-                    "#44540c"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/thumbs/svg": {
-              "title": "Svg",
-              "heading": null,
-              "section": "thumbs",
-              "href": "/thumbs/svg",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/index.md",
-              "relativePath": "/thumbs/svg/index.md",
-              "relativeDirName": "/thumbs/svg",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3871354,
-                "size": 0,
-                "blocks": 0,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-13T03:07:58.000Z",
-                "ctime": "2015-08-13T03:07:58.000Z",
-                "birthtime": "2015-08-13T03:07:58.000Z"
-              },
-              "content": {
-                "original": "",
-                "processed": ""
-              },
-              "isIndex": true,
-              "images": {
-                "thumbnail": {
-                  "title": "thumbnail",
-                  "href": "/thumbs/svg/thumbnail.svg",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-                  "relativePath": "/thumbs/svg/thumbnail.svg",
-                  "relativeDirName": "/thumbs/svg",
-                  "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3870950,
-                    "size": 29346,
-                    "blocks": 64,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-11-13T04:41:44.000Z",
-                    "ctime": "2015-11-13T04:41:44.000Z",
-                    "birthtime": "2015-08-13T02:21:10.000Z"
-                  },
-                  "dimensions": {
-                    "width": 81,
-                    "height": 49,
-                    "type": "svg"
-                  },
-                  "colors": []
-                }
-              },
-              "data": {}
-            }
-          },
-          "sections": {
-            "other": {
-              "title": "Other",
-              "pages": {
-                "/other/UPPERCASE": {
-                  "title": "UPPERCASE",
-                  "heading": null,
-                  "section": "other",
-                  "href": "/other/UPPERCASE",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/UPPERCASE.HTML",
-                  "relativePath": "/other/UPPERCASE.HTML",
-                  "relativeDirName": "/other",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3775416,
-                    "size": 14,
-                    "blocks": 8,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-05T05:18:45.000Z",
-                    "ctime": "2015-08-05T05:18:45.000Z",
-                    "birthtime": "2015-08-05T05:18:17.000Z"
-                  },
-                  "content": {
-                    "original": "I am so loud.\n",
-                    "processed": "<p>I am so loud.</p>\n"
-                  },
-                  "isIndex": false,
-                  "images": {
-                    "guava": {
-                      "title": "guava",
-                      "href": "/other/guava.png",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                      "relativePath": "/other/guava.png",
-                      "relativeDirName": "/other",
-                      "processRelativePath": "test/fixtures/other/guava.png",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 21547208,
-                        "size": 1264961,
-                        "blocks": 2472,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-11-17T02:43:34.000Z",
-                        "ctime": "2015-11-17T02:43:44.000Z",
-                        "birthtime": "2015-11-17T02:43:34.000Z"
-                      },
-                      "dimensions": {
-                        "width": 1094,
-                        "height": 1080,
-                        "type": "png"
-                      },
-                      "colors": [
-                        "#df9f77",
-                        "#fbfbfb",
-                        "#e25554",
-                        "#987a2f",
-                        "#778150"
-                      ]
-                    }
-                  },
-                  "data": {}
-                },
-                "/other/papayas": {
-                  "title": "Papayas",
-                  "heading": null,
-                  "section": "other",
-                  "href": "/other/papayas",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/papayas.markdown",
-                  "relativePath": "/other/papayas.markdown",
-                  "relativeDirName": "/other",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3774007,
-                    "size": 111,
-                    "blocks": 8,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-06T04:24:58.000Z",
-                    "ctime": "2015-08-06T04:24:58.000Z",
-                    "birthtime": "2015-08-05T04:36:09.000Z"
-                  },
-                  "content": {
-                    "original": "<!--\nkeywords: [fruit, tropical]\n-->\n\nWe contain enzymes that aid in human [digestion](https://digestion.com).\n",
-                    "processed": "<meta name=\"keywords\" content=\"fruit,tropical\"><!--\nkeywords: [fruit, tropical]\n-->\n<p>We contain enzymes that aid in human <a href=\"https://digestion.com\">digestion</a>.</p>\n"
-                  },
-                  "keywords": [
-                    "fruit",
-                    "tropical"
-                  ],
-                  "isIndex": false,
-                  "images": {
-                    "guava": {
-                      "title": "guava",
-                      "href": "/other/guava.png",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                      "relativePath": "/other/guava.png",
-                      "relativeDirName": "/other",
-                      "processRelativePath": "test/fixtures/other/guava.png",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 21547208,
-                        "size": 1264961,
-                        "blocks": 2472,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-11-17T02:43:34.000Z",
-                        "ctime": "2015-11-17T02:43:44.000Z",
-                        "birthtime": "2015-11-17T02:43:34.000Z"
-                      },
-                      "dimensions": {
-                        "width": 1094,
-                        "height": 1080,
-                        "type": "png"
-                      },
-                      "colors": [
-                        "#df9f77",
-                        "#fbfbfb",
-                        "#e25554",
-                        "#987a2f",
-                        "#778150"
-                      ]
-                    }
-                  },
-                  "data": {}
-                }
-              }
-            },
-            "thumbs": {
-              "title": "Thumbs",
-              "pages": {
-                "/thumbs/gif": {
-                  "title": "Gif",
-                  "heading": null,
-                  "section": "thumbs",
-                  "href": "/thumbs/gif",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/index.md",
-                  "relativePath": "/thumbs/gif/index.md",
-                  "relativeDirName": "/thumbs/gif",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3871472,
-                    "size": 0,
-                    "blocks": 0,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-13T03:15:14.000Z",
-                    "ctime": "2015-08-13T03:15:14.000Z",
-                    "birthtime": "2015-08-13T03:15:14.000Z"
-                  },
-                  "content": {
-                    "original": "",
-                    "processed": ""
-                  },
-                  "isIndex": true,
-                  "images": {
-                    "thumb": {
-                      "title": "thumb",
-                      "href": "/thumbs/gif/thumb.gif",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
-                      "relativePath": "/thumbs/gif/thumb.gif",
-                      "relativeDirName": "/thumbs/gif",
-                      "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33184,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 18333433,
-                        "size": 4269,
-                        "blocks": 16,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-10-29T02:28:41.000Z",
-                        "ctime": "2015-10-29T02:29:12.000Z",
-                        "birthtime": "2015-10-29T02:28:41.000Z"
-                      },
-                      "dimensions": {
-                        "width": 200,
-                        "height": 200,
-                        "type": "gif"
-                      },
-                      "colors": [
-                        "#f27494",
-                        "#98723e",
-                        "#fcf6f7",
-                        "#b38e5c",
-                        "#f4acc4"
-                      ]
-                    }
-                  },
-                  "data": {}
-                },
-                "/thumbs/jpg": {
-                  "title": "Jpg",
-                  "heading": null,
-                  "section": "thumbs",
-                  "href": "/thumbs/jpg",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/index.html",
-                  "relativePath": "/thumbs/jpg/index.html",
-                  "relativeDirName": "/thumbs/jpg",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3871485,
-                    "size": 0,
-                    "blocks": 0,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-13T03:15:40.000Z",
-                    "ctime": "2015-08-13T03:15:40.000Z",
-                    "birthtime": "2015-08-13T03:15:40.000Z"
-                  },
-                  "content": {
-                    "original": "",
-                    "processed": ""
-                  },
-                  "isIndex": true,
-                  "images": {
-                    "thumb": {
-                      "title": "thumb",
-                      "href": "/thumbs/jpg/thumb.jpg",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
-                      "relativePath": "/thumbs/jpg/thumb.jpg",
-                      "relativeDirName": "/thumbs/jpg",
-                      "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 18332267,
-                        "size": 6690,
-                        "blocks": 16,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-10-29T02:24:27.000Z",
-                        "ctime": "2015-10-29T02:24:32.000Z",
-                        "birthtime": "2015-10-29T02:24:27.000Z"
-                      },
-                      "dimensions": {
-                        "height": 170,
-                        "width": 170,
-                        "type": "jpg"
-                      },
-                      "exif": {
-                        "startMarker": {
-                          "offset": 0
-                        },
-                        "tags": {},
-                        "imageSize": {
-                          "height": 170,
-                          "width": 170
-                        }
-                      },
-                      "colors": [
-                        "#909a3f",
-                        "#e0e4dd",
-                        "#443615",
-                        "#d3d78d",
-                        "#44540c"
-                      ]
-                    }
-                  },
-                  "data": {}
-                },
-                "/thumbs/png": {
-                  "title": "Png",
-                  "heading": null,
-                  "section": "thumbs",
-                  "href": "/thumbs/png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/index.md",
-                  "relativePath": "/thumbs/png/index.md",
-                  "relativeDirName": "/thumbs/png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3870942,
-                    "size": 0,
-                    "blocks": 0,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-13T02:20:40.000Z",
-                    "ctime": "2015-08-13T02:20:40.000Z",
-                    "birthtime": "2015-08-13T02:20:40.000Z"
-                  },
-                  "content": {
-                    "original": "",
-                    "processed": ""
-                  },
-                  "isIndex": true,
-                  "images": {
-                    "thumb": {
-                      "title": "thumb",
-                      "href": "/thumbs/png/thumb.png",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
-                      "relativePath": "/thumbs/png/thumb.png",
-                      "relativeDirName": "/thumbs/png",
-                      "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 18331027,
-                        "size": 121957,
-                        "blocks": 240,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-10-29T02:18:38.000Z",
-                        "ctime": "2015-10-29T02:18:46.000Z",
-                        "birthtime": "2015-10-29T02:18:38.000Z"
-                      },
-                      "dimensions": {
-                        "width": 501,
-                        "height": 198,
-                        "type": "png"
-                      },
-                      "colors": [
-                        "#762c29",
-                        "#1f1b1c",
-                        "#b4cdbe",
-                        "#e6412e",
-                        "#758fa8"
-                      ]
-                    }
-                  },
-                  "data": {}
-                },
-                "/thumbs/svg": {
-                  "title": "Svg",
-                  "heading": null,
-                  "section": "thumbs",
-                  "href": "/thumbs/svg",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/index.md",
-                  "relativePath": "/thumbs/svg/index.md",
-                  "relativeDirName": "/thumbs/svg",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3871354,
-                    "size": 0,
-                    "blocks": 0,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-13T03:07:58.000Z",
-                    "ctime": "2015-08-13T03:07:58.000Z",
-                    "birthtime": "2015-08-13T03:07:58.000Z"
-                  },
-                  "content": {
-                    "original": "",
-                    "processed": ""
-                  },
-                  "isIndex": true,
-                  "images": {
-                    "thumbnail": {
-                      "title": "thumbnail",
-                      "href": "/thumbs/svg/thumbnail.svg",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-                      "relativePath": "/thumbs/svg/thumbnail.svg",
-                      "relativeDirName": "/thumbs/svg",
-                      "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 3870950,
-                        "size": 29346,
-                        "blocks": 64,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-11-13T04:41:44.000Z",
-                        "ctime": "2015-11-13T04:41:44.000Z",
-                        "birthtime": "2015-08-13T02:21:10.000Z"
-                      },
-                      "dimensions": {
-                        "width": 81,
-                        "height": 49,
-                        "type": "svg"
-                      },
-                      "colors": []
-                    }
-                  },
-                  "data": {}
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/oranges": {
-      "title": "We are Oranges",
-      "heading": null,
-      "section": null,
-      "href": "/oranges",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/oranges.html",
-      "relativePath": "/oranges.html",
-      "relativeDirName": "/",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3773990,
-        "size": 54,
-        "blocks": 8,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-08-06T04:23:00.000Z",
-        "ctime": "2015-08-06T04:23:00.000Z",
-        "birthtime": "2015-08-05T04:35:40.000Z"
-      },
-      "content": {
-        "original": "<title>We are Oranges</title>\nNothing rhymes with us.\n",
-        "processed": "<title>We are Oranges</title>\nNothing rhymes with us.\n"
-      },
-      "isIndex": false,
-      "images": {},
-      "data": {
-        ".juicer-cache": {
-          "images": {
-            "/thumbs/svg/thumbnail.svg": {
-              "title": "thumbnail",
-              "href": "/thumbs/svg/thumbnail.svg",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-              "relativePath": "/thumbs/svg/thumbnail.svg",
-              "relativeDirName": "/thumbs/svg",
-              "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3870950,
-                "size": 29346,
-                "blocks": 64,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-11-13T04:41:44.000Z",
-                "ctime": "2015-11-13T04:41:44.000Z",
-                "birthtime": "2015-08-13T02:21:10.000Z"
-              },
-              "dimensions": {
-                "width": 81,
-                "height": 49,
-                "type": "svg"
-              },
-              "colors": []
-            },
-            "/thumbs/gif/thumb.gif": {
-              "title": "thumb",
-              "href": "/thumbs/gif/thumb.gif",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
-              "relativePath": "/thumbs/gif/thumb.gif",
-              "relativeDirName": "/thumbs/gif",
-              "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33184,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 18333433,
-                "size": 4269,
-                "blocks": 16,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-10-29T02:28:41.000Z",
-                "ctime": "2015-10-29T02:29:12.000Z",
-                "birthtime": "2015-10-29T02:28:41.000Z"
-              },
-              "dimensions": {
-                "width": 200,
-                "height": 200,
-                "type": "gif"
-              },
-              "colors": [
-                "#f27494",
-                "#98723e",
-                "#fcf6f7",
-                "#b38e5c",
-                "#f4acc4"
-              ]
-            },
-            "/thumbs/jpg/thumb.jpg": {
-              "title": "thumb",
-              "href": "/thumbs/jpg/thumb.jpg",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
-              "relativePath": "/thumbs/jpg/thumb.jpg",
-              "relativeDirName": "/thumbs/jpg",
-              "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 18332267,
-                "size": 6690,
-                "blocks": 16,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-10-29T02:24:27.000Z",
-                "ctime": "2015-10-29T02:24:32.000Z",
-                "birthtime": "2015-10-29T02:24:27.000Z"
-              },
-              "dimensions": {
-                "height": 170,
-                "width": 170,
-                "type": "jpg"
-              },
-              "exif": {
-                "startMarker": {
-                  "offset": 0
-                },
-                "tags": {},
-                "imageSize": {
-                  "height": 170,
-                  "width": 170
-                }
-              },
-              "colors": [
-                "#909a3f",
-                "#e0e4dd",
-                "#443615",
-                "#d3d78d",
-                "#44540c"
-              ]
-            },
-            "/thumbs/png/thumb.png": {
-              "title": "thumb",
-              "href": "/thumbs/png/thumb.png",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
-              "relativePath": "/thumbs/png/thumb.png",
-              "relativeDirName": "/thumbs/png",
-              "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 18331027,
-                "size": 121957,
-                "blocks": 240,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-10-29T02:18:38.000Z",
-                "ctime": "2015-10-29T02:18:46.000Z",
-                "birthtime": "2015-10-29T02:18:38.000Z"
-              },
-              "dimensions": {
-                "width": 501,
-                "height": 198,
-                "type": "png"
-              },
-              "colors": [
-                "#762c29",
-                "#1f1b1c",
-                "#b4cdbe",
-                "#e6412e",
-                "#758fa8"
-              ]
-            },
-            "/other/guava.png": {
-              "title": "guava",
-              "href": "/other/guava.png",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-              "relativePath": "/other/guava.png",
-              "relativeDirName": "/other",
-              "processRelativePath": "test/fixtures/other/guava.png",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 21547208,
-                "size": 1264961,
-                "blocks": 2472,
-                "atime": "2015-11-27T01:34:11.000Z",
-                "mtime": "2015-11-17T02:43:34.000Z",
-                "ctime": "2015-11-17T02:43:44.000Z",
-                "birthtime": "2015-11-17T02:43:34.000Z"
-              },
-              "dimensions": {
-                "width": 1094,
-                "height": 1080,
-                "type": "png"
-              },
-              "colors": [
-                "#df9f77",
-                "#fbfbfb",
-                "#e25554",
-                "#987a2f",
-                "#778150"
-              ]
-            }
-          },
-          "pages": {
-            "/oranges": "[Circular ~.pages./oranges]",
-            "/apples": {
-              "title": "Apples!",
-              "heading": null,
-              "section": null,
-              "href": "/apples",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/apples.md",
-              "relativePath": "/apples.md",
-              "relativeDirName": "/",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3773988,
-                "size": 74,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-06T04:24:09.000Z",
-                "ctime": "2015-08-06T04:24:09.000Z",
-                "birthtime": "2015-08-05T04:35:31.000Z"
-              },
-              "content": {
-                "original": "<!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n\nHow do you like them?\n",
-                "processed": "<meta name=\"title\" content=\"Apples!\"><meta name=\"keywords\" content=\"fruit,doctors\"><!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n<p>How do you like them?</p>\n"
-              },
-              "keywords": [
-                "fruit",
-                "doctors"
-              ],
-              "isIndex": false,
-              "images": {},
-              "data": {
-                ".juicer-cache": "[Circular ~.pages./oranges.data..juicer-cache]"
-              }
-            },
-            "/other/UPPERCASE": {
-              "title": "UPPERCASE",
-              "heading": null,
-              "section": "other",
-              "href": "/other/UPPERCASE",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/UPPERCASE.HTML",
-              "relativePath": "/other/UPPERCASE.HTML",
-              "relativeDirName": "/other",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3775416,
-                "size": 14,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-05T05:18:45.000Z",
-                "ctime": "2015-08-05T05:18:45.000Z",
-                "birthtime": "2015-08-05T05:18:17.000Z"
-              },
-              "content": {
-                "original": "I am so loud.\n",
-                "processed": "<p>I am so loud.</p>\n"
-              },
-              "isIndex": false,
-              "images": {
-                "guava": {
-                  "title": "guava",
-                  "href": "/other/guava.png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                  "relativePath": "/other/guava.png",
-                  "relativeDirName": "/other",
-                  "processRelativePath": "test/fixtures/other/guava.png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 21547208,
-                    "size": 1264961,
-                    "blocks": 2472,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-11-17T02:43:34.000Z",
-                    "ctime": "2015-11-17T02:43:44.000Z",
-                    "birthtime": "2015-11-17T02:43:34.000Z"
-                  },
-                  "dimensions": {
-                    "width": 1094,
-                    "height": 1080,
-                    "type": "png"
-                  },
-                  "colors": [
-                    "#df9f77",
-                    "#fbfbfb",
-                    "#e25554",
-                    "#987a2f",
-                    "#778150"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/other": {
-              "title": "Other",
-              "heading": null,
-              "section": null,
-              "href": "/other",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/index.md",
-              "relativePath": "/other/index.md",
-              "relativeDirName": "/other",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3774010,
-                "size": 560,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-11-17T04:27:45.000Z",
-                "ctime": "2015-11-17T04:27:45.000Z",
-                "birthtime": "2015-08-05T04:36:14.000Z"
-              },
-              "content": {
-                "original": "I am the other index.\n\nWhen juicer runs, it should update the relative paths, but not the absolute ones.\n\n## things with href\n\n- absolute: <a href=\"http://mango.com\">mango.com</a>\n- protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a>\n- relative: <a href=\"papayas\">papayas</a>\n- relative with leading slash: <a href=\"/grapes\">grapes</a>\n\n## things with src\n\n- absolute: <img src=\"https://guava.com/logo.png\">\n- protocol-relative: <img src=\"//guava-relative.com/logo.png\">\n- relative: <img src=\"guava.png\">\n- script, too: <script src=\"banana.js\">\n",
-                "processed": "<p>I am the other index.</p>\n<p>When juicer runs, it should update the relative paths, but not the absolute ones.</p>\n<h2 id=\"things-with-href\" class=\"deep-link\"><a href=\"/other/#things-with-href\">things with href</a></h2>\n<ul>\n<li>absolute: <a href=\"http://mango.com\">mango.com</a></li>\n<li>protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a></li>\n<li>relative: <a href=\"/other/papayas\">papayas</a></li>\n<li>relative with leading slash: <a href=\"/other/grapes\">grapes</a></li>\n</ul>\n<h2 id=\"things-with-src\" class=\"deep-link\"><a href=\"/other/#things-with-src\">things with src</a></h2>\n<ul>\n<li>absolute: <img src=\"https://guava.com/logo.png\"></li>\n<li>protocol-relative: <img src=\"//guava-relative.com/logo.png\"></li>\n<li>relative: <img src=\"/other/guava.png\"></li>\n<li>script, too: <script src=\"/other/banana.js\"></li>\n</ul>\n</script></li></ul>"
-              },
-              "isIndex": true,
-              "images": {
-                "guava": {
-                  "title": "guava",
-                  "href": "/other/guava.png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                  "relativePath": "/other/guava.png",
-                  "relativeDirName": "/other",
-                  "processRelativePath": "test/fixtures/other/guava.png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 21547208,
-                    "size": 1264961,
-                    "blocks": 2472,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-11-17T02:43:34.000Z",
-                    "ctime": "2015-11-17T02:43:44.000Z",
-                    "birthtime": "2015-11-17T02:43:34.000Z"
-                  },
-                  "dimensions": {
-                    "width": 1094,
-                    "height": 1080,
-                    "type": "png"
-                  },
-                  "colors": [
-                    "#df9f77",
-                    "#fbfbfb",
-                    "#e25554",
-                    "#987a2f",
-                    "#778150"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/other/papayas": {
-              "title": "Papayas",
-              "heading": null,
-              "section": "other",
-              "href": "/other/papayas",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/papayas.markdown",
-              "relativePath": "/other/papayas.markdown",
-              "relativeDirName": "/other",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3774007,
-                "size": 111,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-06T04:24:58.000Z",
-                "ctime": "2015-08-06T04:24:58.000Z",
-                "birthtime": "2015-08-05T04:36:09.000Z"
-              },
-              "content": {
-                "original": "<!--\nkeywords: [fruit, tropical]\n-->\n\nWe contain enzymes that aid in human [digestion](https://digestion.com).\n",
-                "processed": "<meta name=\"keywords\" content=\"fruit,tropical\"><!--\nkeywords: [fruit, tropical]\n-->\n<p>We contain enzymes that aid in human <a href=\"https://digestion.com\">digestion</a>.</p>\n"
-              },
-              "keywords": [
-                "fruit",
-                "tropical"
-              ],
-              "isIndex": false,
-              "images": {
-                "guava": {
-                  "title": "guava",
-                  "href": "/other/guava.png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                  "relativePath": "/other/guava.png",
-                  "relativeDirName": "/other",
-                  "processRelativePath": "test/fixtures/other/guava.png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 21547208,
-                    "size": 1264961,
-                    "blocks": 2472,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-11-17T02:43:34.000Z",
-                    "ctime": "2015-11-17T02:43:44.000Z",
-                    "birthtime": "2015-11-17T02:43:34.000Z"
-                  },
-                  "dimensions": {
-                    "width": 1094,
-                    "height": 1080,
-                    "type": "png"
-                  },
-                  "colors": [
-                    "#df9f77",
-                    "#fbfbfb",
-                    "#e25554",
-                    "#987a2f",
-                    "#778150"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/thumbs": {
-              "title": "Thumbs",
-              "heading": null,
-              "section": null,
-              "href": "/thumbs",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/index.html",
-              "relativePath": "/thumbs/index.html",
-              "relativeDirName": "/thumbs",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 21546320,
-                "size": 78,
-                "blocks": 8,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-11-25T06:04:48.000Z",
-                "ctime": "2015-11-25T06:04:48.000Z",
-                "birthtime": "2015-11-17T02:40:13.000Z"
-              },
-              "content": {
-                "original": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is {{somedata.name}}\n",
-                "processed": "<p>I am the thumbs index.</p>\n<p>Here comes a reference</p>\n<p>His name is cookie monster</p>\n"
-              },
-              "isIndex": true,
-              "images": {},
-              "data": {
-                "somedata": {
-                  "name": "cookie monster",
-                  "food": "cookies"
-                }
-              }
-            },
-            "/thumbs/gif": {
-              "title": "Gif",
-              "heading": null,
-              "section": "thumbs",
-              "href": "/thumbs/gif",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/index.md",
-              "relativePath": "/thumbs/gif/index.md",
-              "relativeDirName": "/thumbs/gif",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3871472,
-                "size": 0,
-                "blocks": 0,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-13T03:15:14.000Z",
-                "ctime": "2015-08-13T03:15:14.000Z",
-                "birthtime": "2015-08-13T03:15:14.000Z"
-              },
-              "content": {
-                "original": "",
-                "processed": ""
-              },
-              "isIndex": true,
-              "images": {
-                "thumb": {
-                  "title": "thumb",
-                  "href": "/thumbs/gif/thumb.gif",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
-                  "relativePath": "/thumbs/gif/thumb.gif",
-                  "relativeDirName": "/thumbs/gif",
-                  "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33184,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 18333433,
-                    "size": 4269,
-                    "blocks": 16,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-10-29T02:28:41.000Z",
-                    "ctime": "2015-10-29T02:29:12.000Z",
-                    "birthtime": "2015-10-29T02:28:41.000Z"
-                  },
-                  "dimensions": {
-                    "width": 200,
-                    "height": 200,
-                    "type": "gif"
-                  },
-                  "colors": [
-                    "#f27494",
-                    "#98723e",
-                    "#fcf6f7",
-                    "#b38e5c",
-                    "#f4acc4"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/thumbs/png": {
-              "title": "Png",
-              "heading": null,
-              "section": "thumbs",
-              "href": "/thumbs/png",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/index.md",
-              "relativePath": "/thumbs/png/index.md",
-              "relativeDirName": "/thumbs/png",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3870942,
-                "size": 0,
-                "blocks": 0,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-13T02:20:40.000Z",
-                "ctime": "2015-08-13T02:20:40.000Z",
-                "birthtime": "2015-08-13T02:20:40.000Z"
-              },
-              "content": {
-                "original": "",
-                "processed": ""
-              },
-              "isIndex": true,
-              "images": {
-                "thumb": {
-                  "title": "thumb",
-                  "href": "/thumbs/png/thumb.png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
-                  "relativePath": "/thumbs/png/thumb.png",
-                  "relativeDirName": "/thumbs/png",
-                  "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 18331027,
-                    "size": 121957,
-                    "blocks": 240,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-10-29T02:18:38.000Z",
-                    "ctime": "2015-10-29T02:18:46.000Z",
-                    "birthtime": "2015-10-29T02:18:38.000Z"
-                  },
-                  "dimensions": {
-                    "width": 501,
-                    "height": 198,
-                    "type": "png"
-                  },
-                  "colors": [
-                    "#762c29",
-                    "#1f1b1c",
-                    "#b4cdbe",
-                    "#e6412e",
-                    "#758fa8"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/thumbs/jpg": {
-              "title": "Jpg",
-              "heading": null,
-              "section": "thumbs",
-              "href": "/thumbs/jpg",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/index.html",
-              "relativePath": "/thumbs/jpg/index.html",
-              "relativeDirName": "/thumbs/jpg",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3871485,
-                "size": 0,
-                "blocks": 0,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-13T03:15:40.000Z",
-                "ctime": "2015-08-13T03:15:40.000Z",
-                "birthtime": "2015-08-13T03:15:40.000Z"
-              },
-              "content": {
-                "original": "",
-                "processed": ""
-              },
-              "isIndex": true,
-              "images": {
-                "thumb": {
-                  "title": "thumb",
-                  "href": "/thumbs/jpg/thumb.jpg",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
-                  "relativePath": "/thumbs/jpg/thumb.jpg",
-                  "relativeDirName": "/thumbs/jpg",
-                  "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 18332267,
-                    "size": 6690,
-                    "blocks": 16,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-10-29T02:24:27.000Z",
-                    "ctime": "2015-10-29T02:24:32.000Z",
-                    "birthtime": "2015-10-29T02:24:27.000Z"
-                  },
-                  "dimensions": {
-                    "height": 170,
-                    "width": 170,
-                    "type": "jpg"
-                  },
-                  "exif": {
-                    "startMarker": {
-                      "offset": 0
-                    },
-                    "tags": {},
-                    "imageSize": {
-                      "height": 170,
-                      "width": 170
-                    }
-                  },
-                  "colors": [
-                    "#909a3f",
-                    "#e0e4dd",
-                    "#443615",
-                    "#d3d78d",
-                    "#44540c"
-                  ]
-                }
-              },
-              "data": {}
-            },
-            "/thumbs/svg": {
-              "title": "Svg",
-              "heading": null,
-              "section": "thumbs",
-              "href": "/thumbs/svg",
-              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/index.md",
-              "relativePath": "/thumbs/svg/index.md",
-              "relativeDirName": "/thumbs/svg",
-              "stats": {
-                "dev": 16777220,
-                "mode": 33188,
-                "nlink": 1,
-                "uid": 501,
-                "gid": 20,
-                "rdev": 0,
-                "blksize": 4096,
-                "ino": 3871354,
-                "size": 0,
-                "blocks": 0,
-                "atime": "2015-11-27T01:34:12.000Z",
-                "mtime": "2015-08-13T03:07:58.000Z",
-                "ctime": "2015-08-13T03:07:58.000Z",
-                "birthtime": "2015-08-13T03:07:58.000Z"
-              },
-              "content": {
-                "original": "",
-                "processed": ""
-              },
-              "isIndex": true,
-              "images": {
-                "thumbnail": {
-                  "title": "thumbnail",
-                  "href": "/thumbs/svg/thumbnail.svg",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-                  "relativePath": "/thumbs/svg/thumbnail.svg",
-                  "relativeDirName": "/thumbs/svg",
-                  "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3870950,
-                    "size": 29346,
-                    "blocks": 64,
-                    "atime": "2015-11-27T01:34:11.000Z",
-                    "mtime": "2015-11-13T04:41:44.000Z",
-                    "ctime": "2015-11-13T04:41:44.000Z",
-                    "birthtime": "2015-08-13T02:21:10.000Z"
-                  },
-                  "dimensions": {
-                    "width": 81,
-                    "height": 49,
-                    "type": "svg"
-                  },
-                  "colors": []
-                }
-              },
-              "data": {}
-            }
-          },
-          "sections": {
-            "other": {
-              "title": "Other",
-              "pages": {
-                "/other/UPPERCASE": {
-                  "title": "UPPERCASE",
-                  "heading": null,
-                  "section": "other",
-                  "href": "/other/UPPERCASE",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/UPPERCASE.HTML",
-                  "relativePath": "/other/UPPERCASE.HTML",
-                  "relativeDirName": "/other",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3775416,
-                    "size": 14,
-                    "blocks": 8,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-05T05:18:45.000Z",
-                    "ctime": "2015-08-05T05:18:45.000Z",
-                    "birthtime": "2015-08-05T05:18:17.000Z"
-                  },
-                  "content": {
-                    "original": "I am so loud.\n",
-                    "processed": "<p>I am so loud.</p>\n"
-                  },
-                  "isIndex": false,
-                  "images": {
-                    "guava": {
-                      "title": "guava",
-                      "href": "/other/guava.png",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                      "relativePath": "/other/guava.png",
-                      "relativeDirName": "/other",
-                      "processRelativePath": "test/fixtures/other/guava.png",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 21547208,
-                        "size": 1264961,
-                        "blocks": 2472,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-11-17T02:43:34.000Z",
-                        "ctime": "2015-11-17T02:43:44.000Z",
-                        "birthtime": "2015-11-17T02:43:34.000Z"
-                      },
-                      "dimensions": {
-                        "width": 1094,
-                        "height": 1080,
-                        "type": "png"
-                      },
-                      "colors": [
-                        "#df9f77",
-                        "#fbfbfb",
-                        "#e25554",
-                        "#987a2f",
-                        "#778150"
-                      ]
-                    }
-                  },
-                  "data": {}
-                },
-                "/other/papayas": {
-                  "title": "Papayas",
-                  "heading": null,
-                  "section": "other",
-                  "href": "/other/papayas",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/other/papayas.markdown",
-                  "relativePath": "/other/papayas.markdown",
-                  "relativeDirName": "/other",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3774007,
-                    "size": 111,
-                    "blocks": 8,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-06T04:24:58.000Z",
-                    "ctime": "2015-08-06T04:24:58.000Z",
-                    "birthtime": "2015-08-05T04:36:09.000Z"
-                  },
-                  "content": {
-                    "original": "<!--\nkeywords: [fruit, tropical]\n-->\n\nWe contain enzymes that aid in human [digestion](https://digestion.com).\n",
-                    "processed": "<meta name=\"keywords\" content=\"fruit,tropical\"><!--\nkeywords: [fruit, tropical]\n-->\n<p>We contain enzymes that aid in human <a href=\"https://digestion.com\">digestion</a>.</p>\n"
-                  },
-                  "keywords": [
-                    "fruit",
-                    "tropical"
-                  ],
-                  "isIndex": false,
-                  "images": {
-                    "guava": {
-                      "title": "guava",
-                      "href": "/other/guava.png",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-                      "relativePath": "/other/guava.png",
-                      "relativeDirName": "/other",
-                      "processRelativePath": "test/fixtures/other/guava.png",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 21547208,
-                        "size": 1264961,
-                        "blocks": 2472,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-11-17T02:43:34.000Z",
-                        "ctime": "2015-11-17T02:43:44.000Z",
-                        "birthtime": "2015-11-17T02:43:34.000Z"
-                      },
-                      "dimensions": {
-                        "width": 1094,
-                        "height": 1080,
-                        "type": "png"
-                      },
-                      "colors": [
-                        "#df9f77",
-                        "#fbfbfb",
-                        "#e25554",
-                        "#987a2f",
-                        "#778150"
-                      ]
-                    }
-                  },
-                  "data": {}
-                }
-              }
-            },
-            "thumbs": {
-              "title": "Thumbs",
-              "pages": {
-                "/thumbs/gif": {
-                  "title": "Gif",
-                  "heading": null,
-                  "section": "thumbs",
-                  "href": "/thumbs/gif",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/index.md",
-                  "relativePath": "/thumbs/gif/index.md",
-                  "relativeDirName": "/thumbs/gif",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3871472,
-                    "size": 0,
-                    "blocks": 0,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-13T03:15:14.000Z",
-                    "ctime": "2015-08-13T03:15:14.000Z",
-                    "birthtime": "2015-08-13T03:15:14.000Z"
-                  },
-                  "content": {
-                    "original": "",
-                    "processed": ""
-                  },
-                  "isIndex": true,
-                  "images": {
-                    "thumb": {
-                      "title": "thumb",
-                      "href": "/thumbs/gif/thumb.gif",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
-                      "relativePath": "/thumbs/gif/thumb.gif",
-                      "relativeDirName": "/thumbs/gif",
-                      "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33184,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 18333433,
-                        "size": 4269,
-                        "blocks": 16,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-10-29T02:28:41.000Z",
-                        "ctime": "2015-10-29T02:29:12.000Z",
-                        "birthtime": "2015-10-29T02:28:41.000Z"
-                      },
-                      "dimensions": {
-                        "width": 200,
-                        "height": 200,
-                        "type": "gif"
-                      },
-                      "colors": [
-                        "#f27494",
-                        "#98723e",
-                        "#fcf6f7",
-                        "#b38e5c",
-                        "#f4acc4"
-                      ]
-                    }
-                  },
-                  "data": {}
-                },
-                "/thumbs/jpg": {
-                  "title": "Jpg",
-                  "heading": null,
-                  "section": "thumbs",
-                  "href": "/thumbs/jpg",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/index.html",
-                  "relativePath": "/thumbs/jpg/index.html",
-                  "relativeDirName": "/thumbs/jpg",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3871485,
-                    "size": 0,
-                    "blocks": 0,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-13T03:15:40.000Z",
-                    "ctime": "2015-08-13T03:15:40.000Z",
-                    "birthtime": "2015-08-13T03:15:40.000Z"
-                  },
-                  "content": {
-                    "original": "",
-                    "processed": ""
-                  },
-                  "isIndex": true,
-                  "images": {
-                    "thumb": {
-                      "title": "thumb",
-                      "href": "/thumbs/jpg/thumb.jpg",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
-                      "relativePath": "/thumbs/jpg/thumb.jpg",
-                      "relativeDirName": "/thumbs/jpg",
-                      "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 18332267,
-                        "size": 6690,
-                        "blocks": 16,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-10-29T02:24:27.000Z",
-                        "ctime": "2015-10-29T02:24:32.000Z",
-                        "birthtime": "2015-10-29T02:24:27.000Z"
-                      },
-                      "dimensions": {
-                        "height": 170,
-                        "width": 170,
-                        "type": "jpg"
-                      },
-                      "exif": {
-                        "startMarker": {
-                          "offset": 0
-                        },
-                        "tags": {},
-                        "imageSize": {
-                          "height": 170,
-                          "width": 170
-                        }
-                      },
-                      "colors": [
-                        "#909a3f",
-                        "#e0e4dd",
-                        "#443615",
-                        "#d3d78d",
-                        "#44540c"
-                      ]
-                    }
-                  },
-                  "data": {}
-                },
-                "/thumbs/png": {
-                  "title": "Png",
-                  "heading": null,
-                  "section": "thumbs",
-                  "href": "/thumbs/png",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/index.md",
-                  "relativePath": "/thumbs/png/index.md",
-                  "relativeDirName": "/thumbs/png",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3870942,
-                    "size": 0,
-                    "blocks": 0,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-13T02:20:40.000Z",
-                    "ctime": "2015-08-13T02:20:40.000Z",
-                    "birthtime": "2015-08-13T02:20:40.000Z"
-                  },
-                  "content": {
-                    "original": "",
-                    "processed": ""
-                  },
-                  "isIndex": true,
-                  "images": {
-                    "thumb": {
-                      "title": "thumb",
-                      "href": "/thumbs/png/thumb.png",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
-                      "relativePath": "/thumbs/png/thumb.png",
-                      "relativeDirName": "/thumbs/png",
-                      "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 18331027,
-                        "size": 121957,
-                        "blocks": 240,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-10-29T02:18:38.000Z",
-                        "ctime": "2015-10-29T02:18:46.000Z",
-                        "birthtime": "2015-10-29T02:18:38.000Z"
-                      },
-                      "dimensions": {
-                        "width": 501,
-                        "height": 198,
-                        "type": "png"
-                      },
-                      "colors": [
-                        "#762c29",
-                        "#1f1b1c",
-                        "#b4cdbe",
-                        "#e6412e",
-                        "#758fa8"
-                      ]
-                    }
-                  },
-                  "data": {}
-                },
-                "/thumbs/svg": {
-                  "title": "Svg",
-                  "heading": null,
-                  "section": "thumbs",
-                  "href": "/thumbs/svg",
-                  "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/index.md",
-                  "relativePath": "/thumbs/svg/index.md",
-                  "relativeDirName": "/thumbs/svg",
-                  "stats": {
-                    "dev": 16777220,
-                    "mode": 33188,
-                    "nlink": 1,
-                    "uid": 501,
-                    "gid": 20,
-                    "rdev": 0,
-                    "blksize": 4096,
-                    "ino": 3871354,
-                    "size": 0,
-                    "blocks": 0,
-                    "atime": "2015-11-27T01:34:12.000Z",
-                    "mtime": "2015-08-13T03:07:58.000Z",
-                    "ctime": "2015-08-13T03:07:58.000Z",
-                    "birthtime": "2015-08-13T03:07:58.000Z"
-                  },
-                  "content": {
-                    "original": "",
-                    "processed": ""
-                  },
-                  "isIndex": true,
-                  "images": {
-                    "thumbnail": {
-                      "title": "thumbnail",
-                      "href": "/thumbs/svg/thumbnail.svg",
-                      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-                      "relativePath": "/thumbs/svg/thumbnail.svg",
-                      "relativeDirName": "/thumbs/svg",
-                      "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
-                      "stats": {
-                        "dev": 16777220,
-                        "mode": 33188,
-                        "nlink": 1,
-                        "uid": 501,
-                        "gid": 20,
-                        "rdev": 0,
-                        "blksize": 4096,
-                        "ino": 3870950,
-                        "size": 29346,
-                        "blocks": 64,
-                        "atime": "2015-11-27T01:34:11.000Z",
-                        "mtime": "2015-11-13T04:41:44.000Z",
-                        "ctime": "2015-11-13T04:41:44.000Z",
-                        "birthtime": "2015-08-13T02:21:10.000Z"
-                      },
-                      "dimensions": {
-                        "width": 81,
-                        "height": 49,
-                        "type": "svg"
-                      },
-                      "colors": []
-                    }
-                  },
-                  "data": {}
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/other/UPPERCASE": {
-      "title": "UPPERCASE",
-      "heading": null,
-      "section": "other",
-      "href": "/other/UPPERCASE",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/other/UPPERCASE.HTML",
-      "relativePath": "/other/UPPERCASE.HTML",
-      "relativeDirName": "/other",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3775416,
-        "size": 14,
-        "blocks": 8,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-08-05T05:18:45.000Z",
-        "ctime": "2015-08-05T05:18:45.000Z",
-        "birthtime": "2015-08-05T05:18:17.000Z"
-      },
-      "content": {
-        "original": "I am so loud.\n",
-        "processed": "<p>I am so loud.</p>\n"
-      },
-      "isIndex": false,
-      "images": {
-        "guava": {
-          "title": "guava",
-          "href": "/other/guava.png",
-          "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-          "relativePath": "/other/guava.png",
-          "relativeDirName": "/other",
-          "processRelativePath": "test/fixtures/other/guava.png",
+        "/apples": {
+          "title": "Apples!",
+          "heading": null,
+          "section": null,
+          "href": "/apples",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/apples.md",
+          "extension": ".md",
+          "filename": "apples.md",
+          "relativePath": "/apples.md",
+          "parent": "/",
           "stats": {
             "dev": 16777220,
             "mode": 33188,
@@ -2679,502 +85,36 @@
             "gid": 20,
             "rdev": 0,
             "blksize": 4096,
-            "ino": 21547208,
-            "size": 1264961,
-            "blocks": 2472,
-            "atime": "2015-11-27T01:34:11.000Z",
-            "mtime": "2015-11-17T02:43:34.000Z",
-            "ctime": "2015-11-17T02:43:44.000Z",
-            "birthtime": "2015-11-17T02:43:34.000Z"
+            "ino": 3773988,
+            "size": 74,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-06T04:24:09.000Z",
+            "ctime": "2015-08-06T04:24:09.000Z",
+            "birthtime": "2015-08-05T04:35:31.000Z"
           },
-          "dimensions": {
-            "width": 1094,
-            "height": 1080,
-            "type": "png"
+          "content": {
+            "original": "<!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n\nHow do you like them?\n",
+            "processed": "<meta name=\"title\" content=\"Apples!\"><meta name=\"keywords\" content=\"fruit,doctors\"><!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n<p>How do you like them?</p>\n"
           },
-          "colors": [
-            "#df9f77",
-            "#fbfbfb",
-            "#e25554",
-            "#987a2f",
-            "#778150"
-          ]
-        }
-      },
-      "data": {}
-    },
-    "/other": {
-      "title": "Other",
-      "heading": null,
-      "section": null,
-      "href": "/other",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/other/index.md",
-      "relativePath": "/other/index.md",
-      "relativeDirName": "/other",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3774010,
-        "size": 560,
-        "blocks": 8,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-11-17T04:27:45.000Z",
-        "ctime": "2015-11-17T04:27:45.000Z",
-        "birthtime": "2015-08-05T04:36:14.000Z"
-      },
-      "content": {
-        "original": "I am the other index.\n\nWhen juicer runs, it should update the relative paths, but not the absolute ones.\n\n## things with href\n\n- absolute: <a href=\"http://mango.com\">mango.com</a>\n- protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a>\n- relative: <a href=\"papayas\">papayas</a>\n- relative with leading slash: <a href=\"/grapes\">grapes</a>\n\n## things with src\n\n- absolute: <img src=\"https://guava.com/logo.png\">\n- protocol-relative: <img src=\"//guava-relative.com/logo.png\">\n- relative: <img src=\"guava.png\">\n- script, too: <script src=\"banana.js\">\n",
-        "processed": "<p>I am the other index.</p>\n<p>When juicer runs, it should update the relative paths, but not the absolute ones.</p>\n<h2 id=\"things-with-href\" class=\"deep-link\"><a href=\"/other/#things-with-href\">things with href</a></h2>\n<ul>\n<li>absolute: <a href=\"http://mango.com\">mango.com</a></li>\n<li>protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a></li>\n<li>relative: <a href=\"/other/papayas\">papayas</a></li>\n<li>relative with leading slash: <a href=\"/other/grapes\">grapes</a></li>\n</ul>\n<h2 id=\"things-with-src\" class=\"deep-link\"><a href=\"/other/#things-with-src\">things with src</a></h2>\n<ul>\n<li>absolute: <img src=\"https://guava.com/logo.png\"></li>\n<li>protocol-relative: <img src=\"//guava-relative.com/logo.png\"></li>\n<li>relative: <img src=\"/other/guava.png\"></li>\n<li>script, too: <script src=\"/other/banana.js\"></li>\n</ul>\n</script></li></ul>"
-      },
-      "isIndex": true,
-      "images": {
-        "guava": {
-          "title": "guava",
-          "href": "/other/guava.png",
-          "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-          "relativePath": "/other/guava.png",
-          "relativeDirName": "/other",
-          "processRelativePath": "test/fixtures/other/guava.png",
-          "stats": {
-            "dev": 16777220,
-            "mode": 33188,
-            "nlink": 1,
-            "uid": 501,
-            "gid": 20,
-            "rdev": 0,
-            "blksize": 4096,
-            "ino": 21547208,
-            "size": 1264961,
-            "blocks": 2472,
-            "atime": "2015-11-27T01:34:11.000Z",
-            "mtime": "2015-11-17T02:43:34.000Z",
-            "ctime": "2015-11-17T02:43:44.000Z",
-            "birthtime": "2015-11-17T02:43:34.000Z"
-          },
-          "dimensions": {
-            "width": 1094,
-            "height": 1080,
-            "type": "png"
-          },
-          "colors": [
-            "#df9f77",
-            "#fbfbfb",
-            "#e25554",
-            "#987a2f",
-            "#778150"
-          ]
-        }
-      },
-      "data": {}
-    },
-    "/other/papayas": {
-      "title": "Papayas",
-      "heading": null,
-      "section": "other",
-      "href": "/other/papayas",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/other/papayas.markdown",
-      "relativePath": "/other/papayas.markdown",
-      "relativeDirName": "/other",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3774007,
-        "size": 111,
-        "blocks": 8,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-08-06T04:24:58.000Z",
-        "ctime": "2015-08-06T04:24:58.000Z",
-        "birthtime": "2015-08-05T04:36:09.000Z"
-      },
-      "content": {
-        "original": "<!--\nkeywords: [fruit, tropical]\n-->\n\nWe contain enzymes that aid in human [digestion](https://digestion.com).\n",
-        "processed": "<meta name=\"keywords\" content=\"fruit,tropical\"><!--\nkeywords: [fruit, tropical]\n-->\n<p>We contain enzymes that aid in human <a href=\"https://digestion.com\">digestion</a>.</p>\n"
-      },
-      "keywords": [
-        "fruit",
-        "tropical"
-      ],
-      "isIndex": false,
-      "images": {
-        "guava": {
-          "title": "guava",
-          "href": "/other/guava.png",
-          "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
-          "relativePath": "/other/guava.png",
-          "relativeDirName": "/other",
-          "processRelativePath": "test/fixtures/other/guava.png",
-          "stats": {
-            "dev": 16777220,
-            "mode": 33188,
-            "nlink": 1,
-            "uid": 501,
-            "gid": 20,
-            "rdev": 0,
-            "blksize": 4096,
-            "ino": 21547208,
-            "size": 1264961,
-            "blocks": 2472,
-            "atime": "2015-11-27T01:34:11.000Z",
-            "mtime": "2015-11-17T02:43:34.000Z",
-            "ctime": "2015-11-17T02:43:44.000Z",
-            "birthtime": "2015-11-17T02:43:34.000Z"
-          },
-          "dimensions": {
-            "width": 1094,
-            "height": 1080,
-            "type": "png"
-          },
-          "colors": [
-            "#df9f77",
-            "#fbfbfb",
-            "#e25554",
-            "#987a2f",
-            "#778150"
-          ]
-        }
-      },
-      "data": {}
-    },
-    "/thumbs": {
-      "title": "Thumbs",
-      "heading": null,
-      "section": null,
-      "href": "/thumbs",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/index.html",
-      "relativePath": "/thumbs/index.html",
-      "relativeDirName": "/thumbs",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 21546320,
-        "size": 78,
-        "blocks": 8,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-11-25T06:04:48.000Z",
-        "ctime": "2015-11-25T06:04:48.000Z",
-        "birthtime": "2015-11-17T02:40:13.000Z"
-      },
-      "content": {
-        "original": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is {{somedata.name}}\n",
-        "processed": "<p>I am the thumbs index.</p>\n<p>Here comes a reference</p>\n<p>His name is cookie monster</p>\n"
-      },
-      "isIndex": true,
-      "images": {},
-      "data": {
-        "somedata": {
-          "name": "cookie monster",
-          "food": "cookies"
-        }
-      }
-    },
-    "/thumbs/gif": {
-      "title": "Gif",
-      "heading": null,
-      "section": "thumbs",
-      "href": "/thumbs/gif",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/index.md",
-      "relativePath": "/thumbs/gif/index.md",
-      "relativeDirName": "/thumbs/gif",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3871472,
-        "size": 0,
-        "blocks": 0,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-08-13T03:15:14.000Z",
-        "ctime": "2015-08-13T03:15:14.000Z",
-        "birthtime": "2015-08-13T03:15:14.000Z"
-      },
-      "content": {
-        "original": "",
-        "processed": ""
-      },
-      "isIndex": true,
-      "images": {
-        "thumb": {
-          "title": "thumb",
-          "href": "/thumbs/gif/thumb.gif",
-          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
-          "relativePath": "/thumbs/gif/thumb.gif",
-          "relativeDirName": "/thumbs/gif",
-          "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
-          "stats": {
-            "dev": 16777220,
-            "mode": 33184,
-            "nlink": 1,
-            "uid": 501,
-            "gid": 20,
-            "rdev": 0,
-            "blksize": 4096,
-            "ino": 18333433,
-            "size": 4269,
-            "blocks": 16,
-            "atime": "2015-11-27T01:34:11.000Z",
-            "mtime": "2015-10-29T02:28:41.000Z",
-            "ctime": "2015-10-29T02:29:12.000Z",
-            "birthtime": "2015-10-29T02:28:41.000Z"
-          },
-          "dimensions": {
-            "width": 200,
-            "height": 200,
-            "type": "gif"
-          },
-          "colors": [
-            "#f27494",
-            "#98723e",
-            "#fcf6f7",
-            "#b38e5c",
-            "#f4acc4"
-          ]
-        }
-      },
-      "data": {}
-    },
-    "/thumbs/jpg": {
-      "title": "Jpg",
-      "heading": null,
-      "section": "thumbs",
-      "href": "/thumbs/jpg",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/index.html",
-      "relativePath": "/thumbs/jpg/index.html",
-      "relativeDirName": "/thumbs/jpg",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3871485,
-        "size": 0,
-        "blocks": 0,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-08-13T03:15:40.000Z",
-        "ctime": "2015-08-13T03:15:40.000Z",
-        "birthtime": "2015-08-13T03:15:40.000Z"
-      },
-      "content": {
-        "original": "",
-        "processed": ""
-      },
-      "isIndex": true,
-      "images": {
-        "thumb": {
-          "title": "thumb",
-          "href": "/thumbs/jpg/thumb.jpg",
-          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
-          "relativePath": "/thumbs/jpg/thumb.jpg",
-          "relativeDirName": "/thumbs/jpg",
-          "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
-          "stats": {
-            "dev": 16777220,
-            "mode": 33188,
-            "nlink": 1,
-            "uid": 501,
-            "gid": 20,
-            "rdev": 0,
-            "blksize": 4096,
-            "ino": 18332267,
-            "size": 6690,
-            "blocks": 16,
-            "atime": "2015-11-27T01:34:11.000Z",
-            "mtime": "2015-10-29T02:24:27.000Z",
-            "ctime": "2015-10-29T02:24:32.000Z",
-            "birthtime": "2015-10-29T02:24:27.000Z"
-          },
-          "dimensions": {
-            "height": 170,
-            "width": 170,
-            "type": "jpg"
-          },
-          "exif": {
-            "startMarker": {
-              "offset": 0
-            },
-            "tags": {},
-            "imageSize": {
-              "height": 170,
-              "width": 170
-            }
-          },
-          "colors": [
-            "#909a3f",
-            "#e0e4dd",
-            "#443615",
-            "#d3d78d",
-            "#44540c"
-          ]
-        }
-      },
-      "data": {}
-    },
-    "/thumbs/png": {
-      "title": "Png",
-      "heading": null,
-      "section": "thumbs",
-      "href": "/thumbs/png",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/index.md",
-      "relativePath": "/thumbs/png/index.md",
-      "relativeDirName": "/thumbs/png",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3870942,
-        "size": 0,
-        "blocks": 0,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-08-13T02:20:40.000Z",
-        "ctime": "2015-08-13T02:20:40.000Z",
-        "birthtime": "2015-08-13T02:20:40.000Z"
-      },
-      "content": {
-        "original": "",
-        "processed": ""
-      },
-      "isIndex": true,
-      "images": {
-        "thumb": {
-          "title": "thumb",
-          "href": "/thumbs/png/thumb.png",
-          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
-          "relativePath": "/thumbs/png/thumb.png",
-          "relativeDirName": "/thumbs/png",
-          "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
-          "stats": {
-            "dev": 16777220,
-            "mode": 33188,
-            "nlink": 1,
-            "uid": 501,
-            "gid": 20,
-            "rdev": 0,
-            "blksize": 4096,
-            "ino": 18331027,
-            "size": 121957,
-            "blocks": 240,
-            "atime": "2015-11-27T01:34:11.000Z",
-            "mtime": "2015-10-29T02:18:38.000Z",
-            "ctime": "2015-10-29T02:18:46.000Z",
-            "birthtime": "2015-10-29T02:18:38.000Z"
-          },
-          "dimensions": {
-            "width": 501,
-            "height": 198,
-            "type": "png"
-          },
-          "colors": [
-            "#762c29",
-            "#1f1b1c",
-            "#b4cdbe",
-            "#e6412e",
-            "#758fa8"
-          ]
-        }
-      },
-      "data": {}
-    },
-    "/thumbs/svg": {
-      "title": "Svg",
-      "heading": null,
-      "section": "thumbs",
-      "href": "/thumbs/svg",
-      "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/index.md",
-      "relativePath": "/thumbs/svg/index.md",
-      "relativeDirName": "/thumbs/svg",
-      "stats": {
-        "dev": 16777220,
-        "mode": 33188,
-        "nlink": 1,
-        "uid": 501,
-        "gid": 20,
-        "rdev": 0,
-        "blksize": 4096,
-        "ino": 3871354,
-        "size": 0,
-        "blocks": 0,
-        "atime": "2015-11-27T01:34:12.000Z",
-        "mtime": "2015-08-13T03:07:58.000Z",
-        "ctime": "2015-08-13T03:07:58.000Z",
-        "birthtime": "2015-08-13T03:07:58.000Z"
-      },
-      "content": {
-        "original": "",
-        "processed": ""
-      },
-      "isIndex": true,
-      "images": {
-        "thumbnail": {
-          "title": "thumbnail",
-          "href": "/thumbs/svg/thumbnail.svg",
-          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
-          "relativePath": "/thumbs/svg/thumbnail.svg",
-          "relativeDirName": "/thumbs/svg",
-          "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
-          "stats": {
-            "dev": 16777220,
-            "mode": 33188,
-            "nlink": 1,
-            "uid": 501,
-            "gid": 20,
-            "rdev": 0,
-            "blksize": 4096,
-            "ino": 3870950,
-            "size": 29346,
-            "blocks": 64,
-            "atime": "2015-11-27T01:34:11.000Z",
-            "mtime": "2015-11-13T04:41:44.000Z",
-            "ctime": "2015-11-13T04:41:44.000Z",
-            "birthtime": "2015-08-13T02:21:10.000Z"
-          },
-          "dimensions": {
-            "width": 81,
-            "height": 49,
-            "type": "svg"
-          },
-          "colors": []
-        }
-      },
-      "data": {}
-    }
-  },
-  "sections": {
-    "other": {
-      "title": "Other",
-      "pages": {
+          "keywords": [
+            "fruit",
+            "doctors"
+          ],
+          "isIndex": false,
+          "images": {},
+          "data": {}
+        },
         "/other/UPPERCASE": {
           "title": "UPPERCASE",
           "heading": null,
           "section": "other",
           "href": "/other/UPPERCASE",
           "fullPath": "/Users/z/personal/juicer/test/fixtures/other/UPPERCASE.HTML",
+          "extension": ".HTML",
+          "filename": "UPPERCASE.HTML",
           "relativePath": "/other/UPPERCASE.HTML",
-          "relativeDirName": "/other",
+          "parent": "/other",
           "stats": {
             "dev": 16777220,
             "mode": 33188,
@@ -3186,7 +126,7 @@
             "ino": 3775416,
             "size": 14,
             "blocks": 8,
-            "atime": "2015-11-27T01:34:12.000Z",
+            "atime": "2015-11-27T04:02:06.000Z",
             "mtime": "2015-08-05T05:18:45.000Z",
             "ctime": "2015-08-05T05:18:45.000Z",
             "birthtime": "2015-08-05T05:18:17.000Z"
@@ -3202,7 +142,7 @@
               "href": "/other/guava.png",
               "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
               "relativePath": "/other/guava.png",
-              "relativeDirName": "/other",
+              "parent": "/other",
               "processRelativePath": "test/fixtures/other/guava.png",
               "stats": {
                 "dev": 16777220,
@@ -3215,7 +155,78 @@
                 "ino": 21547208,
                 "size": 1264961,
                 "blocks": 2472,
-                "atime": "2015-11-27T01:34:11.000Z",
+                "atime": "2015-11-27T04:02:06.000Z",
+                "mtime": "2015-11-17T02:43:34.000Z",
+                "ctime": "2015-11-17T02:43:44.000Z",
+                "birthtime": "2015-11-17T02:43:34.000Z"
+              },
+              "dimensions": {
+                "width": 1094,
+                "height": 1080,
+                "type": "png"
+              },
+              "colors": [
+                "#df9f77",
+                "#fbfbfb",
+                "#e25554",
+                "#987a2f",
+                "#778150"
+              ]
+            }
+          },
+          "data": {}
+        },
+        "/other": {
+          "title": "Other",
+          "heading": null,
+          "section": null,
+          "href": "/other",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/other/index.md",
+          "extension": ".md",
+          "filename": "index.md",
+          "relativePath": "/other/index.md",
+          "parent": "/other",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3774010,
+            "size": 560,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-11-17T04:27:45.000Z",
+            "ctime": "2015-11-17T04:27:45.000Z",
+            "birthtime": "2015-08-05T04:36:14.000Z"
+          },
+          "content": {
+            "original": "I am the other index.\n\nWhen juicer runs, it should update the relative paths, but not the absolute ones.\n\n## things with href\n\n- absolute: <a href=\"http://mango.com\">mango.com</a>\n- protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a>\n- relative: <a href=\"papayas\">papayas</a>\n- relative with leading slash: <a href=\"/grapes\">grapes</a>\n\n## things with src\n\n- absolute: <img src=\"https://guava.com/logo.png\">\n- protocol-relative: <img src=\"//guava-relative.com/logo.png\">\n- relative: <img src=\"guava.png\">\n- script, too: <script src=\"banana.js\">\n",
+            "processed": "<p>I am the other index.</p>\n<p>When juicer runs, it should update the relative paths, but not the absolute ones.</p>\n<h2 id=\"things-with-href\" class=\"deep-link\"><a href=\"/other/#things-with-href\">things with href</a></h2>\n<ul>\n<li>absolute: <a href=\"http://mango.com\">mango.com</a></li>\n<li>protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a></li>\n<li>relative: <a href=\"/other/papayas\">papayas</a></li>\n<li>relative with leading slash: <a href=\"/other/grapes\">grapes</a></li>\n</ul>\n<h2 id=\"things-with-src\" class=\"deep-link\"><a href=\"/other/#things-with-src\">things with src</a></h2>\n<ul>\n<li>absolute: <img src=\"https://guava.com/logo.png\"></li>\n<li>protocol-relative: <img src=\"//guava-relative.com/logo.png\"></li>\n<li>relative: <img src=\"/other/guava.png\"></li>\n<li>script, too: <script src=\"/other/banana.js\"></li>\n</ul>\n</script></li></ul>"
+          },
+          "isIndex": true,
+          "images": {
+            "guava": {
+              "title": "guava",
+              "href": "/other/guava.png",
+              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
+              "relativePath": "/other/guava.png",
+              "parent": "/other",
+              "processRelativePath": "test/fixtures/other/guava.png",
+              "stats": {
+                "dev": 16777220,
+                "mode": 33188,
+                "nlink": 1,
+                "uid": 501,
+                "gid": 20,
+                "rdev": 0,
+                "blksize": 4096,
+                "ino": 21547208,
+                "size": 1264961,
+                "blocks": 2472,
+                "atime": "2015-11-27T04:02:06.000Z",
                 "mtime": "2015-11-17T02:43:34.000Z",
                 "ctime": "2015-11-17T02:43:44.000Z",
                 "birthtime": "2015-11-17T02:43:34.000Z"
@@ -3242,8 +253,10 @@
           "section": "other",
           "href": "/other/papayas",
           "fullPath": "/Users/z/personal/juicer/test/fixtures/other/papayas.markdown",
+          "extension": ".markdown",
+          "filename": "papayas.markdown",
           "relativePath": "/other/papayas.markdown",
-          "relativeDirName": "/other",
+          "parent": "/other",
           "stats": {
             "dev": 16777220,
             "mode": 33188,
@@ -3255,7 +268,7 @@
             "ino": 3774007,
             "size": 111,
             "blocks": 8,
-            "atime": "2015-11-27T01:34:12.000Z",
+            "atime": "2015-11-27T04:02:06.000Z",
             "mtime": "2015-08-06T04:24:58.000Z",
             "ctime": "2015-08-06T04:24:58.000Z",
             "birthtime": "2015-08-05T04:36:09.000Z"
@@ -3275,7 +288,7 @@
               "href": "/other/guava.png",
               "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
               "relativePath": "/other/guava.png",
-              "relativeDirName": "/other",
+              "parent": "/other",
               "processRelativePath": "test/fixtures/other/guava.png",
               "stats": {
                 "dev": 16777220,
@@ -3288,7 +301,7 @@
                 "ino": 21547208,
                 "size": 1264961,
                 "blocks": 2472,
-                "atime": "2015-11-27T01:34:11.000Z",
+                "atime": "2015-11-27T04:02:06.000Z",
                 "mtime": "2015-11-17T02:43:34.000Z",
                 "ctime": "2015-11-17T02:43:44.000Z",
                 "birthtime": "2015-11-17T02:43:34.000Z"
@@ -3308,20 +321,56 @@
             }
           },
           "data": {}
-        }
-      }
-    },
-    "thumbs": {
-      "title": "Thumbs",
-      "pages": {
+        },
+        "/thumbs": {
+          "title": "Thumbs",
+          "heading": null,
+          "section": null,
+          "href": "/thumbs",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/index.html",
+          "extension": ".html",
+          "filename": "index.html",
+          "relativePath": "/thumbs/index.html",
+          "parent": "/thumbs",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 21546320,
+            "size": 83,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-11-27T03:42:10.000Z",
+            "ctime": "2015-11-27T03:42:10.000Z",
+            "birthtime": "2015-11-17T02:40:13.000Z"
+          },
+          "content": {
+            "original": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is {{data.somedata.name}}\n",
+            "processed": "<p>I am the thumbs index.</p>\n<p>Here comes a reference</p>\n<p>His name is cookie monster</p>\n"
+          },
+          "isIndex": true,
+          "images": {},
+          "data": {
+            "somedata": {
+              "name": "cookie monster",
+              "food": "cookies"
+            }
+          }
+        },
         "/thumbs/gif": {
           "title": "Gif",
           "heading": null,
           "section": "thumbs",
           "href": "/thumbs/gif",
           "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/index.md",
+          "extension": ".md",
+          "filename": "index.md",
           "relativePath": "/thumbs/gif/index.md",
-          "relativeDirName": "/thumbs/gif",
+          "parent": "/thumbs/gif",
           "stats": {
             "dev": 16777220,
             "mode": 33188,
@@ -3333,7 +382,7 @@
             "ino": 3871472,
             "size": 0,
             "blocks": 0,
-            "atime": "2015-11-27T01:34:12.000Z",
+            "atime": "2015-11-27T04:02:06.000Z",
             "mtime": "2015-08-13T03:15:14.000Z",
             "ctime": "2015-08-13T03:15:14.000Z",
             "birthtime": "2015-08-13T03:15:14.000Z"
@@ -3349,7 +398,7 @@
               "href": "/thumbs/gif/thumb.gif",
               "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
               "relativePath": "/thumbs/gif/thumb.gif",
-              "relativeDirName": "/thumbs/gif",
+              "parent": "/thumbs/gif",
               "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
               "stats": {
                 "dev": 16777220,
@@ -3362,7 +411,7 @@
                 "ino": 18333433,
                 "size": 4269,
                 "blocks": 16,
-                "atime": "2015-11-27T01:34:11.000Z",
+                "atime": "2015-11-27T04:02:06.000Z",
                 "mtime": "2015-10-29T02:28:41.000Z",
                 "ctime": "2015-10-29T02:29:12.000Z",
                 "birthtime": "2015-10-29T02:28:41.000Z"
@@ -3389,8 +438,10 @@
           "section": "thumbs",
           "href": "/thumbs/jpg",
           "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/index.html",
+          "extension": ".html",
+          "filename": "index.html",
           "relativePath": "/thumbs/jpg/index.html",
-          "relativeDirName": "/thumbs/jpg",
+          "parent": "/thumbs/jpg",
           "stats": {
             "dev": 16777220,
             "mode": 33188,
@@ -3402,7 +453,7 @@
             "ino": 3871485,
             "size": 0,
             "blocks": 0,
-            "atime": "2015-11-27T01:34:12.000Z",
+            "atime": "2015-11-27T04:02:06.000Z",
             "mtime": "2015-08-13T03:15:40.000Z",
             "ctime": "2015-08-13T03:15:40.000Z",
             "birthtime": "2015-08-13T03:15:40.000Z"
@@ -3418,7 +469,7 @@
               "href": "/thumbs/jpg/thumb.jpg",
               "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
               "relativePath": "/thumbs/jpg/thumb.jpg",
-              "relativeDirName": "/thumbs/jpg",
+              "parent": "/thumbs/jpg",
               "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
               "stats": {
                 "dev": 16777220,
@@ -3431,7 +482,7 @@
                 "ino": 18332267,
                 "size": 6690,
                 "blocks": 16,
-                "atime": "2015-11-27T01:34:11.000Z",
+                "atime": "2015-11-27T04:02:06.000Z",
                 "mtime": "2015-10-29T02:24:27.000Z",
                 "ctime": "2015-10-29T02:24:32.000Z",
                 "birthtime": "2015-10-29T02:24:27.000Z"
@@ -3468,8 +519,10 @@
           "section": "thumbs",
           "href": "/thumbs/png",
           "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/index.md",
+          "extension": ".md",
+          "filename": "index.md",
           "relativePath": "/thumbs/png/index.md",
-          "relativeDirName": "/thumbs/png",
+          "parent": "/thumbs/png",
           "stats": {
             "dev": 16777220,
             "mode": 33188,
@@ -3481,7 +534,7 @@
             "ino": 3870942,
             "size": 0,
             "blocks": 0,
-            "atime": "2015-11-27T01:34:12.000Z",
+            "atime": "2015-11-27T04:02:06.000Z",
             "mtime": "2015-08-13T02:20:40.000Z",
             "ctime": "2015-08-13T02:20:40.000Z",
             "birthtime": "2015-08-13T02:20:40.000Z"
@@ -3497,7 +550,7 @@
               "href": "/thumbs/png/thumb.png",
               "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
               "relativePath": "/thumbs/png/thumb.png",
-              "relativeDirName": "/thumbs/png",
+              "parent": "/thumbs/png",
               "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
               "stats": {
                 "dev": 16777220,
@@ -3510,7 +563,7 @@
                 "ino": 18331027,
                 "size": 121957,
                 "blocks": 240,
-                "atime": "2015-11-27T01:34:11.000Z",
+                "atime": "2015-11-27T04:02:06.000Z",
                 "mtime": "2015-10-29T02:18:38.000Z",
                 "ctime": "2015-10-29T02:18:46.000Z",
                 "birthtime": "2015-10-29T02:18:38.000Z"
@@ -3537,8 +590,10 @@
           "section": "thumbs",
           "href": "/thumbs/svg",
           "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/index.md",
+          "extension": ".md",
+          "filename": "index.md",
           "relativePath": "/thumbs/svg/index.md",
-          "relativeDirName": "/thumbs/svg",
+          "parent": "/thumbs/svg",
           "stats": {
             "dev": 16777220,
             "mode": 33188,
@@ -3550,7 +605,7 @@
             "ino": 3871354,
             "size": 0,
             "blocks": 0,
-            "atime": "2015-11-27T01:34:12.000Z",
+            "atime": "2015-11-27T04:02:06.000Z",
             "mtime": "2015-08-13T03:07:58.000Z",
             "ctime": "2015-08-13T03:07:58.000Z",
             "birthtime": "2015-08-13T03:07:58.000Z"
@@ -3566,7 +621,7 @@
               "href": "/thumbs/svg/thumbnail.svg",
               "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
               "relativePath": "/thumbs/svg/thumbnail.svg",
-              "relativeDirName": "/thumbs/svg",
+              "parent": "/thumbs/svg",
               "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
               "stats": {
                 "dev": 16777220,
@@ -3579,7 +634,7 @@
                 "ino": 3870950,
                 "size": 29346,
                 "blocks": 64,
-                "atime": "2015-11-27T01:34:11.000Z",
+                "atime": "2015-11-27T04:02:06.000Z",
                 "mtime": "2015-11-13T04:41:44.000Z",
                 "ctime": "2015-11-13T04:41:44.000Z",
                 "birthtime": "2015-08-13T02:21:10.000Z"
@@ -3596,5 +651,1206 @@
         }
       }
     }
+  },
+  "/apples": {
+    "title": "Apples!",
+    "heading": null,
+    "section": null,
+    "href": "/apples",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/apples.md",
+    "extension": ".md",
+    "filename": "apples.md",
+    "relativePath": "/apples.md",
+    "parent": "/",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3773988,
+      "size": 74,
+      "blocks": 8,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-08-06T04:24:09.000Z",
+      "ctime": "2015-08-06T04:24:09.000Z",
+      "birthtime": "2015-08-05T04:35:31.000Z"
+    },
+    "content": {
+      "original": "<!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n\nHow do you like them?\n",
+      "processed": "<meta name=\"title\" content=\"Apples!\"><meta name=\"keywords\" content=\"fruit,doctors\"><!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n<p>How do you like them?</p>\n"
+    },
+    "keywords": [
+      "fruit",
+      "doctors"
+    ],
+    "isIndex": false,
+    "images": {},
+    "data": {
+      ".juicer-cache": {
+        "/oranges": {
+          "title": "We are Oranges",
+          "heading": null,
+          "section": null,
+          "href": "/oranges",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/oranges.html",
+          "extension": ".html",
+          "filename": "oranges.html",
+          "relativePath": "/oranges.html",
+          "parent": "/",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3773990,
+            "size": 54,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-06T04:23:00.000Z",
+            "ctime": "2015-08-06T04:23:00.000Z",
+            "birthtime": "2015-08-05T04:35:40.000Z"
+          },
+          "content": {
+            "original": "<title>We are Oranges</title>\nNothing rhymes with us.\n",
+            "processed": "<title>We are Oranges</title>\nNothing rhymes with us.\n"
+          },
+          "isIndex": false,
+          "images": {},
+          "data": {}
+        },
+        "/apples": {
+          "title": "Apples!",
+          "heading": null,
+          "section": null,
+          "href": "/apples",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/apples.md",
+          "extension": ".md",
+          "filename": "apples.md",
+          "relativePath": "/apples.md",
+          "parent": "/",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3773988,
+            "size": 74,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-06T04:24:09.000Z",
+            "ctime": "2015-08-06T04:24:09.000Z",
+            "birthtime": "2015-08-05T04:35:31.000Z"
+          },
+          "content": {
+            "original": "<!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n\nHow do you like them?\n",
+            "processed": "<meta name=\"title\" content=\"Apples!\"><meta name=\"keywords\" content=\"fruit,doctors\"><!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n<p>How do you like them?</p>\n"
+          },
+          "keywords": [
+            "fruit",
+            "doctors"
+          ],
+          "isIndex": false,
+          "images": {},
+          "data": {}
+        },
+        "/other/UPPERCASE": {
+          "title": "UPPERCASE",
+          "heading": null,
+          "section": "other",
+          "href": "/other/UPPERCASE",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/other/UPPERCASE.HTML",
+          "extension": ".HTML",
+          "filename": "UPPERCASE.HTML",
+          "relativePath": "/other/UPPERCASE.HTML",
+          "parent": "/other",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3775416,
+            "size": 14,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-05T05:18:45.000Z",
+            "ctime": "2015-08-05T05:18:45.000Z",
+            "birthtime": "2015-08-05T05:18:17.000Z"
+          },
+          "content": {
+            "original": "I am so loud.\n",
+            "processed": "<p>I am so loud.</p>\n"
+          },
+          "isIndex": false,
+          "images": {
+            "guava": {
+              "title": "guava",
+              "href": "/other/guava.png",
+              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
+              "relativePath": "/other/guava.png",
+              "parent": "/other",
+              "processRelativePath": "test/fixtures/other/guava.png",
+              "stats": {
+                "dev": 16777220,
+                "mode": 33188,
+                "nlink": 1,
+                "uid": 501,
+                "gid": 20,
+                "rdev": 0,
+                "blksize": 4096,
+                "ino": 21547208,
+                "size": 1264961,
+                "blocks": 2472,
+                "atime": "2015-11-27T04:02:06.000Z",
+                "mtime": "2015-11-17T02:43:34.000Z",
+                "ctime": "2015-11-17T02:43:44.000Z",
+                "birthtime": "2015-11-17T02:43:34.000Z"
+              },
+              "dimensions": {
+                "width": 1094,
+                "height": 1080,
+                "type": "png"
+              },
+              "colors": [
+                "#df9f77",
+                "#fbfbfb",
+                "#e25554",
+                "#987a2f",
+                "#778150"
+              ]
+            }
+          },
+          "data": {}
+        },
+        "/other": {
+          "title": "Other",
+          "heading": null,
+          "section": null,
+          "href": "/other",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/other/index.md",
+          "extension": ".md",
+          "filename": "index.md",
+          "relativePath": "/other/index.md",
+          "parent": "/other",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3774010,
+            "size": 560,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-11-17T04:27:45.000Z",
+            "ctime": "2015-11-17T04:27:45.000Z",
+            "birthtime": "2015-08-05T04:36:14.000Z"
+          },
+          "content": {
+            "original": "I am the other index.\n\nWhen juicer runs, it should update the relative paths, but not the absolute ones.\n\n## things with href\n\n- absolute: <a href=\"http://mango.com\">mango.com</a>\n- protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a>\n- relative: <a href=\"papayas\">papayas</a>\n- relative with leading slash: <a href=\"/grapes\">grapes</a>\n\n## things with src\n\n- absolute: <img src=\"https://guava.com/logo.png\">\n- protocol-relative: <img src=\"//guava-relative.com/logo.png\">\n- relative: <img src=\"guava.png\">\n- script, too: <script src=\"banana.js\">\n",
+            "processed": "<p>I am the other index.</p>\n<p>When juicer runs, it should update the relative paths, but not the absolute ones.</p>\n<h2 id=\"things-with-href\" class=\"deep-link\"><a href=\"/other/#things-with-href\">things with href</a></h2>\n<ul>\n<li>absolute: <a href=\"http://mango.com\">mango.com</a></li>\n<li>protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a></li>\n<li>relative: <a href=\"/other/papayas\">papayas</a></li>\n<li>relative with leading slash: <a href=\"/other/grapes\">grapes</a></li>\n</ul>\n<h2 id=\"things-with-src\" class=\"deep-link\"><a href=\"/other/#things-with-src\">things with src</a></h2>\n<ul>\n<li>absolute: <img src=\"https://guava.com/logo.png\"></li>\n<li>protocol-relative: <img src=\"//guava-relative.com/logo.png\"></li>\n<li>relative: <img src=\"/other/guava.png\"></li>\n<li>script, too: <script src=\"/other/banana.js\"></li>\n</ul>\n</script></li></ul>"
+          },
+          "isIndex": true,
+          "images": {
+            "guava": {
+              "title": "guava",
+              "href": "/other/guava.png",
+              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
+              "relativePath": "/other/guava.png",
+              "parent": "/other",
+              "processRelativePath": "test/fixtures/other/guava.png",
+              "stats": {
+                "dev": 16777220,
+                "mode": 33188,
+                "nlink": 1,
+                "uid": 501,
+                "gid": 20,
+                "rdev": 0,
+                "blksize": 4096,
+                "ino": 21547208,
+                "size": 1264961,
+                "blocks": 2472,
+                "atime": "2015-11-27T04:02:06.000Z",
+                "mtime": "2015-11-17T02:43:34.000Z",
+                "ctime": "2015-11-17T02:43:44.000Z",
+                "birthtime": "2015-11-17T02:43:34.000Z"
+              },
+              "dimensions": {
+                "width": 1094,
+                "height": 1080,
+                "type": "png"
+              },
+              "colors": [
+                "#df9f77",
+                "#fbfbfb",
+                "#e25554",
+                "#987a2f",
+                "#778150"
+              ]
+            }
+          },
+          "data": {}
+        },
+        "/other/papayas": {
+          "title": "Papayas",
+          "heading": null,
+          "section": "other",
+          "href": "/other/papayas",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/other/papayas.markdown",
+          "extension": ".markdown",
+          "filename": "papayas.markdown",
+          "relativePath": "/other/papayas.markdown",
+          "parent": "/other",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3774007,
+            "size": 111,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-06T04:24:58.000Z",
+            "ctime": "2015-08-06T04:24:58.000Z",
+            "birthtime": "2015-08-05T04:36:09.000Z"
+          },
+          "content": {
+            "original": "<!--\nkeywords: [fruit, tropical]\n-->\n\nWe contain enzymes that aid in human [digestion](https://digestion.com).\n",
+            "processed": "<meta name=\"keywords\" content=\"fruit,tropical\"><!--\nkeywords: [fruit, tropical]\n-->\n<p>We contain enzymes that aid in human <a href=\"https://digestion.com\">digestion</a>.</p>\n"
+          },
+          "keywords": [
+            "fruit",
+            "tropical"
+          ],
+          "isIndex": false,
+          "images": {
+            "guava": {
+              "title": "guava",
+              "href": "/other/guava.png",
+              "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
+              "relativePath": "/other/guava.png",
+              "parent": "/other",
+              "processRelativePath": "test/fixtures/other/guava.png",
+              "stats": {
+                "dev": 16777220,
+                "mode": 33188,
+                "nlink": 1,
+                "uid": 501,
+                "gid": 20,
+                "rdev": 0,
+                "blksize": 4096,
+                "ino": 21547208,
+                "size": 1264961,
+                "blocks": 2472,
+                "atime": "2015-11-27T04:02:06.000Z",
+                "mtime": "2015-11-17T02:43:34.000Z",
+                "ctime": "2015-11-17T02:43:44.000Z",
+                "birthtime": "2015-11-17T02:43:34.000Z"
+              },
+              "dimensions": {
+                "width": 1094,
+                "height": 1080,
+                "type": "png"
+              },
+              "colors": [
+                "#df9f77",
+                "#fbfbfb",
+                "#e25554",
+                "#987a2f",
+                "#778150"
+              ]
+            }
+          },
+          "data": {}
+        },
+        "/thumbs": {
+          "title": "Thumbs",
+          "heading": null,
+          "section": null,
+          "href": "/thumbs",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/index.html",
+          "extension": ".html",
+          "filename": "index.html",
+          "relativePath": "/thumbs/index.html",
+          "parent": "/thumbs",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 21546320,
+            "size": 83,
+            "blocks": 8,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-11-27T03:42:10.000Z",
+            "ctime": "2015-11-27T03:42:10.000Z",
+            "birthtime": "2015-11-17T02:40:13.000Z"
+          },
+          "content": {
+            "original": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is {{data.somedata.name}}\n",
+            "processed": "<p>I am the thumbs index.</p>\n<p>Here comes a reference</p>\n<p>His name is cookie monster</p>\n"
+          },
+          "isIndex": true,
+          "images": {},
+          "data": {
+            "somedata": {
+              "name": "cookie monster",
+              "food": "cookies"
+            }
+          }
+        },
+        "/thumbs/gif": {
+          "title": "Gif",
+          "heading": null,
+          "section": "thumbs",
+          "href": "/thumbs/gif",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/index.md",
+          "extension": ".md",
+          "filename": "index.md",
+          "relativePath": "/thumbs/gif/index.md",
+          "parent": "/thumbs/gif",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3871472,
+            "size": 0,
+            "blocks": 0,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-13T03:15:14.000Z",
+            "ctime": "2015-08-13T03:15:14.000Z",
+            "birthtime": "2015-08-13T03:15:14.000Z"
+          },
+          "content": {
+            "original": "",
+            "processed": ""
+          },
+          "isIndex": true,
+          "images": {
+            "thumb": {
+              "title": "thumb",
+              "href": "/thumbs/gif/thumb.gif",
+              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
+              "relativePath": "/thumbs/gif/thumb.gif",
+              "parent": "/thumbs/gif",
+              "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
+              "stats": {
+                "dev": 16777220,
+                "mode": 33184,
+                "nlink": 1,
+                "uid": 501,
+                "gid": 20,
+                "rdev": 0,
+                "blksize": 4096,
+                "ino": 18333433,
+                "size": 4269,
+                "blocks": 16,
+                "atime": "2015-11-27T04:02:06.000Z",
+                "mtime": "2015-10-29T02:28:41.000Z",
+                "ctime": "2015-10-29T02:29:12.000Z",
+                "birthtime": "2015-10-29T02:28:41.000Z"
+              },
+              "dimensions": {
+                "width": 200,
+                "height": 200,
+                "type": "gif"
+              },
+              "colors": [
+                "#f27494",
+                "#98723e",
+                "#fcf6f7",
+                "#b38e5c",
+                "#f4acc4"
+              ]
+            }
+          },
+          "data": {}
+        },
+        "/thumbs/jpg": {
+          "title": "Jpg",
+          "heading": null,
+          "section": "thumbs",
+          "href": "/thumbs/jpg",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/index.html",
+          "extension": ".html",
+          "filename": "index.html",
+          "relativePath": "/thumbs/jpg/index.html",
+          "parent": "/thumbs/jpg",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3871485,
+            "size": 0,
+            "blocks": 0,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-13T03:15:40.000Z",
+            "ctime": "2015-08-13T03:15:40.000Z",
+            "birthtime": "2015-08-13T03:15:40.000Z"
+          },
+          "content": {
+            "original": "",
+            "processed": ""
+          },
+          "isIndex": true,
+          "images": {
+            "thumb": {
+              "title": "thumb",
+              "href": "/thumbs/jpg/thumb.jpg",
+              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
+              "relativePath": "/thumbs/jpg/thumb.jpg",
+              "parent": "/thumbs/jpg",
+              "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
+              "stats": {
+                "dev": 16777220,
+                "mode": 33188,
+                "nlink": 1,
+                "uid": 501,
+                "gid": 20,
+                "rdev": 0,
+                "blksize": 4096,
+                "ino": 18332267,
+                "size": 6690,
+                "blocks": 16,
+                "atime": "2015-11-27T04:02:06.000Z",
+                "mtime": "2015-10-29T02:24:27.000Z",
+                "ctime": "2015-10-29T02:24:32.000Z",
+                "birthtime": "2015-10-29T02:24:27.000Z"
+              },
+              "dimensions": {
+                "height": 170,
+                "width": 170,
+                "type": "jpg"
+              },
+              "exif": {
+                "startMarker": {
+                  "offset": 0
+                },
+                "tags": {},
+                "imageSize": {
+                  "height": 170,
+                  "width": 170
+                }
+              },
+              "colors": [
+                "#909a3f",
+                "#e0e4dd",
+                "#443615",
+                "#d3d78d",
+                "#44540c"
+              ]
+            }
+          },
+          "data": {}
+        },
+        "/thumbs/png": {
+          "title": "Png",
+          "heading": null,
+          "section": "thumbs",
+          "href": "/thumbs/png",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/index.md",
+          "extension": ".md",
+          "filename": "index.md",
+          "relativePath": "/thumbs/png/index.md",
+          "parent": "/thumbs/png",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3870942,
+            "size": 0,
+            "blocks": 0,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-13T02:20:40.000Z",
+            "ctime": "2015-08-13T02:20:40.000Z",
+            "birthtime": "2015-08-13T02:20:40.000Z"
+          },
+          "content": {
+            "original": "",
+            "processed": ""
+          },
+          "isIndex": true,
+          "images": {
+            "thumb": {
+              "title": "thumb",
+              "href": "/thumbs/png/thumb.png",
+              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
+              "relativePath": "/thumbs/png/thumb.png",
+              "parent": "/thumbs/png",
+              "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
+              "stats": {
+                "dev": 16777220,
+                "mode": 33188,
+                "nlink": 1,
+                "uid": 501,
+                "gid": 20,
+                "rdev": 0,
+                "blksize": 4096,
+                "ino": 18331027,
+                "size": 121957,
+                "blocks": 240,
+                "atime": "2015-11-27T04:02:06.000Z",
+                "mtime": "2015-10-29T02:18:38.000Z",
+                "ctime": "2015-10-29T02:18:46.000Z",
+                "birthtime": "2015-10-29T02:18:38.000Z"
+              },
+              "dimensions": {
+                "width": 501,
+                "height": 198,
+                "type": "png"
+              },
+              "colors": [
+                "#762c29",
+                "#1f1b1c",
+                "#b4cdbe",
+                "#e6412e",
+                "#758fa8"
+              ]
+            }
+          },
+          "data": {}
+        },
+        "/thumbs/svg": {
+          "title": "Svg",
+          "heading": null,
+          "section": "thumbs",
+          "href": "/thumbs/svg",
+          "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/index.md",
+          "extension": ".md",
+          "filename": "index.md",
+          "relativePath": "/thumbs/svg/index.md",
+          "parent": "/thumbs/svg",
+          "stats": {
+            "dev": 16777220,
+            "mode": 33188,
+            "nlink": 1,
+            "uid": 501,
+            "gid": 20,
+            "rdev": 0,
+            "blksize": 4096,
+            "ino": 3871354,
+            "size": 0,
+            "blocks": 0,
+            "atime": "2015-11-27T04:02:06.000Z",
+            "mtime": "2015-08-13T03:07:58.000Z",
+            "ctime": "2015-08-13T03:07:58.000Z",
+            "birthtime": "2015-08-13T03:07:58.000Z"
+          },
+          "content": {
+            "original": "",
+            "processed": ""
+          },
+          "isIndex": true,
+          "images": {
+            "thumbnail": {
+              "title": "thumbnail",
+              "href": "/thumbs/svg/thumbnail.svg",
+              "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
+              "relativePath": "/thumbs/svg/thumbnail.svg",
+              "parent": "/thumbs/svg",
+              "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
+              "stats": {
+                "dev": 16777220,
+                "mode": 33188,
+                "nlink": 1,
+                "uid": 501,
+                "gid": 20,
+                "rdev": 0,
+                "blksize": 4096,
+                "ino": 3870950,
+                "size": 29346,
+                "blocks": 64,
+                "atime": "2015-11-27T04:02:06.000Z",
+                "mtime": "2015-11-13T04:41:44.000Z",
+                "ctime": "2015-11-13T04:41:44.000Z",
+                "birthtime": "2015-08-13T02:21:10.000Z"
+              },
+              "dimensions": {
+                "width": 81,
+                "height": 49,
+                "type": "svg"
+              },
+              "colors": []
+            }
+          },
+          "data": {}
+        }
+      }
+    }
+  },
+  "/other/UPPERCASE": {
+    "title": "UPPERCASE",
+    "heading": null,
+    "section": "other",
+    "href": "/other/UPPERCASE",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/other/UPPERCASE.HTML",
+    "extension": ".HTML",
+    "filename": "UPPERCASE.HTML",
+    "relativePath": "/other/UPPERCASE.HTML",
+    "parent": "/other",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3775416,
+      "size": 14,
+      "blocks": 8,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-08-05T05:18:45.000Z",
+      "ctime": "2015-08-05T05:18:45.000Z",
+      "birthtime": "2015-08-05T05:18:17.000Z"
+    },
+    "content": {
+      "original": "I am so loud.\n",
+      "processed": "<p>I am so loud.</p>\n"
+    },
+    "isIndex": false,
+    "images": {
+      "guava": {
+        "title": "guava",
+        "href": "/other/guava.png",
+        "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
+        "relativePath": "/other/guava.png",
+        "parent": "/other",
+        "processRelativePath": "test/fixtures/other/guava.png",
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 21547208,
+          "size": 1264961,
+          "blocks": 2472,
+          "atime": "2015-11-27T04:02:10.000Z",
+          "mtime": "2015-11-17T02:43:34.000Z",
+          "ctime": "2015-11-17T02:43:44.000Z",
+          "birthtime": "2015-11-17T02:43:34.000Z"
+        },
+        "dimensions": {
+          "width": 1094,
+          "height": 1080,
+          "type": "png"
+        },
+        "colors": [
+          "#df9f77",
+          "#fbfbfb",
+          "#e25554",
+          "#987a2f",
+          "#778150"
+        ]
+      }
+    },
+    "data": {}
+  },
+  "/other": {
+    "title": "Other",
+    "heading": null,
+    "section": null,
+    "href": "/other",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/other/index.md",
+    "extension": ".md",
+    "filename": "index.md",
+    "relativePath": "/other/index.md",
+    "parent": "/other",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3774010,
+      "size": 560,
+      "blocks": 8,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-11-17T04:27:45.000Z",
+      "ctime": "2015-11-17T04:27:45.000Z",
+      "birthtime": "2015-08-05T04:36:14.000Z"
+    },
+    "content": {
+      "original": "I am the other index.\n\nWhen juicer runs, it should update the relative paths, but not the absolute ones.\n\n## things with href\n\n- absolute: <a href=\"http://mango.com\">mango.com</a>\n- protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a>\n- relative: <a href=\"papayas\">papayas</a>\n- relative with leading slash: <a href=\"/grapes\">grapes</a>\n\n## things with src\n\n- absolute: <img src=\"https://guava.com/logo.png\">\n- protocol-relative: <img src=\"//guava-relative.com/logo.png\">\n- relative: <img src=\"guava.png\">\n- script, too: <script src=\"banana.js\">\n",
+      "processed": "<p>I am the other index.</p>\n<p>When juicer runs, it should update the relative paths, but not the absolute ones.</p>\n<h2 id=\"things-with-href\" class=\"deep-link\"><a href=\"/other/#things-with-href\">things with href</a></h2>\n<ul>\n<li>absolute: <a href=\"http://mango.com\">mango.com</a></li>\n<li>protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a></li>\n<li>relative: <a href=\"/other/papayas\">papayas</a></li>\n<li>relative with leading slash: <a href=\"/other/grapes\">grapes</a></li>\n</ul>\n<h2 id=\"things-with-src\" class=\"deep-link\"><a href=\"/other/#things-with-src\">things with src</a></h2>\n<ul>\n<li>absolute: <img src=\"https://guava.com/logo.png\"></li>\n<li>protocol-relative: <img src=\"//guava-relative.com/logo.png\"></li>\n<li>relative: <img src=\"/other/guava.png\"></li>\n<li>script, too: <script src=\"/other/banana.js\"></li>\n</ul>\n</script></li></ul>"
+    },
+    "isIndex": true,
+    "images": {
+      "guava": {
+        "title": "guava",
+        "href": "/other/guava.png",
+        "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
+        "relativePath": "/other/guava.png",
+        "parent": "/other",
+        "processRelativePath": "test/fixtures/other/guava.png",
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 21547208,
+          "size": 1264961,
+          "blocks": 2472,
+          "atime": "2015-11-27T04:02:10.000Z",
+          "mtime": "2015-11-17T02:43:34.000Z",
+          "ctime": "2015-11-17T02:43:44.000Z",
+          "birthtime": "2015-11-17T02:43:34.000Z"
+        },
+        "dimensions": {
+          "width": 1094,
+          "height": 1080,
+          "type": "png"
+        },
+        "colors": [
+          "#df9f77",
+          "#fbfbfb",
+          "#e25554",
+          "#987a2f",
+          "#778150"
+        ]
+      }
+    },
+    "data": {}
+  },
+  "/other/papayas": {
+    "title": "Papayas",
+    "heading": null,
+    "section": "other",
+    "href": "/other/papayas",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/other/papayas.markdown",
+    "extension": ".markdown",
+    "filename": "papayas.markdown",
+    "relativePath": "/other/papayas.markdown",
+    "parent": "/other",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3774007,
+      "size": 111,
+      "blocks": 8,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-08-06T04:24:58.000Z",
+      "ctime": "2015-08-06T04:24:58.000Z",
+      "birthtime": "2015-08-05T04:36:09.000Z"
+    },
+    "content": {
+      "original": "<!--\nkeywords: [fruit, tropical]\n-->\n\nWe contain enzymes that aid in human [digestion](https://digestion.com).\n",
+      "processed": "<meta name=\"keywords\" content=\"fruit,tropical\"><!--\nkeywords: [fruit, tropical]\n-->\n<p>We contain enzymes that aid in human <a href=\"https://digestion.com\">digestion</a>.</p>\n"
+    },
+    "keywords": [
+      "fruit",
+      "tropical"
+    ],
+    "isIndex": false,
+    "images": {
+      "guava": {
+        "title": "guava",
+        "href": "/other/guava.png",
+        "fullPath": "/Users/z/personal/juicer/test/fixtures/other/guava.png",
+        "relativePath": "/other/guava.png",
+        "parent": "/other",
+        "processRelativePath": "test/fixtures/other/guava.png",
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 21547208,
+          "size": 1264961,
+          "blocks": 2472,
+          "atime": "2015-11-27T04:02:10.000Z",
+          "mtime": "2015-11-17T02:43:34.000Z",
+          "ctime": "2015-11-17T02:43:44.000Z",
+          "birthtime": "2015-11-17T02:43:34.000Z"
+        },
+        "dimensions": {
+          "width": 1094,
+          "height": 1080,
+          "type": "png"
+        },
+        "colors": [
+          "#df9f77",
+          "#fbfbfb",
+          "#e25554",
+          "#987a2f",
+          "#778150"
+        ]
+      }
+    },
+    "data": {}
+  },
+  "/thumbs": {
+    "title": "Thumbs",
+    "heading": null,
+    "section": null,
+    "href": "/thumbs",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/index.html",
+    "extension": ".html",
+    "filename": "index.html",
+    "relativePath": "/thumbs/index.html",
+    "parent": "/thumbs",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 21546320,
+      "size": 83,
+      "blocks": 8,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-11-27T03:42:10.000Z",
+      "ctime": "2015-11-27T03:42:10.000Z",
+      "birthtime": "2015-11-17T02:40:13.000Z"
+    },
+    "content": {
+      "original": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is {{data.somedata.name}}\n",
+      "processed": "<p>I am the thumbs index.</p>\n<p>Here comes a reference</p>\n<p>His name is cookie monster</p>\n"
+    },
+    "isIndex": true,
+    "images": {},
+    "data": {
+      "somedata": {
+        "name": "cookie monster",
+        "food": "cookies"
+      }
+    }
+  },
+  "/thumbs/gif": {
+    "title": "Gif",
+    "heading": null,
+    "section": "thumbs",
+    "href": "/thumbs/gif",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/index.md",
+    "extension": ".md",
+    "filename": "index.md",
+    "relativePath": "/thumbs/gif/index.md",
+    "parent": "/thumbs/gif",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3871472,
+      "size": 0,
+      "blocks": 0,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-08-13T03:15:14.000Z",
+      "ctime": "2015-08-13T03:15:14.000Z",
+      "birthtime": "2015-08-13T03:15:14.000Z"
+    },
+    "content": {
+      "original": "",
+      "processed": ""
+    },
+    "isIndex": true,
+    "images": {
+      "thumb": {
+        "title": "thumb",
+        "href": "/thumbs/gif/thumb.gif",
+        "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/gif/thumb.gif",
+        "relativePath": "/thumbs/gif/thumb.gif",
+        "parent": "/thumbs/gif",
+        "processRelativePath": "test/fixtures/thumbs/gif/thumb.gif",
+        "stats": {
+          "dev": 16777220,
+          "mode": 33184,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 18333433,
+          "size": 4269,
+          "blocks": 16,
+          "atime": "2015-11-27T04:02:10.000Z",
+          "mtime": "2015-10-29T02:28:41.000Z",
+          "ctime": "2015-10-29T02:29:12.000Z",
+          "birthtime": "2015-10-29T02:28:41.000Z"
+        },
+        "dimensions": {
+          "width": 200,
+          "height": 200,
+          "type": "gif"
+        },
+        "colors": [
+          "#f27494",
+          "#98723e",
+          "#fcf6f7",
+          "#b38e5c",
+          "#f4acc4"
+        ]
+      }
+    },
+    "data": {}
+  },
+  "/thumbs/jpg": {
+    "title": "Jpg",
+    "heading": null,
+    "section": "thumbs",
+    "href": "/thumbs/jpg",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/index.html",
+    "extension": ".html",
+    "filename": "index.html",
+    "relativePath": "/thumbs/jpg/index.html",
+    "parent": "/thumbs/jpg",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3871485,
+      "size": 0,
+      "blocks": 0,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-08-13T03:15:40.000Z",
+      "ctime": "2015-08-13T03:15:40.000Z",
+      "birthtime": "2015-08-13T03:15:40.000Z"
+    },
+    "content": {
+      "original": "",
+      "processed": ""
+    },
+    "isIndex": true,
+    "images": {
+      "thumb": {
+        "title": "thumb",
+        "href": "/thumbs/jpg/thumb.jpg",
+        "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/jpg/thumb.jpg",
+        "relativePath": "/thumbs/jpg/thumb.jpg",
+        "parent": "/thumbs/jpg",
+        "processRelativePath": "test/fixtures/thumbs/jpg/thumb.jpg",
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 18332267,
+          "size": 6690,
+          "blocks": 16,
+          "atime": "2015-11-27T04:02:10.000Z",
+          "mtime": "2015-10-29T02:24:27.000Z",
+          "ctime": "2015-10-29T02:24:32.000Z",
+          "birthtime": "2015-10-29T02:24:27.000Z"
+        },
+        "dimensions": {
+          "height": 170,
+          "width": 170,
+          "type": "jpg"
+        },
+        "exif": {
+          "startMarker": {
+            "offset": 0
+          },
+          "tags": {},
+          "imageSize": {
+            "height": 170,
+            "width": 170
+          }
+        },
+        "colors": [
+          "#909a3f",
+          "#e0e4dd",
+          "#443615",
+          "#d3d78d",
+          "#44540c"
+        ]
+      }
+    },
+    "data": {}
+  },
+  "/thumbs/png": {
+    "title": "Png",
+    "heading": null,
+    "section": "thumbs",
+    "href": "/thumbs/png",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/index.md",
+    "extension": ".md",
+    "filename": "index.md",
+    "relativePath": "/thumbs/png/index.md",
+    "parent": "/thumbs/png",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3870942,
+      "size": 0,
+      "blocks": 0,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-08-13T02:20:40.000Z",
+      "ctime": "2015-08-13T02:20:40.000Z",
+      "birthtime": "2015-08-13T02:20:40.000Z"
+    },
+    "content": {
+      "original": "",
+      "processed": ""
+    },
+    "isIndex": true,
+    "images": {
+      "thumb": {
+        "title": "thumb",
+        "href": "/thumbs/png/thumb.png",
+        "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/png/thumb.png",
+        "relativePath": "/thumbs/png/thumb.png",
+        "parent": "/thumbs/png",
+        "processRelativePath": "test/fixtures/thumbs/png/thumb.png",
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 18331027,
+          "size": 121957,
+          "blocks": 240,
+          "atime": "2015-11-27T04:02:10.000Z",
+          "mtime": "2015-10-29T02:18:38.000Z",
+          "ctime": "2015-10-29T02:18:46.000Z",
+          "birthtime": "2015-10-29T02:18:38.000Z"
+        },
+        "dimensions": {
+          "width": 501,
+          "height": 198,
+          "type": "png"
+        },
+        "colors": [
+          "#762c29",
+          "#1f1b1c",
+          "#b4cdbe",
+          "#e6412e",
+          "#758fa8"
+        ]
+      }
+    },
+    "data": {}
+  },
+  "/thumbs/svg": {
+    "title": "Svg",
+    "heading": null,
+    "section": "thumbs",
+    "href": "/thumbs/svg",
+    "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/index.md",
+    "extension": ".md",
+    "filename": "index.md",
+    "relativePath": "/thumbs/svg/index.md",
+    "parent": "/thumbs/svg",
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3871354,
+      "size": 0,
+      "blocks": 0,
+      "atime": "2015-11-27T04:02:10.000Z",
+      "mtime": "2015-08-13T03:07:58.000Z",
+      "ctime": "2015-08-13T03:07:58.000Z",
+      "birthtime": "2015-08-13T03:07:58.000Z"
+    },
+    "content": {
+      "original": "",
+      "processed": ""
+    },
+    "isIndex": true,
+    "images": {
+      "thumbnail": {
+        "title": "thumbnail",
+        "href": "/thumbs/svg/thumbnail.svg",
+        "fullPath": "/Users/z/personal/juicer/test/fixtures/thumbs/svg/thumbnail.svg",
+        "relativePath": "/thumbs/svg/thumbnail.svg",
+        "parent": "/thumbs/svg",
+        "processRelativePath": "test/fixtures/thumbs/svg/thumbnail.svg",
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 3870950,
+          "size": 29346,
+          "blocks": 64,
+          "atime": "2015-11-27T04:02:10.000Z",
+          "mtime": "2015-11-13T04:41:44.000Z",
+          "ctime": "2015-11-13T04:41:44.000Z",
+          "birthtime": "2015-08-13T02:21:10.000Z"
+        },
+        "dimensions": {
+          "width": 81,
+          "height": 49,
+          "type": "svg"
+        },
+        "colors": []
+      }
+    },
+    "data": {}
   }
 }

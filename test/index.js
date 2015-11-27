@@ -4,7 +4,7 @@ const assert = require('assert')
 const cheerio = require('cheerio')
 const _ = require('lodash')
 const juicer = require('..')
-var content
+var pages
 
 describe('juicer', function () {
   this.timeout(5000)
@@ -13,49 +13,16 @@ describe('juicer', function () {
     assert.equal(typeof juicer, 'function')
   })
 
-  it('expects a directory and a callback function', function (done) {
-    juicer(__dirname + '/fixtures', function (err, _content) {
+  it('takes a directory, then calls back with a `pages` object', function (done) {
+    juicer(__dirname + '/fixtures', function (err, _pages) {
       assert(!err)
-      content = _content
-      assert(content)
+      pages = _pages
+      assert(pages)
       done()
     })
   })
 
-  describe('sections', function () {
-    var sections
-
-    before(function () {
-      sections = content.sections
-    })
-
-    it('is an object', function () {
-      assert(sections)
-      assert.equal(typeof sections, 'object')
-    })
-
-    it('has one section for each top-level content directory', function () {
-      assert.deepEqual(
-        Object.keys(sections),
-        ['other', 'thumbs']
-      )
-    })
-
-    describe('each section', function () {
-      it('contains pages', function () {
-        assert(sections.other.pages)
-        assert.equal(typeof sections.other.pages, 'object')
-      })
-    })
-
-  })
-
   describe('pages', function () {
-    var pages
-
-    before(function () {
-      pages = content.pages
-    })
 
     it('is an object', function () {
       assert(pages)
@@ -63,19 +30,19 @@ describe('juicer', function () {
     })
 
     it('includes .md files', function () {
-      assert(pages['/apples'])
+      assert.equal(pages['/apples'].extension, '.md')
     })
 
     it('includes .markdown files', function () {
-      assert(pages['/other/papayas'])
+      assert.equal(pages['/other/papayas'].extension, '.markdown')
     })
 
     it('includes .html files', function () {
-      assert(pages['/oranges'])
+      assert.equal(pages['/oranges'].extension, '.html')
     })
 
     it('removes "index" suffix', function () {
-      assert(pages['/other'])
+      assert.equal(pages['/other'].relativePath, '/other/index.md')
     })
 
     it('is case insensitive when finding files', function () {

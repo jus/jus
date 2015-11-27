@@ -1,15 +1,13 @@
-const fs = require('fs')
-const path = require('path')
-const walkdir = require('walkdir')
-const stringify = require('json-stringify-safe')
-const patterns = require('./lib/patterns')
-const parsers = require('require-dir')('./lib/parsers')
-const associateImagesWithPages = require('./lib/page-images')
-const associateDataFilesWithPages = require('./lib/page-data')
-const deriveSections = require('./lib/sections')
+const fs              = require('fs')
+const path            = require('path')
+const walkdir         = require('walkdir')
+const stringify       = require('json-stringify-safe')
+const patterns        = require('./lib/patterns')
+const parsers         = require('require-dir')('./lib/parsers')
+const associate       = require('./lib/associate')
 
 module.exports = function juicer (baseDir, cb) {
-  var tryToWrapItUpInterval
+  var areWeDoneInterval
   var emitter = walkdir(baseDir)
   var dataFiles = {}
   var pages = {}
@@ -20,24 +18,17 @@ module.exports = function juicer (baseDir, cb) {
     var cache = require(cacheFile)
   }
 
-  function tryToWrapItUp() {
+  function areWeDone() {
     // Wait until all asynchronous image processing is complete
     if (imageCount !== Object.keys(images).length) return
 
-    clearInterval(tryToWrapItUpInterval)
+    clearInterval(areWeDoneInterval)
 
-    associateImagesWithPages(images, pages)
-    associateDataFilesWithPages(dataFiles, pages)
+    associate(pages, images, dataFiles)
 
-    var content = {
-      images:images,
-      pages:pages,
-      sections: deriveSections(pages)
-    }
+    fs.writeFileSync(cacheFile, stringify(pages, null, 2))
 
-    fs.writeFileSync(cacheFile, stringify(content, null, 2))
-
-    cb(null, content)
+    cb(null, pages)
   }
 
   emitter.on('file', function (filepath, stat) {
@@ -67,6 +58,6 @@ module.exports = function juicer (baseDir, cb) {
 
   emitter.on('end', function () {
     // Call repeatedly until all images are processed
-    tryToWrapItUpInterval = setInterval(tryToWrapItUp, 10)
+    areWeDoneInterval = setInterval(areWeDone, 10)
   })
 }
