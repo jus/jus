@@ -209,12 +209,13 @@ describe('juicer', function () {
         })
 
         it("attaches data from JSON files to pages in the same directory", function () {
-          assert.equal(page.data.somedata.name, "cookie monster")
+          assert.equal(page.data.some_json_data.name, "cookie monster")
+          assert.equal(page.data.some_json_data.food, "cookies")
         })
 
         it("attaches data from YML files too", function () {
-          assert.equal(page.data.foo.name, "Bert")
-          assert.equal(page.data.foo.friend, "Ernie")
+          assert.equal(page.data.some_yml_data.name, "Bert")
+          assert.equal(page.data.some_yml_data.friend, "Ernie")
         })
 
         it('injects data into templates', function(){
