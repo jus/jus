@@ -202,16 +202,24 @@ describe('juicer', function () {
       })
 
       describe('data', function(){
+        var page
+
+        before(function(){
+          page = pages['/thumbs']
+        })
+
         it("attaches data from JSON files to pages in the same directory", function () {
-          var page = pages['/thumbs']
-          assert(page.data)
-          assert(page.data.somedata)
           assert.equal(page.data.somedata.name, "cookie monster")
         })
 
-        it('injects data into templates, if present', function(){
-          var page = pages['/thumbs']
+        it("attaches data from YML files too", function () {
+          assert.equal(page.data.foo.name, "Bert")
+          assert.equal(page.data.foo.friend, "Ernie")
+        })
+
+        it('injects data into templates', function(){
           assert(page.content.processed.indexOf('His name is cookie monster') > -1)
+          assert(page.content.processed.indexOf('Another character is Bert') > -1)
         })
       })
 

@@ -45,6 +45,7 @@
     "html-frontmatter": "^1.5.1",
     "image-palette": "^1.0.3",
     "image-size": "^0.4.0",
+    "js-yaml": "^3.4.6",
     "json-stringify-safe": "^5.0.1",
     "lodash": "^3.10.1",
     "marky-markdown": "^5.4.0",
