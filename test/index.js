@@ -45,14 +45,18 @@ describe('juicer', function () {
       assert.equal(pages['/other'].relativePath, '/other/index.md')
     })
 
+    it('find the top-level index page', function () {
+      assert(pages['/'])
+    })
+
     it('is case insensitive when finding files', function () {
       assert(pages['/other/UPPERCASE'])
     })
 
     describe('each page', function () {
 
-      it('infers `section` from top-level directory', function () {
-        assert.equal(pages['/other/papayas'].section, 'other')
+      it('infers `parentName` from top-level directory', function () {
+        assert.equal(pages['/other/papayas'].parentName, 'other')
       })
 
       it('has a relativePath', function () {
@@ -211,16 +215,28 @@ describe('juicer', function () {
         })
       })
 
-      describe('section', function(){
-        it('is derived from top-level directory', function () {
-          assert.equal(pages['/other/papayas'].section, 'other')
+      describe('ancestors', function(){
+        it('does not have a parent if in top-level directory', function () {
+          var page = pages['/']
+          assert(page)
+          assert(!page.parent)
         })
 
-        it('is null for top-level files', function () {
-          assert(!pages['/apples'].section)
+        it('has a `parent` and `parentName` if nested', function () {
+          var page = pages['/other/papayas']
+          assert.equal(page.parent, '/other')
+          assert.equal(page.parentName, 'other')
+        })
+
+        it('has a `grandparent` and `grandparentName` if deeply nested', function () {
+          var page = pages['/other/nested/coconut']
+          assert.equal(page.parent, '/other/nested')
+          assert.equal(page.parentName, 'nested')
+
+          assert.equal(page.grandparent, '/other')
+          assert.equal(page.grandparentName, 'other')
         })
       })
-
     })
   })
 })

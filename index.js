@@ -14,9 +14,7 @@ module.exports = function juicer (baseDir, cb) {
   var images = {}
   var imageCount = 0
   var cacheFile = path.join(baseDir, '/.juicer-cache.json')
-  if (fs.existsSync(cacheFile)) {
-    var cache = require(cacheFile)
-  }
+  if (fs.existsSync(cacheFile)) var cache = require(cacheFile)
 
   function areWeDone() {
     // Wait until all asynchronous image processing is complete
@@ -26,7 +24,7 @@ module.exports = function juicer (baseDir, cb) {
 
     associate(pages, images, dataFiles)
 
-    fs.writeFileSync(cacheFile, stringify(pages, null, 2))
+    fs.writeFileSync(cacheFile, stringify({pages: pages, images: images}))
 
     cb(null, pages)
   }
