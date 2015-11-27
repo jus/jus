@@ -222,6 +222,11 @@ describe('juicer', function () {
           assert(page.content.processed.indexOf('His name is cookie monster') > -1)
           assert(page.content.processed.indexOf('Another character is Bert') > -1)
         })
+
+        it('includes the `pages` object in the context', function(){
+          assert(page.content.processed.indexOf('<li>/other</li>') > -1)
+          assert(page.content.processed.indexOf('<li>/other/papayas</li>') > -1)
+        })
       })
 
       describe('ancestors', function(){
