@@ -1,7 +1,7 @@
 const fs              = require('fs')
 const path            = require('path')
 const walkdir         = require('walkdir')
-const stringify       = require('json-stringify-safe')
+const stringify       = JSON.stringify // require('json-stringify-safe')
 const patterns        = require('./lib/patterns')
 const parsers         = require('require-dir')('./lib/parsers')
 const associate       = require('./lib/associate')
