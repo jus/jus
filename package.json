@@ -47,6 +47,7 @@
     "json-stringify-safe": "^5.0.1",
     "lodash": "^3.10.1",
     "marky-markdown": "^5.4.0",
+    "require-dir": "^0.3.0",
     "titlecase": "^1.0.2",
     "walkdir": "0.0.10"
   }

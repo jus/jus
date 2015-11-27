@@ -2,20 +2,16 @@ const fs = require('fs')
 const path = require('path')
 const walkdir = require('walkdir')
 const stringify = require('json-stringify-safe')
-
 const patterns = require('./lib/patterns')
-const parseJSON = require('./lib/parsers/json')
-const parsePage = require('./lib/parsers/page')
-const parseImage = require('./lib/parsers/image')
+const parsers = require('require-dir')('./lib/parsers')
 const associateImagesWithPages = require('./lib/page-images')
-const associateDataWithPages = require('./lib/page-data')
-const injectDataIntoTemplates = require('./lib/templates')
+const associateDataFilesWithPages = require('./lib/page-data')
 const deriveSections = require('./lib/sections')
 
 module.exports = function juicer (baseDir, cb) {
   var tryToWrapItUpInterval
   var emitter = walkdir(baseDir)
-  var data = {}
+  var dataFiles = {}
   var pages = {}
   var images = {}
   var imageCount = 0
@@ -31,8 +27,7 @@ module.exports = function juicer (baseDir, cb) {
     clearInterval(tryToWrapItUpInterval)
 
     associateImagesWithPages(images, pages)
-    associateDataWithPages(data, pages)
-    injectDataIntoTemplates(pages)
+    associateDataFilesWithPages(dataFiles, pages)
 
     var content = {
       images:images,
@@ -49,26 +44,25 @@ module.exports = function juicer (baseDir, cb) {
     // Skip stuff like node_modules
     if (filepath.match(patterns.blacklist)) return
 
-    // Extract metadata from HTML and Markdown files
+    // Extract metadata from HTML, HBS, and Markdown files
     if (filepath.match(patterns.page)) {
-      var page = parsePage(filepath, baseDir, cache)
+      var page = parsers.page(filepath, baseDir, cache)
       pages[page.href] = page
     }
 
     // Extract metadata from image files
     if (filepath.match(patterns.image)) {
       imageCount++
-      parseImage(filepath, baseDir, cache, function(err, image){
+      parsers.image(filepath, baseDir, cache, function(err, image){
         images[image.href] = image
       })
     }
 
     // Extract metadata from JSON files
-    if (filepath.match(patterns.json)) {
-      var json = parseJSON(filepath, baseDir)
-      data[json.href] = json
+    if (filepath.match(patterns.dataFile)) {
+      var data = parsers.data(filepath, baseDir)
+      dataFiles[data.href] = data
     }
-
   })
 
   emitter.on('end', function () {
