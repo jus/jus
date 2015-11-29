@@ -3,18 +3,18 @@
 const assert = require('assert')
 const cheerio = require('cheerio')
 const _ = require('lodash')
-const juicer = require('..')
+const jus = require('..')
 var pages
 
-describe('juicer', function () {
+describe('jus', function () {
   this.timeout(5000)
 
   it('is a function', function () {
-    assert.equal(typeof juicer, 'function')
+    assert.equal(typeof jus, 'function')
   })
 
   it('takes a directory, then calls back with a `pages` object', function (done) {
-    juicer(__dirname + '/fixtures', function (err, _pages) {
+    jus(__dirname + '/fixtures', function (err, _pages) {
       assert(!err)
       pages = _pages
       assert(pages)

@@ -1,6 +1,6 @@
 I am the other index.
 
-When juicer runs, it should update the relative paths, but not the absolute ones.
+When jus runs, it should update the relative paths, but not the absolute ones.
 
 ## things with href
 
