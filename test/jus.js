@@ -214,6 +214,12 @@ describe('jus', function () {
           assert(~content.processed.indexOf('background: yellow;'))
         })
 
+        it('compiles Stylus', function(){
+          var content = files['/styles-stylus.css'].content
+          assert(~content.original.indexOf('background color'))
+          assert(~content.processed.indexOf('background: #f00;'))
+        })
+
       })
 
       describe('data', function(){

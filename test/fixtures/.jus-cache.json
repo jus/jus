@@ -23,7 +23,7 @@
       "ino": 3773988,
       "size": 74,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-12-06T02:38:54.000Z",
       "ctime": "2015-12-06T02:38:54.000Z",
       "birthtime": "2015-08-05T04:35:31.000Z"
@@ -65,7 +65,7 @@
       "ino": 23200906,
       "size": 24,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-11-27T05:36:46.000Z",
       "ctime": "2015-11-27T05:36:46.000Z",
       "birthtime": "2015-11-27T05:36:46.000Z"
@@ -103,7 +103,7 @@
       "ino": 3773990,
       "size": 54,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-08-06T04:23:00.000Z",
       "ctime": "2015-08-06T04:23:00.000Z",
       "birthtime": "2015-08-05T04:35:40.000Z"
@@ -141,7 +141,7 @@
       "ino": 24612223,
       "size": 42,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-12-06T19:12:07.000Z",
       "ctime": "2015-12-06T19:12:07.000Z",
       "birthtime": "2015-12-06T19:11:47.000Z"
@@ -149,6 +149,41 @@
     "content": {
       "original": "$color: yellow\n\nbody\n  background: $color\n",
       "processed": "body {\n  background: yellow; }\n"
+    },
+    "isDone": true
+  },
+  {
+    "kind": "stylesheet",
+    "href": "/styles-stylus.css",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/styles-stylus.styl",
+      "relative": "/styles-stylus.styl",
+      "processRelative": "test/fixtures/styles-stylus.styl",
+      "root": "/",
+      "dir": "/",
+      "base": "styles-stylus.styl",
+      "ext": ".styl",
+      "name": "styles-stylus"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 24622562,
+      "size": 37,
+      "blocks": 8,
+      "atime": "2015-12-06T20:16:34.000Z",
+      "mtime": "2015-12-06T20:09:19.000Z",
+      "ctime": "2015-12-06T20:09:19.000Z",
+      "birthtime": "2015-12-06T20:08:37.000Z"
+    },
+    "content": {
+      "original": "color = red\n\nbody\n  background color\n",
+      "processed": "body {\n  background: #f00;\n}\n"
     },
     "isDone": true
   },
@@ -176,7 +211,7 @@
       "ino": 24602929,
       "size": 47,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-12-06T19:11:35.000Z",
       "ctime": "2015-12-06T19:11:35.000Z",
       "birthtime": "2015-12-06T06:46:03.000Z"
@@ -211,7 +246,7 @@
       "ino": 3775416,
       "size": 14,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-08-05T05:18:45.000Z",
       "ctime": "2015-08-05T05:18:45.000Z",
       "birthtime": "2015-08-05T05:18:17.000Z"
@@ -247,7 +282,7 @@
           "ino": 21547208,
           "size": 1264961,
           "blocks": 2472,
-          "atime": "2015-12-06T19:49:23.000Z",
+          "atime": "2015-12-06T20:16:33.000Z",
           "mtime": "2015-11-17T02:43:34.000Z",
           "ctime": "2015-11-17T02:43:44.000Z",
           "birthtime": "2015-11-17T02:43:34.000Z"
@@ -294,7 +329,7 @@
       "ino": 21547208,
       "size": 1264961,
       "blocks": 2472,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-11-17T02:43:34.000Z",
       "ctime": "2015-11-17T02:43:44.000Z",
       "birthtime": "2015-11-17T02:43:34.000Z"
@@ -338,7 +373,7 @@
       "ino": 3774010,
       "size": 557,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-12-06T03:00:14.000Z",
       "ctime": "2015-12-06T03:00:14.000Z",
       "birthtime": "2015-08-05T04:36:14.000Z"
@@ -374,7 +409,7 @@
           "ino": 21547208,
           "size": 1264961,
           "blocks": 2472,
-          "atime": "2015-12-06T19:49:23.000Z",
+          "atime": "2015-12-06T20:16:33.000Z",
           "mtime": "2015-11-17T02:43:34.000Z",
           "ctime": "2015-11-17T02:43:44.000Z",
           "birthtime": "2015-11-17T02:43:34.000Z"
@@ -421,7 +456,7 @@
       "ino": 3774007,
       "size": 111,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-08-06T04:24:58.000Z",
       "ctime": "2015-08-06T04:24:58.000Z",
       "birthtime": "2015-08-05T04:36:09.000Z"
@@ -461,7 +496,7 @@
           "ino": 21547208,
           "size": 1264961,
           "blocks": 2472,
-          "atime": "2015-12-06T19:49:23.000Z",
+          "atime": "2015-12-06T20:16:33.000Z",
           "mtime": "2015-11-17T02:43:34.000Z",
           "ctime": "2015-11-17T02:43:44.000Z",
           "birthtime": "2015-11-17T02:43:34.000Z"
@@ -508,14 +543,14 @@
       "ino": 23200909,
       "size": 234,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-12-06T05:30:04.000Z",
       "ctime": "2015-12-06T05:30:04.000Z",
       "birthtime": "2015-11-27T05:36:46.000Z"
     },
     "content": {
       "original": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is {{page.data.some_json_data.name}}\n\nAnother character is {{page.data.some_yml_data.name}}\n\nPages:\n\n<ul>\n  {{#each pages}}\n    <li class=\"page\">{{href}}</li>\n  {{/each}}\n</ul>\n",
-      "processed": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is cookie monster\n\nAnother character is Bert\n\nPages:\n\n<ul>\n    <li class=\"page\">/apples</li>\n    <li class=\"page\">/oranges</li>\n    <li class=\"page\">/</li>\n    <li class=\"page\">/other/UPPERCASE</li>\n    <li class=\"page\">/other</li>\n    <li class=\"page\">/other/papayas</li>\n    <li class=\"page\">/thumbs</li>\n    <li class=\"page\">/other/nested/coconut</li>\n    <li class=\"page\">/thumbs/gif</li>\n    <li class=\"page\">/thumbs/jpg</li>\n    <li class=\"page\">/thumbs/png</li>\n    <li class=\"page\">/thumbs/svg</li>\n</ul>\n"
+      "processed": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is cookie monster\n\nAnother character is Bert\n\nPages:\n\n<ul>\n    <li class=\"page\">/apples</li>\n    <li class=\"page\">/</li>\n    <li class=\"page\">/oranges</li>\n    <li class=\"page\">/other/UPPERCASE</li>\n    <li class=\"page\">/other</li>\n    <li class=\"page\">/other/papayas</li>\n    <li class=\"page\">/thumbs</li>\n    <li class=\"page\">/other/nested/coconut</li>\n    <li class=\"page\">/thumbs/gif</li>\n    <li class=\"page\">/thumbs/jpg</li>\n    <li class=\"page\">/thumbs/png</li>\n    <li class=\"page\">/thumbs/svg</li>\n</ul>\n"
     },
     "title": "Index",
     "isDone": true,
@@ -555,7 +590,7 @@
       "ino": 23200910,
       "size": 52,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-11-27T05:36:46.000Z",
       "ctime": "2015-11-27T05:36:46.000Z",
       "birthtime": "2015-11-27T05:36:46.000Z"
@@ -591,7 +626,7 @@
       "ino": 23200911,
       "size": 25,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-11-27T05:36:46.000Z",
       "ctime": "2015-11-27T05:36:46.000Z",
       "birthtime": "2015-11-27T05:36:46.000Z"
@@ -627,7 +662,7 @@
       "ino": 23200908,
       "size": 6,
       "blocks": 8,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-11-27T05:36:46.000Z",
       "ctime": "2015-11-27T05:36:46.000Z",
       "birthtime": "2015-11-27T05:36:46.000Z"
@@ -665,7 +700,7 @@
       "ino": 3871472,
       "size": 0,
       "blocks": 0,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-08-13T03:15:14.000Z",
       "ctime": "2015-08-13T03:15:14.000Z",
       "birthtime": "2015-08-13T03:15:14.000Z"
@@ -701,7 +736,7 @@
           "ino": 18333433,
           "size": 4269,
           "blocks": 16,
-          "atime": "2015-12-06T19:49:23.000Z",
+          "atime": "2015-12-06T20:16:33.000Z",
           "mtime": "2015-10-29T02:28:41.000Z",
           "ctime": "2015-10-29T02:29:12.000Z",
           "birthtime": "2015-10-29T02:28:41.000Z"
@@ -748,7 +783,7 @@
       "ino": 18333433,
       "size": 4269,
       "blocks": 16,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-10-29T02:28:41.000Z",
       "ctime": "2015-10-29T02:29:12.000Z",
       "birthtime": "2015-10-29T02:28:41.000Z"
@@ -765,60 +800,6 @@
       "#fcf6f7",
       "#b38e5c",
       "#f4acc4"
-    ],
-    "isDone": true
-  },
-  {
-    "kind": "image",
-    "href": "/thumbs/jpg/thumb.jpg",
-    "path": {
-      "full": "/Users/z/personal/jus/test/fixtures/thumbs/jpg/thumb.jpg",
-      "relative": "/thumbs/jpg/thumb.jpg",
-      "processRelative": "test/fixtures/thumbs/jpg/thumb.jpg",
-      "root": "/",
-      "dir": "/thumbs/jpg",
-      "base": "thumb.jpg",
-      "ext": ".jpg",
-      "name": "thumb"
-    },
-    "stats": {
-      "dev": 16777220,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4096,
-      "ino": 18332267,
-      "size": 6690,
-      "blocks": 16,
-      "atime": "2015-12-06T19:49:23.000Z",
-      "mtime": "2015-10-29T02:24:27.000Z",
-      "ctime": "2015-10-29T02:24:32.000Z",
-      "birthtime": "2015-10-29T02:24:27.000Z"
-    },
-    "title": "thumb",
-    "dimensions": {
-      "height": 170,
-      "width": 170,
-      "type": "jpg"
-    },
-    "exif": {
-      "startMarker": {
-        "offset": 0
-      },
-      "tags": {},
-      "imageSize": {
-        "height": 170,
-        "width": 170
-      }
-    },
-    "colors": [
-      "#909a3f",
-      "#e0e4dd",
-      "#443615",
-      "#d3d78d",
-      "#44540c"
     ],
     "isDone": true
   },
@@ -846,7 +827,7 @@
       "ino": 3871485,
       "size": 0,
       "blocks": 0,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-08-13T03:15:40.000Z",
       "ctime": "2015-08-13T03:15:40.000Z",
       "birthtime": "2015-08-13T03:15:40.000Z"
@@ -882,7 +863,7 @@
           "ino": 18332267,
           "size": 6690,
           "blocks": 16,
-          "atime": "2015-12-06T19:49:23.000Z",
+          "atime": "2015-12-06T20:16:33.000Z",
           "mtime": "2015-10-29T02:24:27.000Z",
           "ctime": "2015-10-29T02:24:32.000Z",
           "birthtime": "2015-10-29T02:24:27.000Z"
@@ -916,6 +897,60 @@
     "data": {}
   },
   {
+    "kind": "image",
+    "href": "/thumbs/jpg/thumb.jpg",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/jpg/thumb.jpg",
+      "relative": "/thumbs/jpg/thumb.jpg",
+      "processRelative": "test/fixtures/thumbs/jpg/thumb.jpg",
+      "root": "/",
+      "dir": "/thumbs/jpg",
+      "base": "thumb.jpg",
+      "ext": ".jpg",
+      "name": "thumb"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 18332267,
+      "size": 6690,
+      "blocks": 16,
+      "atime": "2015-12-06T20:16:33.000Z",
+      "mtime": "2015-10-29T02:24:27.000Z",
+      "ctime": "2015-10-29T02:24:32.000Z",
+      "birthtime": "2015-10-29T02:24:27.000Z"
+    },
+    "title": "thumb",
+    "dimensions": {
+      "height": 170,
+      "width": 170,
+      "type": "jpg"
+    },
+    "exif": {
+      "startMarker": {
+        "offset": 0
+      },
+      "tags": {},
+      "imageSize": {
+        "height": 170,
+        "width": 170
+      }
+    },
+    "colors": [
+      "#909a3f",
+      "#e0e4dd",
+      "#443615",
+      "#d3d78d",
+      "#44540c"
+    ],
+    "isDone": true
+  },
+  {
     "kind": "page",
     "href": "/thumbs/png",
     "path": {
@@ -939,7 +974,7 @@
       "ino": 3870942,
       "size": 0,
       "blocks": 0,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-08-13T02:20:40.000Z",
       "ctime": "2015-08-13T02:20:40.000Z",
       "birthtime": "2015-08-13T02:20:40.000Z"
@@ -975,7 +1010,7 @@
           "ino": 18331027,
           "size": 121957,
           "blocks": 240,
-          "atime": "2015-12-06T19:49:23.000Z",
+          "atime": "2015-12-06T20:16:33.000Z",
           "mtime": "2015-10-29T02:18:38.000Z",
           "ctime": "2015-10-29T02:18:46.000Z",
           "birthtime": "2015-10-29T02:18:38.000Z"
@@ -1022,7 +1057,7 @@
       "ino": 18331027,
       "size": 121957,
       "blocks": 240,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-10-29T02:18:38.000Z",
       "ctime": "2015-10-29T02:18:46.000Z",
       "birthtime": "2015-10-29T02:18:38.000Z"
@@ -1066,7 +1101,7 @@
       "ino": 3871354,
       "size": 0,
       "blocks": 0,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-08-13T03:07:58.000Z",
       "ctime": "2015-08-13T03:07:58.000Z",
       "birthtime": "2015-08-13T03:07:58.000Z"
@@ -1102,7 +1137,7 @@
           "ino": 3870950,
           "size": 29346,
           "blocks": 64,
-          "atime": "2015-12-06T19:49:23.000Z",
+          "atime": "2015-12-06T20:16:33.000Z",
           "mtime": "2015-11-13T04:41:44.000Z",
           "ctime": "2015-11-13T04:41:44.000Z",
           "birthtime": "2015-08-13T02:21:10.000Z"
@@ -1207,7 +1242,7 @@
       "ino": 3870950,
       "size": 29346,
       "blocks": 64,
-      "atime": "2015-12-06T19:49:23.000Z",
+      "atime": "2015-12-06T20:16:33.000Z",
       "mtime": "2015-11-13T04:41:44.000Z",
       "ctime": "2015-11-13T04:41:44.000Z",
       "birthtime": "2015-08-13T02:21:10.000Z"
