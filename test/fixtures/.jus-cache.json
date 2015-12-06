@@ -1,0 +1,1218 @@
+[
+  {
+    "kind": "page",
+    "href": "/apples",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/apples.md",
+      "relative": "/apples.md",
+      "processRelative": "test/fixtures/apples.md",
+      "root": "/",
+      "dir": "/",
+      "base": "apples.md",
+      "ext": ".md",
+      "name": "apples"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3773988,
+      "size": 74,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-12-06T02:38:54.000Z",
+      "ctime": "2015-12-06T02:38:54.000Z",
+      "birthtime": "2015-08-05T04:35:31.000Z"
+    },
+    "content": {
+      "original": "<!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n\nHow do you like them?\n",
+      "processed": "<meta name=\"title\" content=\"Apples!\"><meta name=\"keywords\" content=\"fruit,doctors\"><!--\ntitle: Apples!\nkeywords: [fruit, doctors]\n-->\n<p>How do you like them?</p>\n"
+    },
+    "title": "Apples!",
+    "keywords": [
+      "fruit",
+      "doctors"
+    ],
+    "isDone": true,
+    "images": {},
+    "data": {}
+  },
+  {
+    "kind": "page",
+    "href": "/",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/index.md",
+      "relative": "/index.md",
+      "processRelative": "test/fixtures/index.md",
+      "root": "/",
+      "dir": "/",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 23200906,
+      "size": 24,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-11-27T05:36:46.000Z",
+      "ctime": "2015-11-27T05:36:46.000Z",
+      "birthtime": "2015-11-27T05:36:46.000Z"
+    },
+    "content": {
+      "original": "I am the fixtures index\n",
+      "processed": "<p>I am the fixtures index</p>\n"
+    },
+    "title": "Index",
+    "isDone": true,
+    "images": {},
+    "data": {}
+  },
+  {
+    "kind": "page",
+    "href": "/oranges",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/oranges.html",
+      "relative": "/oranges.html",
+      "processRelative": "test/fixtures/oranges.html",
+      "root": "/",
+      "dir": "/",
+      "base": "oranges.html",
+      "ext": ".html",
+      "name": "oranges"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3773990,
+      "size": 54,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-08-06T04:23:00.000Z",
+      "ctime": "2015-08-06T04:23:00.000Z",
+      "birthtime": "2015-08-05T04:35:40.000Z"
+    },
+    "content": {
+      "original": "<title>We are Oranges</title>\nNothing rhymes with us.\n",
+      "processed": "<title>We are Oranges</title>\nNothing rhymes with us.\n"
+    },
+    "title": "We are Oranges",
+    "isDone": true,
+    "images": {},
+    "data": {}
+  },
+  {
+    "kind": "page",
+    "href": "/other/UPPERCASE",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/other/UPPERCASE.HTML",
+      "relative": "/other/UPPERCASE.HTML",
+      "processRelative": "test/fixtures/other/UPPERCASE.HTML",
+      "root": "/",
+      "dir": "/other",
+      "base": "UPPERCASE.HTML",
+      "ext": ".HTML",
+      "name": "UPPERCASE"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3775416,
+      "size": 14,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-08-05T05:18:45.000Z",
+      "ctime": "2015-08-05T05:18:45.000Z",
+      "birthtime": "2015-08-05T05:18:17.000Z"
+    },
+    "content": {
+      "original": "I am so loud.\n",
+      "processed": "I am so loud.\n"
+    },
+    "title": "UPPERCASE",
+    "isDone": true,
+    "images": {
+      "guava": {
+        "kind": "image",
+        "href": "/other/guava.png",
+        "path": {
+          "full": "/Users/z/personal/jus/test/fixtures/other/guava.png",
+          "relative": "/other/guava.png",
+          "processRelative": "test/fixtures/other/guava.png",
+          "root": "/",
+          "dir": "/other",
+          "base": "guava.png",
+          "ext": ".png",
+          "name": "guava"
+        },
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 21547208,
+          "size": 1264961,
+          "blocks": 2472,
+          "atime": "2015-12-06T06:32:32.000Z",
+          "mtime": "2015-11-17T02:43:34.000Z",
+          "ctime": "2015-11-17T02:43:44.000Z",
+          "birthtime": "2015-11-17T02:43:34.000Z"
+        },
+        "title": "guava",
+        "dimensions": {
+          "width": 1094,
+          "height": 1080,
+          "type": "png"
+        },
+        "colors": [
+          "#df9f77",
+          "#fbfbfb",
+          "#e25554",
+          "#987a2f",
+          "#778150"
+        ],
+        "isDone": true
+      }
+    },
+    "data": {}
+  },
+  {
+    "kind": "image",
+    "href": "/other/guava.png",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/other/guava.png",
+      "relative": "/other/guava.png",
+      "processRelative": "test/fixtures/other/guava.png",
+      "root": "/",
+      "dir": "/other",
+      "base": "guava.png",
+      "ext": ".png",
+      "name": "guava"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 21547208,
+      "size": 1264961,
+      "blocks": 2472,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-11-17T02:43:34.000Z",
+      "ctime": "2015-11-17T02:43:44.000Z",
+      "birthtime": "2015-11-17T02:43:34.000Z"
+    },
+    "title": "guava",
+    "dimensions": {
+      "width": 1094,
+      "height": 1080,
+      "type": "png"
+    },
+    "colors": [
+      "#df9f77",
+      "#fbfbfb",
+      "#e25554",
+      "#987a2f",
+      "#778150"
+    ],
+    "isDone": true
+  },
+  {
+    "kind": "page",
+    "href": "/other",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/other/index.md",
+      "relative": "/other/index.md",
+      "processRelative": "test/fixtures/other/index.md",
+      "root": "/",
+      "dir": "/other",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3774010,
+      "size": 557,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-12-06T03:00:14.000Z",
+      "ctime": "2015-12-06T03:00:14.000Z",
+      "birthtime": "2015-08-05T04:36:14.000Z"
+    },
+    "content": {
+      "original": "I am the other index.\n\nWhen jus runs, it should update the relative paths, but not the absolute ones.\n\n## things with href\n\n- absolute: <a href=\"http://mango.com\">mango.com</a>\n- protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a>\n- relative: <a href=\"papayas\">papayas</a>\n- relative with leading slash: <a href=\"/grapes\">grapes</a>\n\n## things with src\n\n- absolute: <img src=\"https://guava.com/logo.png\">\n- protocol-relative: <img src=\"//guava-relative.com/logo.png\">\n- relative: <img src=\"guava.png\">\n- script, too: <script src=\"banana.js\">\n",
+      "processed": "<p>I am the other index.</p>\n<p>When jus runs, it should update the relative paths, but not the absolute ones.</p>\n<h2 id=\"things-with-href\" class=\"deep-link\"><a href=\"/other/#things-with-href\">things with href</a></h2>\n<ul>\n<li>absolute: <a href=\"http://mango.com\">mango.com</a></li>\n<li>protocol-relative: <a href=\"//coconut-cdn.com\">coconut-cdn.com</a></li>\n<li>relative: <a href=\"/other/papayas\">papayas</a></li>\n<li>relative with leading slash: <a href=\"/other/grapes\">grapes</a></li>\n</ul>\n<h2 id=\"things-with-src\" class=\"deep-link\"><a href=\"/other/#things-with-src\">things with src</a></h2>\n<ul>\n<li>absolute: <img src=\"https://guava.com/logo.png\"></li>\n<li>protocol-relative: <img src=\"//guava-relative.com/logo.png\"></li>\n<li>relative: <img src=\"/other/guava.png\"></li>\n<li>script, too: <script src=\"/other/banana.js\"></li>\n</ul>\n</script></li></ul>"
+    },
+    "title": "Index",
+    "isDone": true,
+    "images": {
+      "guava": {
+        "kind": "image",
+        "href": "/other/guava.png",
+        "path": {
+          "full": "/Users/z/personal/jus/test/fixtures/other/guava.png",
+          "relative": "/other/guava.png",
+          "processRelative": "test/fixtures/other/guava.png",
+          "root": "/",
+          "dir": "/other",
+          "base": "guava.png",
+          "ext": ".png",
+          "name": "guava"
+        },
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 21547208,
+          "size": 1264961,
+          "blocks": 2472,
+          "atime": "2015-12-06T06:32:32.000Z",
+          "mtime": "2015-11-17T02:43:34.000Z",
+          "ctime": "2015-11-17T02:43:44.000Z",
+          "birthtime": "2015-11-17T02:43:34.000Z"
+        },
+        "title": "guava",
+        "dimensions": {
+          "width": 1094,
+          "height": 1080,
+          "type": "png"
+        },
+        "colors": [
+          "#df9f77",
+          "#fbfbfb",
+          "#e25554",
+          "#987a2f",
+          "#778150"
+        ],
+        "isDone": true
+      }
+    },
+    "data": {}
+  },
+  {
+    "kind": "page",
+    "href": "/other/papayas",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/other/papayas.markdown",
+      "relative": "/other/papayas.markdown",
+      "processRelative": "test/fixtures/other/papayas.markdown",
+      "root": "/",
+      "dir": "/other",
+      "base": "papayas.markdown",
+      "ext": ".markdown",
+      "name": "papayas"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3774007,
+      "size": 111,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-08-06T04:24:58.000Z",
+      "ctime": "2015-08-06T04:24:58.000Z",
+      "birthtime": "2015-08-05T04:36:09.000Z"
+    },
+    "content": {
+      "original": "<!--\nkeywords: [fruit, tropical]\n-->\n\nWe contain enzymes that aid in human [digestion](https://digestion.com).\n",
+      "processed": "<meta name=\"keywords\" content=\"fruit,tropical\"><!--\nkeywords: [fruit, tropical]\n-->\n<p>We contain enzymes that aid in human <a href=\"https://digestion.com\">digestion</a>.</p>\n"
+    },
+    "keywords": [
+      "fruit",
+      "tropical"
+    ],
+    "title": "Papayas",
+    "isDone": true,
+    "images": {
+      "guava": {
+        "kind": "image",
+        "href": "/other/guava.png",
+        "path": {
+          "full": "/Users/z/personal/jus/test/fixtures/other/guava.png",
+          "relative": "/other/guava.png",
+          "processRelative": "test/fixtures/other/guava.png",
+          "root": "/",
+          "dir": "/other",
+          "base": "guava.png",
+          "ext": ".png",
+          "name": "guava"
+        },
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 21547208,
+          "size": 1264961,
+          "blocks": 2472,
+          "atime": "2015-12-06T06:32:32.000Z",
+          "mtime": "2015-11-17T02:43:34.000Z",
+          "ctime": "2015-11-17T02:43:44.000Z",
+          "birthtime": "2015-11-17T02:43:34.000Z"
+        },
+        "title": "guava",
+        "dimensions": {
+          "width": 1094,
+          "height": 1080,
+          "type": "png"
+        },
+        "colors": [
+          "#df9f77",
+          "#fbfbfb",
+          "#e25554",
+          "#987a2f",
+          "#778150"
+        ],
+        "isDone": true
+      }
+    },
+    "data": {}
+  },
+  {
+    "kind": "page",
+    "href": "/thumbs",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/index.html",
+      "relative": "/thumbs/index.html",
+      "processRelative": "test/fixtures/thumbs/index.html",
+      "root": "/",
+      "dir": "/thumbs",
+      "base": "index.html",
+      "ext": ".html",
+      "name": "index"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 23200909,
+      "size": 234,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-12-06T05:30:04.000Z",
+      "ctime": "2015-12-06T05:30:04.000Z",
+      "birthtime": "2015-11-27T05:36:46.000Z"
+    },
+    "content": {
+      "original": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is {{page.data.some_json_data.name}}\n\nAnother character is {{page.data.some_yml_data.name}}\n\nPages:\n\n<ul>\n  {{#each pages}}\n    <li class=\"page\">{{href}}</li>\n  {{/each}}\n</ul>\n",
+      "processed": "I am the thumbs index.\n\nHere comes a reference\n\nHis name is cookie monster\n\nAnother character is Bert\n\nPages:\n\n<ul>\n    <li class=\"page\">/apples</li>\n    <li class=\"page\">/</li>\n    <li class=\"page\">/oranges</li>\n    <li class=\"page\">/other/UPPERCASE</li>\n    <li class=\"page\">/other</li>\n    <li class=\"page\">/other/papayas</li>\n    <li class=\"page\">/thumbs</li>\n    <li class=\"page\">/other/nested/coconut</li>\n    <li class=\"page\">/thumbs/gif</li>\n    <li class=\"page\">/thumbs/jpg</li>\n    <li class=\"page\">/thumbs/png</li>\n    <li class=\"page\">/thumbs/svg</li>\n</ul>\n"
+    },
+    "title": "Index",
+    "isDone": true,
+    "images": {},
+    "data": {
+      "some_json_data": {
+        "name": "cookie monster",
+        "food": "cookies"
+      },
+      "some_yml_data": {
+        "name": "Bert",
+        "friend": "Ernie"
+      }
+    }
+  },
+  {
+    "kind": "dataFile",
+    "href": "/thumbs/some_json_data.json",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/some_json_data.json",
+      "relative": "/thumbs/some_json_data.json",
+      "processRelative": "test/fixtures/thumbs/some_json_data.json",
+      "root": "/",
+      "dir": "/thumbs",
+      "base": "some_json_data.json",
+      "ext": ".json",
+      "name": "some_json_data"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 23200910,
+      "size": 52,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:39.000Z",
+      "mtime": "2015-11-27T05:36:46.000Z",
+      "ctime": "2015-11-27T05:36:46.000Z",
+      "birthtime": "2015-11-27T05:36:46.000Z"
+    },
+    "title": "some_json_data",
+    "data": {
+      "name": "cookie monster",
+      "food": "cookies"
+    },
+    "isDone": true
+  },
+  {
+    "kind": "dataFile",
+    "href": "/thumbs/some_yml_data.yml",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/some_yml_data.yml",
+      "relative": "/thumbs/some_yml_data.yml",
+      "processRelative": "test/fixtures/thumbs/some_yml_data.yml",
+      "root": "/",
+      "dir": "/thumbs",
+      "base": "some_yml_data.yml",
+      "ext": ".yml",
+      "name": "some_yml_data"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 23200911,
+      "size": 25,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:39.000Z",
+      "mtime": "2015-11-27T05:36:46.000Z",
+      "ctime": "2015-11-27T05:36:46.000Z",
+      "birthtime": "2015-11-27T05:36:46.000Z"
+    },
+    "title": "some_yml_data",
+    "data": {
+      "name": "Bert",
+      "friend": "Ernie"
+    },
+    "isDone": true
+  },
+  {
+    "kind": "page",
+    "href": "/other/nested/coconut",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/other/nested/coconut.md",
+      "relative": "/other/nested/coconut.md",
+      "processRelative": "test/fixtures/other/nested/coconut.md",
+      "root": "/",
+      "dir": "/other/nested",
+      "base": "coconut.md",
+      "ext": ".md",
+      "name": "coconut"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 23200908,
+      "size": 6,
+      "blocks": 8,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-11-27T05:36:46.000Z",
+      "ctime": "2015-11-27T05:36:46.000Z",
+      "birthtime": "2015-11-27T05:36:46.000Z"
+    },
+    "content": {
+      "original": "hello\n",
+      "processed": "<p>hello</p>\n"
+    },
+    "title": "Coconut",
+    "isDone": true,
+    "images": {},
+    "data": {}
+  },
+  {
+    "kind": "page",
+    "href": "/thumbs/gif",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/gif/index.md",
+      "relative": "/thumbs/gif/index.md",
+      "processRelative": "test/fixtures/thumbs/gif/index.md",
+      "root": "/",
+      "dir": "/thumbs/gif",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3871472,
+      "size": 0,
+      "blocks": 0,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-08-13T03:15:14.000Z",
+      "ctime": "2015-08-13T03:15:14.000Z",
+      "birthtime": "2015-08-13T03:15:14.000Z"
+    },
+    "content": {
+      "original": "",
+      "processed": ""
+    },
+    "title": "Index",
+    "isDone": true,
+    "images": {
+      "thumb": {
+        "kind": "image",
+        "href": "/thumbs/gif/thumb.gif",
+        "path": {
+          "full": "/Users/z/personal/jus/test/fixtures/thumbs/gif/thumb.gif",
+          "relative": "/thumbs/gif/thumb.gif",
+          "processRelative": "test/fixtures/thumbs/gif/thumb.gif",
+          "root": "/",
+          "dir": "/thumbs/gif",
+          "base": "thumb.gif",
+          "ext": ".gif",
+          "name": "thumb"
+        },
+        "stats": {
+          "dev": 16777220,
+          "mode": 33184,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 18333433,
+          "size": 4269,
+          "blocks": 16,
+          "atime": "2015-12-06T06:32:32.000Z",
+          "mtime": "2015-10-29T02:28:41.000Z",
+          "ctime": "2015-10-29T02:29:12.000Z",
+          "birthtime": "2015-10-29T02:28:41.000Z"
+        },
+        "title": "thumb",
+        "dimensions": {
+          "width": 200,
+          "height": 200,
+          "type": "gif"
+        },
+        "colors": [
+          "#f27494",
+          "#98723e",
+          "#fcf6f7",
+          "#b38e5c",
+          "#f4acc4"
+        ],
+        "isDone": true
+      }
+    },
+    "data": {}
+  },
+  {
+    "kind": "image",
+    "href": "/thumbs/gif/thumb.gif",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/gif/thumb.gif",
+      "relative": "/thumbs/gif/thumb.gif",
+      "processRelative": "test/fixtures/thumbs/gif/thumb.gif",
+      "root": "/",
+      "dir": "/thumbs/gif",
+      "base": "thumb.gif",
+      "ext": ".gif",
+      "name": "thumb"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33184,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 18333433,
+      "size": 4269,
+      "blocks": 16,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-10-29T02:28:41.000Z",
+      "ctime": "2015-10-29T02:29:12.000Z",
+      "birthtime": "2015-10-29T02:28:41.000Z"
+    },
+    "title": "thumb",
+    "dimensions": {
+      "width": 200,
+      "height": 200,
+      "type": "gif"
+    },
+    "colors": [
+      "#f27494",
+      "#98723e",
+      "#fcf6f7",
+      "#b38e5c",
+      "#f4acc4"
+    ],
+    "isDone": true
+  },
+  {
+    "kind": "page",
+    "href": "/thumbs/png",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/png/index.md",
+      "relative": "/thumbs/png/index.md",
+      "processRelative": "test/fixtures/thumbs/png/index.md",
+      "root": "/",
+      "dir": "/thumbs/png",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3870942,
+      "size": 0,
+      "blocks": 0,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-08-13T02:20:40.000Z",
+      "ctime": "2015-08-13T02:20:40.000Z",
+      "birthtime": "2015-08-13T02:20:40.000Z"
+    },
+    "content": {
+      "original": "",
+      "processed": ""
+    },
+    "title": "Index",
+    "isDone": true,
+    "images": {
+      "thumb": {
+        "kind": "image",
+        "href": "/thumbs/png/thumb.png",
+        "path": {
+          "full": "/Users/z/personal/jus/test/fixtures/thumbs/png/thumb.png",
+          "relative": "/thumbs/png/thumb.png",
+          "processRelative": "test/fixtures/thumbs/png/thumb.png",
+          "root": "/",
+          "dir": "/thumbs/png",
+          "base": "thumb.png",
+          "ext": ".png",
+          "name": "thumb"
+        },
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 18331027,
+          "size": 121957,
+          "blocks": 240,
+          "atime": "2015-12-06T06:32:32.000Z",
+          "mtime": "2015-10-29T02:18:38.000Z",
+          "ctime": "2015-10-29T02:18:46.000Z",
+          "birthtime": "2015-10-29T02:18:38.000Z"
+        },
+        "title": "thumb",
+        "dimensions": {
+          "width": 501,
+          "height": 198,
+          "type": "png"
+        },
+        "colors": [
+          "#762c29",
+          "#1f1b1c",
+          "#b4cdbe",
+          "#e6412e",
+          "#758fa8"
+        ],
+        "isDone": true
+      }
+    },
+    "data": {}
+  },
+  {
+    "kind": "image",
+    "href": "/thumbs/png/thumb.png",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/png/thumb.png",
+      "relative": "/thumbs/png/thumb.png",
+      "processRelative": "test/fixtures/thumbs/png/thumb.png",
+      "root": "/",
+      "dir": "/thumbs/png",
+      "base": "thumb.png",
+      "ext": ".png",
+      "name": "thumb"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 18331027,
+      "size": 121957,
+      "blocks": 240,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-10-29T02:18:38.000Z",
+      "ctime": "2015-10-29T02:18:46.000Z",
+      "birthtime": "2015-10-29T02:18:38.000Z"
+    },
+    "title": "thumb",
+    "dimensions": {
+      "width": 501,
+      "height": 198,
+      "type": "png"
+    },
+    "colors": [
+      "#762c29",
+      "#1f1b1c",
+      "#b4cdbe",
+      "#e6412e",
+      "#758fa8"
+    ],
+    "isDone": true
+  },
+  {
+    "kind": "page",
+    "href": "/thumbs/jpg",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/jpg/index.html",
+      "relative": "/thumbs/jpg/index.html",
+      "processRelative": "test/fixtures/thumbs/jpg/index.html",
+      "root": "/",
+      "dir": "/thumbs/jpg",
+      "base": "index.html",
+      "ext": ".html",
+      "name": "index"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3871485,
+      "size": 0,
+      "blocks": 0,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-08-13T03:15:40.000Z",
+      "ctime": "2015-08-13T03:15:40.000Z",
+      "birthtime": "2015-08-13T03:15:40.000Z"
+    },
+    "content": {
+      "original": "",
+      "processed": ""
+    },
+    "title": "Index",
+    "isDone": true,
+    "images": {
+      "thumb": {
+        "kind": "image",
+        "href": "/thumbs/jpg/thumb.jpg",
+        "path": {
+          "full": "/Users/z/personal/jus/test/fixtures/thumbs/jpg/thumb.jpg",
+          "relative": "/thumbs/jpg/thumb.jpg",
+          "processRelative": "test/fixtures/thumbs/jpg/thumb.jpg",
+          "root": "/",
+          "dir": "/thumbs/jpg",
+          "base": "thumb.jpg",
+          "ext": ".jpg",
+          "name": "thumb"
+        },
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 18332267,
+          "size": 6690,
+          "blocks": 16,
+          "atime": "2015-12-06T06:32:32.000Z",
+          "mtime": "2015-10-29T02:24:27.000Z",
+          "ctime": "2015-10-29T02:24:32.000Z",
+          "birthtime": "2015-10-29T02:24:27.000Z"
+        },
+        "title": "thumb",
+        "dimensions": {
+          "height": 170,
+          "width": 170,
+          "type": "jpg"
+        },
+        "exif": {
+          "startMarker": {
+            "offset": 0
+          },
+          "tags": {},
+          "imageSize": {
+            "height": 170,
+            "width": 170
+          }
+        },
+        "colors": [
+          "#909a3f",
+          "#e0e4dd",
+          "#443615",
+          "#d3d78d",
+          "#44540c"
+        ],
+        "isDone": true
+      }
+    },
+    "data": {}
+  },
+  {
+    "kind": "image",
+    "href": "/thumbs/jpg/thumb.jpg",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/jpg/thumb.jpg",
+      "relative": "/thumbs/jpg/thumb.jpg",
+      "processRelative": "test/fixtures/thumbs/jpg/thumb.jpg",
+      "root": "/",
+      "dir": "/thumbs/jpg",
+      "base": "thumb.jpg",
+      "ext": ".jpg",
+      "name": "thumb"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 18332267,
+      "size": 6690,
+      "blocks": 16,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-10-29T02:24:27.000Z",
+      "ctime": "2015-10-29T02:24:32.000Z",
+      "birthtime": "2015-10-29T02:24:27.000Z"
+    },
+    "title": "thumb",
+    "dimensions": {
+      "height": 170,
+      "width": 170,
+      "type": "jpg"
+    },
+    "exif": {
+      "startMarker": {
+        "offset": 0
+      },
+      "tags": {},
+      "imageSize": {
+        "height": 170,
+        "width": 170
+      }
+    },
+    "colors": [
+      "#909a3f",
+      "#e0e4dd",
+      "#443615",
+      "#d3d78d",
+      "#44540c"
+    ],
+    "isDone": true
+  },
+  {
+    "kind": "page",
+    "href": "/thumbs/svg",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/svg/index.md",
+      "relative": "/thumbs/svg/index.md",
+      "processRelative": "test/fixtures/thumbs/svg/index.md",
+      "root": "/",
+      "dir": "/thumbs/svg",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3871354,
+      "size": 0,
+      "blocks": 0,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-08-13T03:07:58.000Z",
+      "ctime": "2015-08-13T03:07:58.000Z",
+      "birthtime": "2015-08-13T03:07:58.000Z"
+    },
+    "content": {
+      "original": "",
+      "processed": ""
+    },
+    "title": "Index",
+    "isDone": true,
+    "images": {
+      "thumbnail": {
+        "kind": "image",
+        "href": "/thumbs/svg/thumbnail.svg",
+        "path": {
+          "full": "/Users/z/personal/jus/test/fixtures/thumbs/svg/thumbnail.svg",
+          "relative": "/thumbs/svg/thumbnail.svg",
+          "processRelative": "test/fixtures/thumbs/svg/thumbnail.svg",
+          "root": "/",
+          "dir": "/thumbs/svg",
+          "base": "thumbnail.svg",
+          "ext": ".svg",
+          "name": "thumbnail"
+        },
+        "stats": {
+          "dev": 16777220,
+          "mode": 33188,
+          "nlink": 1,
+          "uid": 501,
+          "gid": 20,
+          "rdev": 0,
+          "blksize": 4096,
+          "ino": 3870950,
+          "size": 29346,
+          "blocks": 64,
+          "atime": "2015-12-06T06:32:32.000Z",
+          "mtime": "2015-11-13T04:41:44.000Z",
+          "ctime": "2015-11-13T04:41:44.000Z",
+          "birthtime": "2015-08-13T02:21:10.000Z"
+        },
+        "title": "thumbnail",
+        "dimensions": {
+          "width": 81,
+          "height": 49,
+          "type": "svg"
+        },
+        "colors": [
+          "#ccaaff",
+          "#ffcc00",
+          "#ff6600",
+          "#ff7f2a",
+          "#ff0000",
+          "#ff8080",
+          "#ff8080",
+          "#fc6a6b",
+          "#005500",
+          "#00aa00",
+          "#008000",
+          "#501616",
+          "#a02c2c",
+          "#782121",
+          "#2b0000",
+          "#552200",
+          "#552200",
+          "#552200",
+          "#552200",
+          "#552200",
+          "#552200",
+          "#552200",
+          "#552200",
+          "#552200",
+          "#552200",
+          "#552200",
+          "#aa8800",
+          "#aa8800",
+          "#aa8800",
+          "#000000",
+          "#000000",
+          "#803300",
+          "#000000",
+          "#803300",
+          "#000000",
+          "#800000",
+          "#000000",
+          "#000000",
+          "#800000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#803300",
+          "#803300",
+          "#803300",
+          "#803300",
+          "#803300",
+          "#803300",
+          "#803300",
+          "#803300",
+          "#803300",
+          "#803300",
+          "#803300",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        "isDone": true
+      }
+    },
+    "data": {}
+  },
+  {
+    "kind": "image",
+    "href": "/thumbs/svg/thumbnail.svg",
+    "path": {
+      "full": "/Users/z/personal/jus/test/fixtures/thumbs/svg/thumbnail.svg",
+      "relative": "/thumbs/svg/thumbnail.svg",
+      "processRelative": "test/fixtures/thumbs/svg/thumbnail.svg",
+      "root": "/",
+      "dir": "/thumbs/svg",
+      "base": "thumbnail.svg",
+      "ext": ".svg",
+      "name": "thumbnail"
+    },
+    "stats": {
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3870950,
+      "size": 29346,
+      "blocks": 64,
+      "atime": "2015-12-06T06:32:32.000Z",
+      "mtime": "2015-11-13T04:41:44.000Z",
+      "ctime": "2015-11-13T04:41:44.000Z",
+      "birthtime": "2015-08-13T02:21:10.000Z"
+    },
+    "title": "thumbnail",
+    "dimensions": {
+      "width": 81,
+      "height": 49,
+      "type": "svg"
+    },
+    "colors": [
+      "#ccaaff",
+      "#ffcc00",
+      "#ff6600",
+      "#ff7f2a",
+      "#ff0000",
+      "#ff8080",
+      "#ff8080",
+      "#fc6a6b",
+      "#005500",
+      "#00aa00",
+      "#008000",
+      "#501616",
+      "#a02c2c",
+      "#782121",
+      "#2b0000",
+      "#552200",
+      "#552200",
+      "#552200",
+      "#552200",
+      "#552200",
+      "#552200",
+      "#552200",
+      "#552200",
+      "#552200",
+      "#552200",
+      "#552200",
+      "#aa8800",
+      "#aa8800",
+      "#aa8800",
+      "#000000",
+      "#000000",
+      "#803300",
+      "#000000",
+      "#803300",
+      "#000000",
+      "#800000",
+      "#000000",
+      "#000000",
+      "#800000",
+      "#000000",
+      "#000000",
+      "#000000",
+      "#000000",
+      "#000000",
+      "#000000",
+      "#000000",
+      "#000000",
+      "#000000",
+      "#000000",
+      "#803300",
+      "#803300",
+      "#803300",
+      "#803300",
+      "#803300",
+      "#803300",
+      "#803300",
+      "#803300",
+      "#803300",
+      "#803300",
+      "#803300",
+      "#000000",
+      "#000000",
+      "#000000"
+    ],
+    "isDone": true
+  }
+]

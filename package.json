@@ -5,7 +5,7 @@
   "main": "lib/jus.js",
   "bin": "lib/cli.js",
   "scripts": {
-    "test": "rm test/fixtures/.jus-cache.json; mocha"
+    "test": "rm test/fixtures/.jus-cache.json; mocha && mocha"
   },
   "repository": "github:zeke/jus",
   "keywords": [
