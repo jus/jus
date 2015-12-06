@@ -54,10 +54,6 @@ describe('jus', function () {
 
     describe('each file', function () {
 
-      it('infers `parent` from top-level directory', function () {
-        assert.equal(files['/other/papayas'].parent, '/other')
-      })
-
       it('has a relative path', function () {
         assert.equal(files['/other/papayas'].path.relative, '/other/papayas.markdown')
       })
@@ -230,28 +226,6 @@ describe('jus', function () {
         })
       })
 
-      // describe('ancestors', function(){
-      //   it('does not have a parent if in top-level directory', function () {
-      //     var page = files['/']
-      //     assert(page)
-      //     assert(!page.parent)
-      //   })
-      //
-      //   it('has a `parent` and `parentName` if nested', function () {
-      //     var page = files['/other/papayas']
-      //     assert.equal(page.parent, '/other')
-      //     assert.equal(page.parentName, 'other')
-      //   })
-      //
-      //   it('has a `grandparent` and `grandparentName` if deeply nested', function () {
-      //     var page = files['/other/nested/coconut']
-      //     assert.equal(page.parent, '/other/nested')
-      //     assert.equal(page.parentName, 'nested')
-      //
-      //     assert.equal(page.grandparent, '/other')
-      //     assert.equal(page.grandparentName, 'other')
-      //   })
-      // })
     })
   })
 })
