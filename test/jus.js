@@ -4,7 +4,7 @@ const assert = require('assert')
 const cheerio = require('cheerio')
 const _ = require('lodash')
 const jus = require('..')
-var pages
+var files
 
 describe('jus', function () {
   this.timeout(5000)
@@ -13,75 +13,74 @@ describe('jus', function () {
     assert.equal(typeof jus, 'function')
   })
 
-  it('takes a directory, then calls back with a `pages` object', function (done) {
-    jus(__dirname + '/fixtures', function (err, _pages) {
+  it('takes a directory, then calls back with data', function (done) {
+    jus(__dirname + '/fixtures', function (err, _files) {
       assert(!err)
-      pages = _pages
-      assert(pages)
+      files = _files
+      assert(files)
       done()
     })
   })
 
-  describe('pages', function () {
+  describe('files', function () {
 
-    it('is an object', function () {
-      assert(pages)
-      assert.equal(typeof pages, 'object')
+    it('is an array', function () {
+      assert(Array.isArray(files))
     })
 
     it('includes .md files', function () {
-      assert.equal(pages['/apples'].extension, '.md')
+      assert.equal(files['/apples'].path.ext, '.md')
     })
 
     it('includes .markdown files', function () {
-      assert.equal(pages['/other/papayas'].extension, '.markdown')
+      assert.equal(files['/other/papayas'].path.ext, '.markdown')
     })
 
     it('includes .html files', function () {
-      assert.equal(pages['/oranges'].extension, '.html')
+      assert.equal(files['/oranges'].path.ext, '.html')
     })
 
     it('removes "index" suffix', function () {
-      assert.equal(pages['/other'].relativePath, '/other/index.md')
+      assert.equal(files['/other'].path.relative, '/other/index.md')
     })
 
     it('find the top-level index page', function () {
-      assert(pages['/'])
+      assert(files['/'])
     })
 
     it('is case insensitive when finding files', function () {
-      assert(pages['/other/UPPERCASE'])
+      assert(files['/other/UPPERCASE'])
     })
 
-    describe('each page', function () {
+    describe('each file', function () {
 
-      it('infers `parentName` from top-level directory')//, function () {
-        // assert.equal(pages['/other/papayas'].parentName, 'other')
-      // })
+      it('infers `parent` from top-level directory', function () {
+        assert.equal(files['/other/papayas'].parent, '/other')
+      })
 
-      it('has a relativePath', function () {
-        assert.equal(pages['/other/papayas'].relativePath, '/other/papayas.markdown')
+      it('has a relative path', function () {
+        assert.equal(files['/other/papayas'].path.relative, '/other/papayas.markdown')
       })
 
       it('ingests HTML frontmatter', function () {
-        assert.equal(pages['/apples'].title, 'Apples!')
-        assert.deepEqual(pages['/apples'].keywords, ['fruit', 'doctors'])
+        assert.equal(files['/apples'].title, 'Apples!')
+        assert.deepEqual(files['/apples'].keywords, ['fruit', 'doctors'])
       })
 
       it('converts markdown into HTML in `content.processed`', function () {
-        const $ = cheerio.load(pages['/other/papayas'].content.processed)
+        const $ = cheerio.load(files['/other/papayas'].content.processed)
         assert.equal($('a[href="https://digestion.com"]').text(), 'digestion')
       })
 
       it('preserves original content in `content.original`', function () {
-        assert.equal(typeof pages['/other/papayas'].content.original, 'string')
+        assert.equal(typeof files['/other/papayas'].content.original, 'string')
       })
 
       describe('`src` attributes in the DOM', function() {
         var content
 
         before(function() {
-          content = pages['/other'].content
+          content = files['/other'].content
         })
 
         it('converts relative', function(){
@@ -108,7 +107,7 @@ describe('jus', function () {
         var content
 
         before(function() {
-          content = pages['/other'].content
+          content = files['/other'].content
         })
 
         it('converts relative', function(){
@@ -135,58 +134,59 @@ describe('jus', function () {
 
       describe('title', function(){
         it('is derived from HTML frontmatter', function () {
-          assert.equal(pages['/apples'].title, 'Apples!')
+          assert.equal(files['/apples'].title, 'Apples!')
         })
 
         it('falls back to <title> tag, if present', function () {
-          assert.equal(pages['/oranges'].title, 'We are Oranges')
+          assert.equal(files['/oranges'].title, 'We are Oranges')
         })
 
         it('falls back lastly to titlecased basename', function () {
-          assert.equal(pages['/other/papayas'].title, 'Papayas')
+          assert.equal(files['/other/papayas'].title, 'Papayas')
         })
       })
 
       describe('isIndex', function(){
         it('is true if file is a directory index', function () {
-          assert(pages['/other'].isIndex)
+          assert(files['/other'].isIndex)
         })
         it('is false if file is NOT a directory index', function () {
-          assert(!pages['/other/papayas'].isIndex)
+          assert(!files['/other/papayas'].isIndex)
         })
       })
 
       describe('images', function(){
         it("builds an images object with a key for each image in the page's directory", function () {
-          assert.equal(pages['/thumbs/png'].images.thumb.href, '/thumbs/png/thumb.png')
+          // console.log(files['/thumbs/png'])
+          assert.equal(files['/thumbs/png'].images.thumb.href, '/thumbs/png/thumb.png')
         })
 
         it('can be an svg', function () {
-          assert.equal(pages['/thumbs/svg'].images.thumbnail.href, '/thumbs/svg/thumbnail.svg')
+          assert.equal(files['/thumbs/svg'].images.thumbnail.href, '/thumbs/svg/thumbnail.svg')
         })
 
         it('can be a jpg', function () {
-          assert.equal(pages['/thumbs/jpg'].images.thumb.href, '/thumbs/jpg/thumb.jpg')
+          assert.equal(files['/thumbs/jpg'].images.thumb.href, '/thumbs/jpg/thumb.jpg')
         })
 
         it('can be a gif', function () {
-          assert.equal(pages['/thumbs/gif'].images.thumb.href, '/thumbs/gif/thumb.gif')
+          assert.equal(files['/thumbs/gif'].images.thumb.href, '/thumbs/gif/thumb.gif')
         })
 
         it('includes width and height dimensions for each image', function() {
-          const jpg = pages['/thumbs/jpg'].images.thumb
+          const jpg = files['/thumbs/jpg'].images.thumb
           assert(jpg.dimensions)
           assert.equal(jpg.dimensions.width, 170)
           assert.equal(jpg.dimensions.height, 170)
 
-          // const svg = pages['/thumbs/svg'].images.thumbnail
+          // const svg = files['/thumbs/svg'].images.thumbnail
           // assert(svg.dimensions)
           // assert.equal(svg.dimensions.width, 170)
           // assert.equal(svg.dimensions.height, 170)
         })
 
         it('includes exif data', function(){
-          const jpg = pages['/thumbs/jpg'].images.thumb
+          const jpg = files['/thumbs/jpg'].images.thumb
           assert(jpg.exif)
           assert(jpg.exif.imageSize)
           assert.equal(jpg.exif.imageSize.width, 170)
@@ -194,7 +194,7 @@ describe('jus', function () {
         })
 
         it('includes color data as hex strings', function(){
-          var colors = pages['/thumbs/gif'].images.thumb.colors
+          var colors = files['/thumbs/gif'].images.thumb.colors
           assert(Array.isArray(colors))
           assert(colors.length)
           assert(colors[0].match(/^#[0-9a-f]{3,6}$/i))
@@ -205,10 +205,10 @@ describe('jus', function () {
         var page
 
         before(function(){
-          page = pages['/thumbs']
+          page = files['/thumbs']
         })
 
-        it("attaches data from JSON files to pages in the same directory", function () {
+        it("attaches data from JSON files to files in the same directory", function () {
           assert.equal(page.data.some_json_data.name, "cookie monster")
           assert.equal(page.data.some_json_data.food, "cookies")
         })
@@ -219,31 +219,32 @@ describe('jus', function () {
         })
 
         it('injects data into templates', function(){
+
           assert(page.content.processed.indexOf('His name is cookie monster') > -1)
           assert(page.content.processed.indexOf('Another character is Bert') > -1)
         })
 
-        it('includes the `pages` object in the context')//, function(){
-          // assert(page.content.processed.indexOf('<li>/other</li>') > -1)
-          // assert(page.content.processed.indexOf('<li>/other/papayas</li>') > -1)
-        // })
+        it('includes the `pages` object in the context', function(){
+          assert(page.content.processed.indexOf('<li class="page">/other</li>') > -1)
+          assert(page.content.processed.indexOf('<li class="page">/other/papayas</li>') > -1)
+        })
       })
 
       // describe('ancestors', function(){
       //   it('does not have a parent if in top-level directory', function () {
-      //     var page = pages['/']
+      //     var page = files['/']
       //     assert(page)
       //     assert(!page.parent)
       //   })
       //
       //   it('has a `parent` and `parentName` if nested', function () {
-      //     var page = pages['/other/papayas']
+      //     var page = files['/other/papayas']
       //     assert.equal(page.parent, '/other')
       //     assert.equal(page.parentName, 'other')
       //   })
       //
       //   it('has a `grandparent` and `grandparentName` if deeply nested', function () {
-      //     var page = pages['/other/nested/coconut']
+      //     var page = files['/other/nested/coconut']
       //     assert.equal(page.parent, '/other/nested')
       //     assert.equal(page.parentName, 'nested')
       //
