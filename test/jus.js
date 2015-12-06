@@ -153,7 +153,6 @@ describe('jus', function () {
 
       describe('images', function(){
         it("builds an images object with a key for each image in the page's directory", function () {
-          // console.log(files['/thumbs/png'])
           assert.equal(files['/thumbs/png'].images.thumb.href, '/thumbs/png/thumb.png')
         })
 
@@ -174,11 +173,6 @@ describe('jus', function () {
           assert(jpg.dimensions)
           assert.equal(jpg.dimensions.width, 170)
           assert.equal(jpg.dimensions.height, 170)
-
-          // const svg = files['/thumbs/svg'].images.thumbnail
-          // assert(svg.dimensions)
-          // assert.equal(svg.dimensions.width, 170)
-          // assert.equal(svg.dimensions.height, 170)
         })
 
         it('includes exif data', function(){
@@ -195,6 +189,31 @@ describe('jus', function () {
           assert(colors.length)
           assert(colors[0].match(/^#[0-9a-f]{3,6}$/i))
         })
+      })
+
+      describe('stylesheets', function(){
+
+        it('changes extension to `css` in href', function(){
+          assert.equal(files['/styles.css'].href, '/styles.css')
+          assert.equal(files['/styles.css'].path.ext, '.scss')
+        })
+
+        it('has a kind', function(){
+          assert.equal(files['/styles.css'].kind, 'stylesheet')
+        })
+
+        it('compiles SCSS', function(){
+          var content = files['/styles.css'].content
+          assert(~content.original.indexOf('background: $color;'))
+          assert(~content.processed.indexOf('background: green;'))
+        })
+
+        it('compiles Sass', function(){
+          var content = files['/styles-sass.css'].content
+          assert(~content.original.indexOf('background: $color'))
+          assert(~content.processed.indexOf('background: yellow;'))
+        })
+
       })
 
       describe('data', function(){
