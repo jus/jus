@@ -194,8 +194,9 @@ describe('jus', function () {
       describe('stylesheets', function(){
 
         it('changes extension to `css` in href', function(){
-          assert.equal(files['/styles.css'].href, '/styles.css')
-          assert.equal(files['/styles.css'].path.ext, '.scss')
+          var stylesheet = files['/styles.css']
+          assert.equal(stylesheet.href, '/styles.css')
+          assert.equal(stylesheet.path.ext, '.scss')
         })
 
         it('has a kind', function(){
@@ -206,6 +207,45 @@ describe('jus', function () {
           var content = files['/styles.css'].content
           assert(~content.original.indexOf('background: $color;'))
           assert(~content.processed.indexOf('background: green;'))
+        })
+
+        it('compiles Sass', function(){
+          var content = files['/styles-sass.css'].content
+          assert(~content.original.indexOf('background: $color'))
+          assert(~content.processed.indexOf('background: yellow;'))
+        })
+
+        it('compiles Stylus', function(){
+          var content = files['/styles-stylus.css'].content
+          assert(~content.original.indexOf('background color'))
+          assert(~content.processed.indexOf('background: #f00;'))
+        })
+
+      })
+
+      describe('scripts', function(){
+        var script
+
+        before(function(){
+          script = files['/babel-and-browserify.js']
+        })
+
+        it('preserves js extension in href', function(){
+          assert.equal(script.href, '/babel-and-browserify.js')
+        })
+
+        it('has a kind', function(){
+          assert.equal(script.kind, 'script')
+        })
+
+        it('browserifies', function(){
+          assert(~script.content.original.indexOf("const url = require('url')"))
+          assert(~script.content.processed.indexOf('Url.prototype.parse = function('))
+        })
+
+        it('converts ES6 template strings to ES5 regular strings', function(){
+          assert(~script.content.original.indexOf("`I am an ES2015 string`"))
+          assert(~script.content.processed.indexOf("'I am an ES2015 string'"))
         })
 
         it('compiles Sass', function(){
