@@ -140,6 +140,10 @@ describe('jus', function () {
         it('falls back lastly to titlecased basename', function () {
           assert.equal(files['/other/papayas'].title, 'Papayas')
         })
+
+        it('injects <title> tag into HTML, if absent', function () {
+          assert(~files['/oranges'].content.processed.indexOf('<title>We are Oranges</title>'))
+        })
       })
 
       describe('isIndex', function(){
