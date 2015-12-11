@@ -69,17 +69,17 @@ describe('server', function () {
         .get('/apples')
         .expect(200)
         .end((err, res) => {
-          $ = cheerio.load(res.body)
+          $ = cheerio.load(res.text)
           return done()
         })
     })
 
     it('responds with an HTML page', function(){
-      console.log($.html())
-      assert.equal($('<title>').text(), 'Apples!')
+      assert.equal($('title').text(), 'Apples!')
     })
 
   })
 
+  // describe('redirects')
 
 })

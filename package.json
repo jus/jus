@@ -5,7 +5,9 @@
   "main": "lib/jus.js",
   "bin": "lib/cli.js",
   "scripts": {
-    "test": "rm test/fixtures/.jus-cache.json; NODE_ENV=test mocha && mocha"
+    "test": "npm run test:uncached; npm run test:cached",
+    "test:uncached": "rm test/fixtures/.jus-cache.json; NODE_ENV=test mocha",
+    "test:cached": "NODE_ENV=test mocha"
   },
   "repository": "github:zeke/jus",
   "keywords": [
