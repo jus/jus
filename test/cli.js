@@ -13,15 +13,26 @@ describe('jus CLI', function () {
       .end(done)
   })
 
-  describe('jus serve', function(){
+  describe('environment', function(){
 
-    it("starts the server")//, function(done) {
-    //   nixt()
-    //     .run('./lib/cli.js serve test/fixtures')
-    //     .stdout(/foo/i)
-    //     .end(done)
-    // })
+    describe('port', function() {
+      it("defaults to 3000")
+      it("can be overridden with --port")
+      it("can be overridden with -p")
+    })
+
   })
 
+  describe('jus server', function(){
+
+    it("starts the server")//, function(done) {
+    //     nixt()
+    //       .run('./lib/cli.js serve test/fixtures')
+    //       .stdout(/Juicing/i)
+    //       .end(done)
+    // })
+
+
+  })
 
 })
