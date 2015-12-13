@@ -2,20 +2,6 @@
 
 Squeeze metadata out of a directory full of files.
 
-Give it a directory, get back a javascript object full of useful m
-
-jus ./my-cool-site > pages.json
-
-Write node-style javascript with `require`.
-
-express
-browserify
-markdown
-HTML
-handlebars
-
-There are four
-
 ## Pages
 
 Pages are written in Markdown, HTML, or Handlebars, or a combination thereof.
@@ -32,7 +18,6 @@ Supports PNG, JPG, GIF, and SVG
 JSON and YML files are detected and passed to Handlebars templates.
 
 ## Scripts
-
 
 
 ## Styles
@@ -53,6 +38,8 @@ npm i -g jus
 ```
 
 ## Tests
+
+[![Build Status Images](https://travis-ci.org/zeke/jus.svg)](https://travis-ci.org/zeke/jus)
 
 ```sh
 npm install
