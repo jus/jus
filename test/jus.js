@@ -52,7 +52,7 @@ describe('jus', function () {
       assert(files['/other/UPPERCASE'])
     })
 
-    describe('each file', function () {
+    describe('pages', function () {
 
       it('has a relative path', function () {
         assert.equal(files['/other/papayas'].path.relative, '/other/papayas.markdown')
@@ -195,6 +195,46 @@ describe('jus', function () {
         })
       })
 
+      describe('layouts', function(){
+
+        it('has a type', function(){
+          assert.equal(files['/layout'].type, 'layout')
+        })
+
+        it('uses /layout.html as the default layout, if present', function(){
+          var $ = cheerio.load(files['/'].content.processed)
+          assert($('html').length)
+          assert.equal($('#default-layout').text(), 'I am the fixtures index\n')
+        })
+
+        it('allows custom layout to be set in HTML frontmatter', function(){
+          var page = files['/custom']
+          assert(page)
+          assert.equal(page.layout, 'simple')
+          var $ = cheerio.load(page.content.processed)
+          assert($('#simple-layout').length)
+        })
+
+        it('does not apply layout if custom layout does not exist', function(){
+          var page = files['/misguided']
+          assert(page)
+          assert(page.content.processed.length)
+          var $ = cheerio.load(page.content.processed)
+          assert($('p').length)
+          assert(!$('body').length)
+        })
+
+        it('does not apply layout if set to `false` in HTML frontmatter', function(){
+          var page = files['/standalone']
+          assert(page)
+          assert(page.content.processed.length)
+          var $ = cheerio.load(page.content.processed)
+          assert($('p').length)
+          assert(!$('#default-layout').length)
+        })
+
+      })
+
       describe('stylesheets', function(){
 
         it('changes extension to `css` in href', function(){
@@ -203,8 +243,8 @@ describe('jus', function () {
           assert.equal(stylesheet.path.ext, '.scss')
         })
 
-        it('has a kind', function(){
-          assert.equal(files['/styles.css'].kind, 'stylesheet')
+        it('has a type', function(){
+          assert.equal(files['/styles.css'].type, 'stylesheet')
         })
 
         it('compiles SCSS', function(){
@@ -238,8 +278,8 @@ describe('jus', function () {
           assert.equal(script.href, '/babel-and-browserify.js')
         })
 
-        it('has a kind', function(){
-          assert.equal(script.kind, 'script')
+        it('has a type', function(){
+          assert.equal(script.type, 'script')
         })
 
         it('browserifies', function(){

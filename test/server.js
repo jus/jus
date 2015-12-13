@@ -75,7 +75,7 @@ describe('server', function () {
     })
 
     it('responds with an HTML page', function(){
-      assert.equal($('title').text(), 'Apples!')
+      assert.equal($('p').text(), 'How do you like them?')
     })
 
   })
