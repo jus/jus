@@ -1,5 +1,7 @@
 sudo: false
 language: node_js
+env:
+ - NODE_ENV=travis CXX="g++-4.8" CC="gcc-4.8"
 node_js:
   - '4.0'
   - '5.1'
