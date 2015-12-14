@@ -41,7 +41,9 @@
     "mocha": "^2.3.3",
     "nixt": "^0.4.1",
     "standard": "^5.0.0",
-    "supertest": "^1.1.0"
+    "supertest": "^1.1.0",
+    "npm-run-all": "^1.4.0",
+    "power-assert": "^1.2.0"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.3.13",
@@ -66,7 +68,6 @@
     "morgan": "^1.6.1",
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
-    "npm-run-all": "^1.4.0",
     "require-dir": "^0.3.0",
     "stylus": "^0.52.4",
     "titlecase": "^1.0.2",

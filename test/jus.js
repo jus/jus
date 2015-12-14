@@ -1,6 +1,6 @@
 /* globals describe, it */
 
-const assert = require('assert')
+const assert = require('power-assert')
 const cheerio = require('cheerio')
 const _ = require('lodash')
 const jus = require('..')
