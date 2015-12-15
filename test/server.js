@@ -14,7 +14,7 @@ describe('server', function () {
   })
 
   describe('GET /api', function(){
-    var files
+    var context
 
     before(done => {
       supertest(server)
@@ -23,13 +23,14 @@ describe('server', function () {
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
-          files = res.body
-          files.forEach(file => files[file.href] = file)
+          context = res.body
+          context.files.forEach(file => context.files[file.href] = file)
           return done()
         })
     })
 
     it('responds with a JSON array of file objects', function(){
+      var files = context.files
       assert(Array.isArray(files))
       assert(files.length)
       assert(files['/apples'])
@@ -38,7 +39,7 @@ describe('server', function () {
   })
 
   describe('GET /api/files/apples', function(){
-    var page
+    var context
 
     before(done => {
       supertest(server)
@@ -47,12 +48,13 @@ describe('server', function () {
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
-          page = res.body
+          context = res.body
           return done()
         })
     })
 
     it('responds with a specific file object', function(){
+      var page = context.page
       assert.equal(page.href, '/apples')
       assert.equal(page.title, 'Apples!')
     })
