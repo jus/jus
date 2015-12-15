@@ -63,67 +63,71 @@ describe('jus', function () {
         assert.deepEqual(files['/apples'].keywords, ['fruit', 'doctors'])
       })
 
-      it('converts markdown into HTML in `content.processed`', function () {
-        const $ = cheerio.load(files['/other/papayas'].content.processed)
+      it('converts markdown into HTML in `output`', function () {
+        const $ = cheerio.load(files['/other/papayas'].output)
         assert.equal($('a[href="https://digestion.com"]').text(), 'digestion')
       })
 
-      it('preserves original content in `content.original`', function () {
-        assert.equal(typeof files['/other/papayas'].content.original, 'string')
+      it('preserves original content in `input`', function () {
+        assert.equal(typeof files['/other/papayas'].input, 'string')
       })
 
       describe('`src` attributes in the DOM', function() {
-        var content
+        var input
+        var output
 
         before(function() {
-          content = files['/other'].content
+          input = files['/other'].input
+          output = files['/other'].output
         })
 
         it('converts relative', function(){
-          assert(~content.original.indexOf('<img src="guava.png">'))
-          assert(~content.processed.indexOf('<img src="/other/guava.png">'))
+          assert(~input.indexOf('<img src="guava.png">'))
+          assert(~output.indexOf('<img src="/other/guava.png">'))
 
-          assert(~content.original.indexOf('<script src="banana.js">'))
-          assert(~content.processed.indexOf('<script src="/other/banana.js">'))
+          assert(~input.indexOf('<script src="banana.js">'))
+          assert(~output.indexOf('<script src="/other/banana.js">'))
         })
 
         it('ignores absolute', function(){
-          assert(~content.original.indexOf('<img src="https://guava.com/logo.png">'))
-          assert(~content.processed.indexOf('<img src="https://guava.com/logo.png">'))
+          assert(~input.indexOf('<img src="https://guava.com/logo.png">'))
+          assert(~output.indexOf('<img src="https://guava.com/logo.png">'))
         })
 
         it('ignores protocol-relative', function(){
-          assert(~content.original.indexOf('<img src="//guava-relative.com/logo.png">'))
-          assert(~content.processed.indexOf('<img src="//guava-relative.com/logo.png">'))
+          assert(~input.indexOf('<img src="//guava-relative.com/logo.png">'))
+          assert(~output.indexOf('<img src="//guava-relative.com/logo.png">'))
         })
 
       })
 
       describe('`href` attributes in the DOM', function() {
-        var content
+        var input
+        var output
 
         before(function() {
-          content = files['/other'].content
+          input = files['/other'].input
+          output = files['/other'].output
         })
 
         it('converts relative', function(){
-          assert(~content.original.indexOf('<a href="papayas">papayas</a>'))
-          assert(~content.processed.indexOf('<a href="/other/papayas">papayas</a>'))
+          assert(~input.indexOf('<a href="papayas">papayas</a>'))
+          assert(~output.indexOf('<a href="/other/papayas">papayas</a>'))
         })
 
         it('converts relative with leading slash', function(){
-          assert(~content.original.indexOf('<a href="/grapes">grapes</a>'))
-          assert(~content.processed.indexOf('<a href="/other/grapes">grapes</a>'))
+          assert(~input.indexOf('<a href="/grapes">grapes</a>'))
+          assert(~output.indexOf('<a href="/other/grapes">grapes</a>'))
         })
 
         it('ignores absolute', function(){
-          assert(~content.original.indexOf('<a href="http://mango.com">mango.com</a>'))
-          assert(~content.processed.indexOf('<a href="http://mango.com">mango.com</a>'))
+          assert(~input.indexOf('<a href="http://mango.com">mango.com</a>'))
+          assert(~output.indexOf('<a href="http://mango.com">mango.com</a>'))
         })
 
         it('ignores protocol-relative', function(){
-          assert(~content.original.indexOf('<a href="//coconut-cdn.com">coconut-cdn.com</a>'))
-          assert(~content.processed.indexOf('<a href="//coconut-cdn.com">coconut-cdn.com</a>'))
+          assert(~input.indexOf('<a href="//coconut-cdn.com">coconut-cdn.com</a>'))
+          assert(~output.indexOf('<a href="//coconut-cdn.com">coconut-cdn.com</a>'))
         })
 
       })
@@ -142,7 +146,7 @@ describe('jus', function () {
         })
 
         it('injects <title> tag into HTML, if absent', function () {
-          assert(~files['/oranges'].content.processed.indexOf('<title>We are Oranges</title>'))
+          assert(~files['/oranges'].output.indexOf('<title>We are Oranges</title>'))
         })
       })
 
@@ -202,7 +206,7 @@ describe('jus', function () {
         })
 
         it('uses /layout.html as the default layout, if present', function(){
-          var $ = cheerio.load(files['/'].content.processed)
+          var $ = cheerio.load(files['/'].output)
           assert($('html').length)
           assert.equal($('#default-layout').text(), 'I am the fixtures index\n')
         })
@@ -211,15 +215,15 @@ describe('jus', function () {
           var page = files['/custom']
           assert(page)
           assert.equal(page.layout, 'simple')
-          var $ = cheerio.load(page.content.processed)
+          var $ = cheerio.load(page.output)
           assert($('#simple-layout').length)
         })
 
         it('does not apply layout if custom layout does not exist', function(){
           var page = files['/misguided']
           assert(page)
-          assert(page.content.processed.length)
-          var $ = cheerio.load(page.content.processed)
+          assert(page.output.length)
+          var $ = cheerio.load(page.output)
           assert($('p').length)
           assert(!$('body').length)
         })
@@ -227,8 +231,8 @@ describe('jus', function () {
         it('does not apply layout if set to `false` in HTML frontmatter', function(){
           var page = files['/standalone']
           assert(page)
-          assert(page.content.processed.length)
-          var $ = cheerio.load(page.content.processed)
+          assert(page.output.length)
+          var $ = cheerio.load(page.output)
           assert($('p').length)
           assert(!$('#default-layout').length)
         })
@@ -248,21 +252,21 @@ describe('jus', function () {
         })
 
         it('compiles SCSS', function(){
-          var content = files['/styles.css'].content
-          assert(~content.original.indexOf('background: $color;'))
-          assert(~content.processed.indexOf('background: green;'))
+          var styles = files['/styles.css']
+          assert(~styles.input.indexOf('background: $color;'))
+          assert(~styles.output.indexOf('background: green;'))
         })
 
         it('compiles Sass', function(){
-          var content = files['/styles-sass.css'].content
-          assert(~content.original.indexOf('background: $color'))
-          assert(~content.processed.indexOf('background: yellow;'))
+          var styles = files['/styles-sass.css']
+          assert(~styles.input.indexOf('background: $color'))
+          assert(~styles.output.indexOf('background: yellow;'))
         })
 
         it('compiles Stylus', function(){
-          var content = files['/styles-stylus.css'].content
-          assert(~content.original.indexOf('background color'))
-          assert(~content.processed.indexOf('background: #f00;'))
+          var styles = files['/styles-stylus.css']
+          assert(~styles.input.indexOf('background color'))
+          assert(~styles.output.indexOf('background: #f00;'))
         })
 
       })
@@ -283,27 +287,26 @@ describe('jus', function () {
         })
 
         it('browserifies', function(){
-          assert(~script.content.original.indexOf("const url = require('url')"))
-          assert(~script.content.processed.indexOf('Url.prototype.parse = function('))
+          assert(~script.input.indexOf("const url = require('url')"))
+          assert(~script.output.indexOf('Url.prototype.parse = function('))
         })
 
         it('converts ES6 template strings to ES5 regular strings', function(){
-          assert(~script.content.original.indexOf("`I am an ES2015 string`"))
-          assert(~script.content.processed.indexOf("'I am an ES2015 string'"))
+          assert(~script.input.indexOf("`I am an ES2015 string`"))
+          assert(~script.output.indexOf("'I am an ES2015 string'"))
         })
 
         it('compiles Sass', function(){
-          var content = files['/styles-sass.css'].content
-          assert(~content.original.indexOf('background: $color'))
-          assert(~content.processed.indexOf('background: yellow;'))
+          var styles = files['/styles-sass.css']
+          assert(~styles.input.indexOf('background: $color'))
+          assert(~styles.output.indexOf('background: yellow;'))
         })
 
         it('compiles Stylus', function(){
-          var content = files['/styles-stylus.css'].content
-          assert(~content.original.indexOf('background color'))
-          assert(~content.processed.indexOf('background: #f00;'))
+          var styles = files['/styles-stylus.css']
+          assert(~styles.input.indexOf('background color'))
+          assert(~styles.output.indexOf('background: #f00;'))
         })
-
       })
 
       describe('data', function(){
@@ -324,14 +327,13 @@ describe('jus', function () {
         })
 
         it('injects data into templates', function(){
-
-          assert(page.content.processed.indexOf('His name is cookie monster') > -1)
-          assert(page.content.processed.indexOf('Another character is Bert') > -1)
+          assert(page.output.indexOf('His name is cookie monster') > -1)
+          assert(page.output.indexOf('Another character is Bert') > -1)
         })
 
         it('includes the `pages` object in the context', function(){
-          assert(page.content.processed.indexOf('<li class="page">/other</li>') > -1)
-          assert(page.content.processed.indexOf('<li class="page">/other/papayas</li>') > -1)
+          assert(page.output.indexOf('<li class="page">/other</li>') > -1)
+          assert(page.output.indexOf('<li class="page">/other/papayas</li>') > -1)
         })
       })
 

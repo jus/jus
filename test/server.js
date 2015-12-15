@@ -35,9 +35,7 @@ describe('server', function () {
       assert(files['/apples'])
       assert(files['/styles.css'])
     })
-
   })
-
 
   describe('GET /api/files/apples', function(){
     var page
