@@ -13,5 +13,6 @@ When jus runs, it should update the relative paths, but not the absolute ones.
 
 - absolute: <img src="https://guava.com/logo.png">
 - protocol-relative: <img src="//guava-relative.com/logo.png">
+- leading-slashy: <img src="/guava-leading-slashy.png">
 - relative: <img src="guava.png">
 - script, too: <script src="banana.js">

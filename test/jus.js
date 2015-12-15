@@ -89,6 +89,11 @@ describe('jus', function () {
           assert(~output.indexOf('<script src="/other/banana.js">'))
         })
 
+        it('ignores relative with leading slash', function(){
+          assert(~input.indexOf('<img src="/guava-leading-slashy.png">'))
+          assert(~output.indexOf('<img src="/guava-leading-slashy.png">'))
+        })
+
         it('ignores absolute', function(){
           assert(~input.indexOf('<img src="https://guava.com/logo.png">'))
           assert(~output.indexOf('<img src="https://guava.com/logo.png">'))
@@ -115,9 +120,9 @@ describe('jus', function () {
           assert(~output.indexOf('<a href="/other/papayas">papayas</a>'))
         })
 
-        it('converts relative with leading slash', function(){
+        it('ignores relative with leading slash', function(){
           assert(~input.indexOf('<a href="/grapes">grapes</a>'))
-          assert(~output.indexOf('<a href="/other/grapes">grapes</a>'))
+          assert(~output.indexOf('<a href="/grapes">grapes</a>'))
         })
 
         it('ignores absolute', function(){
