@@ -2,39 +2,48 @@
 
 Squeeze metadata out of a directory full of files.
 
+**This project is experimental. Not ready for public use!**
+
 ## Pages
 
-Pages are written in Markdown, HTML, or Handlebars, or a combination thereof.
-
-## Images
-
-EXIF data
-Dimensions (width, height)
-Color Palette Extraction
-Supports PNG, JPG, GIF, and SVG
-
-## Data files
-
-JSON and YML files are detected and passed to Handlebars templates.
-
-## Scripts
-
-
-## Styles
-
+Markdown, HTML, or Handlebars, or a combination thereof.
 
 - Markdown parsing with [marky-markdown](npm.im/marky-markdown)
 - Syntax Highlighting with Atom.io's [highlights](npm.im/highlights)
-- Handlebars
-- Supports [clean URLs](https://surge.sh/help/using-clean-urls-automatically)
+- GitHub flavored markdown
 - HTML Frontmatter from HTML and Markdown files
-- Color palettes from PNG, JPG, GIF, and SVG files
-- EXIF data from images
+
+## Images
+
+PNG, JPG, GIF, and SVG
+EXIF data
+Geodata
+Dimensions (width, height)
+Color Palette Extraction
+
+## Data files
+
+JSON
+YML
+
+## Scripts
+
+Browserify
+Babel
+- babel-preset-react
+- babel-preset-es2015
+- babel-preset-stage-0
+
+## Styles
+
+- Sass
+- SCSS
+- Stylus
 
 ## Installation
 
 ```sh
-npm i -g jus
+npm i jus --save
 ```
 
 ## Tests
