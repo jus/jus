@@ -5,6 +5,7 @@ const cheerio = require('cheerio')
 const _ = require('lodash')
 const jus = require('..')
 var files
+var context
 
 describe('jus', function () {
   this.timeout(5000)
@@ -13,13 +14,15 @@ describe('jus', function () {
     assert.equal(typeof jus, 'function')
   })
 
-  it('takes a directory, then calls back with data', function (done) {
-    jus(__dirname + '/fixtures', function (err, _files) {
-      assert(!err)
-      files = _files
-      assert(files)
-      done()
-    })
+  it("emits a `squeezed` event when all files have been imported", function (done) {
+    jus(__dirname + '/fixtures')
+      .on('squeezed', (_files, _context) => {
+        assert(_files)
+        assert(_context)
+        files = _files
+        context = _context
+        done()
+      })
   })
 
   describe('files', function () {
