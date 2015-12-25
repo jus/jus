@@ -65,6 +65,7 @@
     "minimist": "^1.2.0",
     "morgan": "^1.6.1",
     "node-sass": "^3.4.2",
+    "open": "0.0.5",
     "require-dir": "^0.3.0",
     "stylus": "^0.52.4",
     "titlecase": "^1.0.2",
