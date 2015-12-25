@@ -3,7 +3,7 @@
   "version": "0.3.2",
   "description": "Squeeze delicious data out of a directory full of files",
   "main": "lib/jus.js",
-  "bin": "lib/cli.js",
+  "bin": "bin/cmd.js",
   "scripts": {
     "test": "NODE_ENV=test mocha"
   },

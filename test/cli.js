@@ -7,7 +7,7 @@ describe('jus CLI', function () {
 
   it("outputs usage if run without a command", function(done) {
     nixt()
-      .run('./lib/cli.js')
+      .run('./bin/cmd.js')
       .stdout(/usage/i)
       .end(done)
   })
@@ -26,7 +26,7 @@ describe('jus CLI', function () {
   //
   //   it("starts the server"), function(done) {
   //     nixt()
-  //       .run('./lib/cli.js serve test/fixtures')
+  //       .run('./bin/cmd.js serve test/fixtures')
   //       .stdout(/Juicing/i)
   //       .end(done)
   //   })

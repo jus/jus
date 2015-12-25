@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const path            = require('path')
+const server          = require('../lib/server')
 const args            = require('minimist')(process.argv.slice(2))
 const command         = args._[0]
 
@@ -12,7 +13,7 @@ process.env.JUS_PORT = args.port || args.p || 3000
 switch(command) {
   case 'serve':
   case 'server':
-    require('./server').start(process.env.JUS_DIR)
+    server.start(process.env.JUS_DIR)
     break
   default:
     console.log(`Unrecognized command: ${command}\n`)
@@ -27,8 +28,8 @@ jus serve
 jus serve <path>
 jus serve <path> --port 1337
 
-If 'path' is omitted, the current directory is served.
-If 'port' is omitted, 3000 is used.
+default path: .
+default port: 3000
 `)
   process.exit(1)
 }
