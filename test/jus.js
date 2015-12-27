@@ -1,6 +1,5 @@
 /* globals describe, it */
 
-const assert    = require('assert')
 const expect    = require('chai').expect
 const cheerio   = require('cheerio')
 const _         = require('lodash')
@@ -12,7 +11,7 @@ describe('jus', function () {
   this.timeout(5000)
 
   it('is a function', function () {
-    assert.equal(typeof jus, 'function')
+    expect(jus).to.be.a('function')
   })
 
   it("emits a `squeezed` event when all files have been imported", function (done) {
@@ -26,22 +25,20 @@ describe('jus', function () {
 
   describe('context', function() {
 
-    it('is an object', function () {
-      assert(context)
-      assert.equal(typeof context, 'object')
+    it('is an object returned by the `squeezed` event', function () {
+      expect(context).to.exist
+      expect(context).to.be.an('object')
     })
 
-    it('has an array of each primitive', function(){
-      assert(Array.isArray(context.files))
-      assert(Array.isArray(context.images))
-      assert(Array.isArray(context.layouts))
-      assert(Array.isArray(context.pages))
-      assert(Array.isArray(context.scripts))
-      assert(Array.isArray(context.stylesheets))
+    it('has an array for each primitive: files, images, layouts, pages, etc..', function(){
+      expect(context.files).to.be.an('array')
+      expect(context.images).to.be.an('array')
+      expect(context.layouts).to.be.an('array')
+      expect(context.pages).to.be.an('array')
+      expect(context.scripts).to.be.an('array')
+      expect(context.stylesheets).to.be.an('array')
     })
-
   })
-
 
   describe('files', function() {
     var files
@@ -51,31 +48,31 @@ describe('jus', function () {
     })
 
     it('is an array', function () {
-      assert(Array.isArray(files))
+      expect(files).to.be.an('array')
     })
 
     it('includes .md files', function () {
-      assert.equal(files['/apples'].path.ext, '.md')
+      expect(files['/apples'].path.ext).to.equal('.md')
     })
 
     it('includes .markdown files', function () {
-      assert.equal(files['/other/papayas'].path.ext, '.markdown')
+      expect(files['/other/papayas'].path.ext).to.equal('.markdown')
     })
 
     it('includes .html files', function () {
-      assert.equal(files['/oranges'].path.ext, '.html')
+      expect(files['/oranges'].path.ext).to.equal('.html')
     })
 
     it('removes "index" suffix', function () {
-      assert.equal(files['/other'].path.relative, '/other/index.md')
+      expect(files['/other'].path.relative).to.equal('/other/index.md')
     })
 
     it('finds the top-level index page', function () {
-      assert(files['/'])
+      expect(files['/']).to.exist
     })
 
     it('finds files regardless of case', function () {
-      assert(files['/other/UPPERCASE'])
+      expect(files['/other/UPPERCASE']).to.exist
     })
   })
 
@@ -87,28 +84,28 @@ describe('jus', function () {
     })
 
     they('have a relative path', function () {
-      assert.equal(pages['/other/papayas'].path.relative, '/other/papayas.markdown')
+      expect(pages['/other/papayas'].path.relative).to.equal('/other/papayas.markdown')
     })
 
     they('ingest HTML frontmatter', function () {
-      assert.equal(pages['/apples'].title, 'Apples!')
-      assert.deepEqual(pages['/apples'].keywords, ['fruit', 'doctors'])
+      expect(pages['/apples'].title).to.equal('Apples!')
+      expect(pages['/apples'].keywords).to.deep.equal(['fruit', 'doctors'])
     })
 
     they('preserve original content in `input`', function () {
-      assert.equal(typeof pages['/other/papayas'].input, 'string')
+      expect(pages['/other/papayas'].input).to.be.a('string')
     })
 
     they('have a cheerio DOM object ($)', function () {
       var $ = pages['/other/papayas'].$
-      assert($)
-      assert($.text)
-      assert($.html)
+      expect($).to.exist
+      expect($.text).to.be.a('function')
+      expect($.html).to.be.a('function')
     })
 
     they('convert markdown to HTML', function () {
       var $ = pages['/other/papayas'].$
-      assert.equal($('a[href="https://digestion.com"]').text(), 'digestion')
+      expect($('a[href="https://digestion.com"]').text()).to.equal('digestion')
     })
 
     describe('`src` attributes in the DOM', function() {
@@ -121,26 +118,26 @@ describe('jus', function () {
       })
 
       it('converts relative', function(){
-        assert(~input.indexOf('<img src="guava.png">'))
-        assert(~output.indexOf('<img src="/other/guava.png">'))
+        expect(input).to.include('<img src="guava.png">')
+        expect(output).to.include('<img src="/other/guava.png">')
 
-        assert(~input.indexOf('<script src="banana.js">'))
-        assert(~output.indexOf('<script src="/other/banana.js">'))
+        expect(input).to.include('<script src="banana.js">')
+        expect(output).to.include('<script src="/other/banana.js">')
       })
 
       it('ignores relative with leading slash', function(){
-        assert(~input.indexOf('<img src="/guava-leading-slashy.png">'))
-        assert(~output.indexOf('<img src="/guava-leading-slashy.png">'))
+        expect(input).to.include('<img src="/guava-leading-slashy.png">')
+        expect(output).to.include('<img src="/guava-leading-slashy.png">')
       })
 
       it('ignores absolute', function(){
-        assert(~input.indexOf('<img src="https://guava.com/logo.png">'))
-        assert(~output.indexOf('<img src="https://guava.com/logo.png">'))
+        expect(input).to.include('<img src="https://guava.com/logo.png">')
+        expect(output).to.include('<img src="https://guava.com/logo.png">')
       })
 
       it('ignores protocol-relative', function(){
-        assert(~input.indexOf('<img src="//guava-relative.com/logo.png">'))
-        assert(~output.indexOf('<img src="//guava-relative.com/logo.png">'))
+        expect(input).to.include('<img src="//guava-relative.com/logo.png">')
+        expect(output).to.include('<img src="//guava-relative.com/logo.png">')
       })
 
     })
@@ -155,51 +152,51 @@ describe('jus', function () {
       })
 
       it('converts relative', function(){
-        assert(~input.indexOf('<a href="papayas">papayas</a>'))
-        assert(~output.indexOf('<a href="/other/papayas">papayas</a>'))
+        expect(input).to.include('<a href="papayas">papayas</a>')
+        expect(output).to.include('<a href="/other/papayas">papayas</a>')
       })
 
       it('ignores relative with leading slash', function(){
-        assert(~input.indexOf('<a href="/grapes">grapes</a>'))
-        assert(~output.indexOf('<a href="/grapes">grapes</a>'))
+        expect(input).to.include('<a href="/grapes">grapes</a>')
+        expect(output).to.include('<a href="/grapes">grapes</a>')
       })
 
       it('ignores absolute', function(){
-        assert(~input.indexOf('<a href="http://mango.com">mango.com</a>'))
-        assert(~output.indexOf('<a href="http://mango.com">mango.com</a>'))
+        expect(input).to.include('<a href="http://mango.com">mango.com</a>')
+        expect(output).to.include('<a href="http://mango.com">mango.com</a>')
       })
 
       it('ignores protocol-relative', function(){
-        assert(~input.indexOf('<a href="//coconut-cdn.com">coconut-cdn.com</a>'))
-        assert(~output.indexOf('<a href="//coconut-cdn.com">coconut-cdn.com</a>'))
+        expect(input).to.include('<a href="//coconut-cdn.com">coconut-cdn.com</a>')
+        expect(output).to.include('<a href="//coconut-cdn.com">coconut-cdn.com</a>')
       })
 
     })
 
     describe('title', function(){
       it('is derived from HTML frontmatter', function () {
-        assert.equal(pages['/apples'].title, 'Apples!')
+        expect(pages['/apples'].title).to.equal('Apples!')
       })
 
       it('falls back to <title> tag, if present', function () {
-        assert.equal(pages['/oranges'].title, 'We are Oranges')
+        expect(pages['/oranges'].title).to.equal('We are Oranges')
       })
 
       it('falls back lastly to titlecased basename', function () {
-        assert.equal(pages['/other/papayas'].title, 'Papayas')
+        expect(pages['/other/papayas'].title).to.equal('Papayas')
       })
 
       it('injects <title> tag into HTML, if absent', function () {
-        assert(~pages['/oranges'].output.indexOf('<title>We are Oranges</title>'))
+        expect(pages['/oranges'].output).to.include('<title>We are Oranges</title>')
       })
     })
 
     describe('isIndex', function(){
       it('is true if file is a directory index', function () {
-        assert(pages['/other'].isIndex)
+        expect(pages['/other'].isIndex).to.be.true
       })
       it('is false if file is NOT a directory index', function () {
-        assert(!pages['/other/papayas'].isIndex)
+        expect(pages['/other/papayas'].isIndex).to.be.false
       })
     })
   })
@@ -211,42 +208,38 @@ describe('jus', function () {
       pages = context.pages
     })
 
-    it("builds an images object with a key for each image in the page's directory", function () {
-      assert.equal(pages['/thumbs/png'].images.thumb.href, '/thumbs/png/thumb.png')
+    it("are attached to pages in the same directory", function () {
+      expect(pages['/thumbs/png'].images.thumb.href).to.equal('/thumbs/png/thumb.png')
     })
 
-    it('can be an svg', function () {
-      assert.equal(pages['/thumbs/svg'].images.thumbnail.href, '/thumbs/svg/thumbnail.svg')
+    they('can be SVGs', function () {
+      expect(pages['/thumbs/svg'].images.thumbnail.href).to.equal('/thumbs/svg/thumbnail.svg')
     })
 
-    it('can be a jpg', function () {
-      assert.equal(pages['/thumbs/jpg'].images.thumb.href, '/thumbs/jpg/thumb.jpg')
+    they('can be JPGs', function () {
+      expect(pages['/thumbs/jpg'].images.thumb.href).to.equal('/thumbs/jpg/thumb.jpg')
     })
 
-    it('can be a gif', function () {
-      assert.equal(pages['/thumbs/gif'].images.thumb.href, '/thumbs/gif/thumb.gif')
+    they('can be GIFs', function () {
+      expect(pages['/thumbs/gif'].images.thumb.href).to.equal('/thumbs/gif/thumb.gif')
     })
 
-    it('includes width and height dimensions for each image', function() {
+    they('include width and height dimensions', function() {
       const jpg = pages['/thumbs/jpg'].images.thumb
-      assert(jpg.dimensions)
-      assert.equal(jpg.dimensions.width, 170)
-      assert.equal(jpg.dimensions.height, 170)
+      expect(jpg.dimensions.width).to.equal(170)
+      expect(jpg.dimensions.height).to.equal(170)
     })
 
-    it('includes exif data', function(){
+    they('include exif data', function(){
       const jpg = pages['/thumbs/jpg'].images.thumb
-      assert(jpg.exif)
-      assert(jpg.exif.imageSize)
-      assert.equal(jpg.exif.imageSize.width, 170)
-      assert.equal(jpg.exif.imageSize.height, 170)
+      expect(jpg.exif.imageSize.width).to.equal(170)
+      expect(jpg.exif.imageSize.height).to.equal(170)
     })
 
-    it('includes color data as hex strings', function(){
+    they('include color data as hex strings', function(){
       var colors = pages['/thumbs/gif'].images.thumb.colors
-      assert(Array.isArray(colors))
-      assert(colors.length)
-      assert(colors[0].match(/^#[0-9a-f]{3,6}$/i))
+      expect(colors).to.be.an('array')
+      expect(colors[0]).to.match(/^#[0-9a-f]{3,6}$/i)
     })
   })
 
@@ -258,70 +251,70 @@ describe('jus', function () {
       layouts = context.layouts
     })
 
-    it('has a type', function(){
-      assert.equal(layouts['/layout'].type, 'layout')
+    they('have a type', function(){
+      expect(layouts['/layout'].type).to.equal('layout')
     })
 
-    it('uses /layout.html as the default layout, if present', function(){
+    they('use /layout.html as the default layout, if present', function(){
       var $ = cheerio.load(pages['/'].render(context))
-      assert($('html').length)
-      assert.equal($('#default-layout').text(), 'I am the fixtures index\n')
+      expect($('html').length).to.equal(1)
+      expect($('#default-layout').text()).to.equal('I am the fixtures index\n')
     })
 
-    it('allows custom layout to be set in HTML frontmatter', function(){
+    they("can be specified in a page's HTML frontmatter", function(){
       var page = pages['/custom']
-      assert(page)
-      assert.equal(page.layout, 'simple')
+      expect(page).to.exist
+      expect(page.layout).to.equal('simple')
       var $ = cheerio.load(page.render(context))
-      assert($('#simple-layout').length)
+      expect($('#simple-layout').length).to.equal(1)
     })
 
-    it('does not apply layout if custom layout does not exist', function(){
+    they('are not used if specified layout does not exist', function(){
       var page = pages['/misguided']
-      assert(page)
+      expect(page).to.exist
       var $ = cheerio.load(page.render(context))
-      assert($('p').length)
-      assert(!$('body').length)
+      expect($('p').length).to.equal(1)
+      expect($('body').length).to.equal(0)
     })
 
-    it('does not apply layout if set to `false` in HTML frontmatter', function(){
+    they('are not used if set to `false` in HTML frontmatter', function(){
       var page = pages['/standalone']
-      assert(page)
+      expect(page).to.exist
       var $ = cheerio.load(page.render(context))
-      assert($('p').length)
-      assert(!$('#default-layout').length)
+      expect($('p').length).to.equal(1)
+      expect($('#default-layout').length).to.equal(0)
     })
 
   })
 
   describe('stylesheets', function(){
 
-    it('changes extension to `css` in href', function(){
+    they('have a `.css` extension in their href', function(){
       var stylesheet = files['/styles.css']
-      assert.equal(stylesheet.href, '/styles.css')
-      assert.equal(stylesheet.path.ext, '.scss')
+      expect(stylesheet.href).to.equal('/styles.css')
+      expect(stylesheet.path.ext).to.equal('.scss')
     })
 
-    it('has a type', function(){
-      assert.equal(files['/styles.css'].type, 'stylesheet')
+    they('have a type', function(){
+      expect(files['/styles.css'].type).to.equal('stylesheet')
     })
 
-    it('compiles SCSS', function(){
+    they('can be written in SCSS', function(){
       var styles = files['/styles.css']
-      assert(~styles.input.indexOf('background: $color;'))
-      assert(~styles.output.indexOf('background: green;'))
+      expect(styles.input).to.include('background: $color;')
+      expect(styles.output).to.include('background: green;')
     })
 
-    it('compiles Sass', function(){
+    they('can be written in Sass', function(){
       var styles = files['/styles-sass.css']
-      assert(~styles.input.indexOf('background: $color'))
-      assert(~styles.output.indexOf('background: yellow;'))
+      expect(styles.input).to.include('background: $color')
+      expect(styles.output).to.include('background: yellow;')
     })
 
-    it('compiles Stylus', function(){
+    they('can be written in Stylus', function(){
       var styles = files['/styles-stylus.css']
-      assert(~styles.input.indexOf('background color'))
-      assert(~styles.output.indexOf('background: #f00;'))
+      expect(styles.input).to.include('background color')
+      expect(styles.output).to.include('background: #f00;')
     })
 
   })
@@ -333,34 +326,22 @@ describe('jus', function () {
       script = files['/babel-and-browserify.js']
     })
 
-    it('preserves js extension in href', function(){
-      assert.equal(script.href, '/babel-and-browserify.js')
+    they('preserve js extension in href', function(){
+      expect(script.href).to.equal('/babel-and-browserify.js')
     })
 
-    it('has a type', function(){
-      assert.equal(script.type, 'script')
+    they('have a type', function(){
+      expect(script.type).to.equal('script')
     })
 
-    it('browserifies', function(){
-      assert(~script.input.indexOf("const url = require('url')"))
-      assert(~script.output.indexOf('Url.prototype.parse = function('))
+    they('browserify', function(){
+      expect(script.input).to.include("const url = require('url')")
+      expect(script.output).to.include('Url.prototype.parse = function(')
     })
 
-    it('converts ES6 template strings to ES5 regular strings', function(){
-      assert(~script.input.indexOf("`I am an ES2015 string`"))
-      assert(~script.output.indexOf("'I am an ES2015 string'"))
-    })
-
-    it('compiles Sass', function(){
-      var styles = files['/styles-sass.css']
-      assert(~styles.input.indexOf('background: $color'))
-      assert(~styles.output.indexOf('background: yellow;'))
-    })
-
-    it('compiles Stylus', function(){
-      var styles = files['/styles-stylus.css']
-      assert(~styles.input.indexOf('background color'))
-      assert(~styles.output.indexOf('background: #f00;'))
+    they('babelify', function(){
+      expect(script.input).to.include("`I am an ES2015 string`")
+      expect(script.output).to.include("'I am an ES2015 string'")
     })
   })
 
