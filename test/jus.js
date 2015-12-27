@@ -1,6 +1,7 @@
 /* globals describe, it */
 
 const assert    = require('assert')
+const expect    = require('chai').expect
 const cheerio   = require('cheerio')
 const _         = require('lodash')
 const jus       = require('..')
@@ -366,30 +367,32 @@ describe('jus', function () {
   describe('data', function(){
     var page
     var output
+    var data
 
     before(function(){
       page = pages['/thumbs']
       output = page.render(context)
+      data = page.data
     })
 
     it("attaches data from JSON files to files in the same directory", function () {
-      assert.equal(page.data.some_json_data.name, "cookie monster")
-      assert.equal(page.data.some_json_data.food, "cookies")
+      expect(data.some_json_data.name).to.equal('cookie monster')
+      expect(data.some_json_data.food).to.equal('cookies')
     })
 
     it("attaches data from YML files too", function () {
-      assert.equal(page.data.some_yml_data.name, "Bert")
-      assert.equal(page.data.some_yml_data.friend, "Ernie")
+      expect(data.some_yml_data.name).to.equal('Bert')
+      expect(data.some_yml_data.friend).to.equal('Ernie')
     })
 
     it('injects data into templates', function(){
-      assert(output.indexOf('His name is cookie monster') > -1)
-      assert(output.indexOf('Another character is Bert') > -1)
+      expect(output).to.contain('His name is cookie monster')
+      expect(output).to.contain('Another character is Bert')
     })
 
     it('includes the `pages` object in the context', function(){
-      assert(output.indexOf('<li class="page">/other</li>') > -1)
-      assert(output.indexOf('<li class="page">/other/papayas</li>') > -1)
+      expect(output).to.contain('<li class="page">/other</li>')
+      expect(output).to.contain('<li class="page">/other/papayas</li>')
     })
   })
 
