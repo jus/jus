@@ -1,6 +1,6 @@
 /* globals before, after, describe, it */
 
-const assert      = require('power-assert')
+const assert      = require('assert')
 const path        = require('path')
 const supertest   = require('supertest')
 const cheerio     = require('cheerio')
