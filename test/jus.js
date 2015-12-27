@@ -5,7 +5,6 @@ const cheerio   = require('cheerio')
 const _         = require('lodash')
 const jus       = require('..')
 const they      = it
-var files
 var context
 
 describe('jus', function () {
@@ -17,21 +16,38 @@ describe('jus', function () {
 
   it("emits a `squeezed` event when all files have been imported", function (done) {
     jus(__dirname + '/fixtures')
-      .on('squeezed', (ctx) => {
-        assert(ctx)
-        assert(ctx.files)
-        assert(ctx.pages)
-        assert(ctx.stylesheets)
-        assert(ctx.layouts)
-        assert(ctx.scripts)
-        assert(ctx.images)
-        context = ctx
-        files = ctx.files
+      .on('squeezed', (_context) => {
+        context = _context
+        files = context.files
         done()
       })
   })
 
+  describe('context', function() {
+
+    it('is an object', function () {
+      assert(context)
+      assert.equal(typeof context, 'object')
+    })
+
+    it('has an array of each primitive', function(){
+      assert(Array.isArray(context.files))
+      assert(Array.isArray(context.images))
+      assert(Array.isArray(context.layouts))
+      assert(Array.isArray(context.pages))
+      assert(Array.isArray(context.scripts))
+      assert(Array.isArray(context.stylesheets))
+    })
+
+  })
+
+
   describe('files', function() {
+    var files
+
+    before(function(){
+      files = context.files
+    })
 
     it('is an array', function () {
       assert(Array.isArray(files))
@@ -63,29 +79,34 @@ describe('jus', function () {
   })
 
   describe('pages', function () {
+    var pages
+
+    before(function(){
+      pages = context.pages
+    })
 
     they('have a relative path', function () {
-      assert.equal(files['/other/papayas'].path.relative, '/other/papayas.markdown')
+      assert.equal(pages['/other/papayas'].path.relative, '/other/papayas.markdown')
     })
 
     they('ingest HTML frontmatter', function () {
-      assert.equal(files['/apples'].title, 'Apples!')
-      assert.deepEqual(files['/apples'].keywords, ['fruit', 'doctors'])
+      assert.equal(pages['/apples'].title, 'Apples!')
+      assert.deepEqual(pages['/apples'].keywords, ['fruit', 'doctors'])
     })
 
     they('preserve original content in `input`', function () {
-      assert.equal(typeof files['/other/papayas'].input, 'string')
+      assert.equal(typeof pages['/other/papayas'].input, 'string')
     })
 
     they('have a cheerio DOM object ($)', function () {
-      var $ = files['/other/papayas'].$
+      var $ = pages['/other/papayas'].$
       assert($)
       assert($.text)
       assert($.html)
     })
 
     they('convert markdown to HTML', function () {
-      var $ = files['/other/papayas'].$
+      var $ = pages['/other/papayas'].$
       assert.equal($('a[href="https://digestion.com"]').text(), 'digestion')
     })
 
@@ -94,8 +115,8 @@ describe('jus', function () {
       var output
 
       before(function() {
-        input = files['/other'].input
-        output = files['/other'].$.html()
+        input = pages['/other'].input
+        output = pages['/other'].$.html()
       })
 
       it('converts relative', function(){
@@ -128,8 +149,8 @@ describe('jus', function () {
       var output
 
       before(function() {
-        input = files['/other'].input
-        output = files['/other'].$.html()
+        input = pages['/other'].input
+        output = pages['/other'].$.html()
       })
 
       it('converts relative', function(){
@@ -156,58 +177,64 @@ describe('jus', function () {
 
     describe('title', function(){
       it('is derived from HTML frontmatter', function () {
-        assert.equal(files['/apples'].title, 'Apples!')
+        assert.equal(pages['/apples'].title, 'Apples!')
       })
 
       it('falls back to <title> tag, if present', function () {
-        assert.equal(files['/oranges'].title, 'We are Oranges')
+        assert.equal(pages['/oranges'].title, 'We are Oranges')
       })
 
       it('falls back lastly to titlecased basename', function () {
-        assert.equal(files['/other/papayas'].title, 'Papayas')
+        assert.equal(pages['/other/papayas'].title, 'Papayas')
       })
 
       it('injects <title> tag into HTML, if absent', function () {
-        assert(~files['/oranges'].output.indexOf('<title>We are Oranges</title>'))
+        assert(~pages['/oranges'].output.indexOf('<title>We are Oranges</title>'))
       })
     })
 
     describe('isIndex', function(){
       it('is true if file is a directory index', function () {
-        assert(files['/other'].isIndex)
+        assert(pages['/other'].isIndex)
       })
       it('is false if file is NOT a directory index', function () {
-        assert(!files['/other/papayas'].isIndex)
+        assert(!pages['/other/papayas'].isIndex)
       })
     })
   })
 
   describe('images', function(){
+    var pages
+
+    before(function(){
+      pages = context.pages
+    })
+
     it("builds an images object with a key for each image in the page's directory", function () {
-      assert.equal(files['/thumbs/png'].images.thumb.href, '/thumbs/png/thumb.png')
+      assert.equal(pages['/thumbs/png'].images.thumb.href, '/thumbs/png/thumb.png')
     })
 
     it('can be an svg', function () {
-      assert.equal(files['/thumbs/svg'].images.thumbnail.href, '/thumbs/svg/thumbnail.svg')
+      assert.equal(pages['/thumbs/svg'].images.thumbnail.href, '/thumbs/svg/thumbnail.svg')
     })
 
     it('can be a jpg', function () {
-      assert.equal(files['/thumbs/jpg'].images.thumb.href, '/thumbs/jpg/thumb.jpg')
+      assert.equal(pages['/thumbs/jpg'].images.thumb.href, '/thumbs/jpg/thumb.jpg')
     })
 
     it('can be a gif', function () {
-      assert.equal(files['/thumbs/gif'].images.thumb.href, '/thumbs/gif/thumb.gif')
+      assert.equal(pages['/thumbs/gif'].images.thumb.href, '/thumbs/gif/thumb.gif')
     })
 
     it('includes width and height dimensions for each image', function() {
-      const jpg = files['/thumbs/jpg'].images.thumb
+      const jpg = pages['/thumbs/jpg'].images.thumb
       assert(jpg.dimensions)
       assert.equal(jpg.dimensions.width, 170)
       assert.equal(jpg.dimensions.height, 170)
     })
 
     it('includes exif data', function(){
-      const jpg = files['/thumbs/jpg'].images.thumb
+      const jpg = pages['/thumbs/jpg'].images.thumb
       assert(jpg.exif)
       assert(jpg.exif.imageSize)
       assert.equal(jpg.exif.imageSize.width, 170)
@@ -215,7 +242,7 @@ describe('jus', function () {
     })
 
     it('includes color data as hex strings', function(){
-      var colors = files['/thumbs/gif'].images.thumb.colors
+      var colors = pages['/thumbs/gif'].images.thumb.colors
       assert(Array.isArray(colors))
       assert(colors.length)
       assert(colors[0].match(/^#[0-9a-f]{3,6}$/i))
@@ -223,19 +250,25 @@ describe('jus', function () {
   })
 
   describe('layouts', function(){
+    var layouts
+
+    before(function(){
+      pages = context.pages
+      layouts = context.layouts
+    })
 
     it('has a type', function(){
-      assert.equal(files['/layout'].type, 'layout')
+      assert.equal(layouts['/layout'].type, 'layout')
     })
 
     it('uses /layout.html as the default layout, if present', function(){
-      var $ = cheerio.load(files['/'].render(context))
+      var $ = cheerio.load(pages['/'].render(context))
       assert($('html').length)
       assert.equal($('#default-layout').text(), 'I am the fixtures index\n')
     })
 
     it('allows custom layout to be set in HTML frontmatter', function(){
-      var page = files['/custom']
+      var page = pages['/custom']
       assert(page)
       assert.equal(page.layout, 'simple')
       var $ = cheerio.load(page.render(context))
@@ -243,7 +276,7 @@ describe('jus', function () {
     })
 
     it('does not apply layout if custom layout does not exist', function(){
-      var page = files['/misguided']
+      var page = pages['/misguided']
       assert(page)
       var $ = cheerio.load(page.render(context))
       assert($('p').length)
@@ -251,7 +284,7 @@ describe('jus', function () {
     })
 
     it('does not apply layout if set to `false` in HTML frontmatter', function(){
-      var page = files['/standalone']
+      var page = pages['/standalone']
       assert(page)
       var $ = cheerio.load(page.render(context))
       assert($('p').length)
@@ -332,9 +365,11 @@ describe('jus', function () {
 
   describe('data', function(){
     var page
+    var output
 
     before(function(){
-      page = files['/thumbs']
+      page = pages['/thumbs']
+      output = page.render(context)
     })
 
     it("attaches data from JSON files to files in the same directory", function () {
@@ -348,13 +383,11 @@ describe('jus', function () {
     })
 
     it('injects data into templates', function(){
-      var output = page.render(context)
       assert(output.indexOf('His name is cookie monster') > -1)
       assert(output.indexOf('Another character is Bert') > -1)
     })
 
     it('includes the `pages` object in the context', function(){
-      var output = page.render(context)
       assert(output.indexOf('<li class="page">/other</li>') > -1)
       assert(output.indexOf('<li class="page">/other/papayas</li>') > -1)
     })
