@@ -1,6 +1,7 @@
 /* globals before, after, describe, it */
 
 const assert      = require('assert')
+const expect      = require('chai').expect
 const path        = require('path')
 const supertest   = require('supertest')
 const cheerio     = require('cheerio')
@@ -80,6 +81,17 @@ describe('server', function () {
 
   })
 
-  // describe('redirects')
+  describe('redirects', function() {
+
+    it('redirects', function(done){
+      supertest(server)
+        .get('/apples-of-yore')
+        .expect(301)
+        .end((err, res) => {
+          expect(res.header['location']).to.equal('/apples')
+          return done()
+        })
+    })
+  })
 
 })
