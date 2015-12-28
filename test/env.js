@@ -26,4 +26,9 @@ describe('env', function () {
     expect(env.production).to.be.false
   })
 
+  it('has a `current` getter', function () {
+    process.env.NODE_ENV='wango'
+    expect(env.current).to.equal('wango')
+  })
+
 })
