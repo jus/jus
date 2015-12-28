@@ -7,7 +7,7 @@ const command         = args._[0]
 
 if (!command) usage()
 
-process.env.JUS_DIR = args._[1] || process.cwd()
+process.env.JUS_DIR = path.resolve(process.cwd(), args._[1]) || process.cwd()
 process.env.JUS_PORT = args.port || args.p || 3000
 
 switch(command) {
