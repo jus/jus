@@ -90,15 +90,21 @@ describe('server', function () {
   })
 
   describe('GET /styles.css', function(){
+    var text
     var headers
 
     before(done => {
       supertest(server)
         .get('/styles.css')
         .end((err, res) => {
+          text = res.text
           headers = res.headers
           return done()
         })
+    })
+
+    it('has response text containing CSS styles', function(){
+      expect(text).to.include('background: green;')
     })
 
     it('returns a CSS mime type', function(){
