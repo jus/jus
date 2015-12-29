@@ -47,32 +47,44 @@ describe('jus', function () {
       files = context.files
     })
 
-    it('is an array', function () {
+    they('are in an array', function () {
       expect(files).to.be.an('array')
     })
 
-    it('includes .md files', function () {
+    they('include .md files', function () {
       expect(files['/apples'].path.ext).to.equal('.md')
     })
 
-    it('includes .markdown files', function () {
+    they('include .markdown files', function () {
       expect(files['/other/papayas'].path.ext).to.equal('.markdown')
     })
 
-    it('includes .html files', function () {
+    they('include .html files', function () {
       expect(files['/oranges'].path.ext).to.equal('.html')
     })
 
-    it('removes "index" suffix', function () {
+    they('have and href with the "index" suffix removed', function () {
       expect(files['/other'].path.relative).to.equal('/other/index.md')
     })
 
-    it('finds the top-level index page', function () {
+    they('have a root-level href', function () {
       expect(files['/']).to.exist
     })
 
-    it('finds files regardless of case', function () {
+    they('are loaded regardless of case', function () {
       expect(files['/other/UPPERCASE']).to.exist
+    })
+
+    they('have target filenames', function () {
+      expect(files['/apples'].path.target.relative).to.equal('/apples.html')
+      expect(files['/styles.css'].path.target.relative).to.equal('/styles.css')
+      expect(files['/babel-and-browserify.js'].path.target.relative).to.equal('/babel-and-browserify.js')
+    })
+
+    they('have target extensions', function () {
+      expect(files['/apples'].path.target.ext).to.equal('.html')
+      expect(files['/styles.css'].path.target.ext).to.equal('.css')
+      expect(files['/babel-and-browserify.js'].path.target.ext).to.equal('.js')
     })
   })
 

@@ -41,15 +41,14 @@ describe('server', function () {
 
   describe('GET /api/files/apples', function(){
     var context
+    var headers
 
     before(done => {
       supertest(server)
         .get('/api/files/apples')
-        .set('Accept', 'application/json')
-        .expect(200)
-        .expect('Content-Type', /json/)
         .end((err, res) => {
           context = res.body
+          headers = res.headers
           return done()
         })
     })
@@ -60,17 +59,22 @@ describe('server', function () {
       assert.equal(page.title, 'Apples!')
     })
 
+    it('returns a JSON mime type', function(){
+      expect(headers['content-type']).to.equal('application/json; charset=utf-8')
+    })
+
   })
 
   describe('GET /apples', function(){
     var $
+    var headers
 
     before(done => {
       supertest(server)
         .get('/apples')
-        .expect(200)
         .end((err, res) => {
           $ = cheerio.load(res.text)
+          headers = res.headers
           return done()
         })
     })
@@ -79,7 +83,48 @@ describe('server', function () {
       assert.equal($('p').text(), 'How do you like them?')
     })
 
+    it('returns an HTML mime type', function(){
+      expect(headers['content-type']).to.equal('text/html; charset=utf-8')
+    })
+
   })
+
+  describe('GET /styles.css', function(){
+    var headers
+
+    before(done => {
+      supertest(server)
+        .get('/styles.css')
+        .end((err, res) => {
+          headers = res.headers
+          return done()
+        })
+    })
+
+    it('returns a CSS mime type', function(){
+      expect(headers['content-type']).to.equal('text/css; charset=utf-8')
+    })
+
+  })
+
+  describe('GET /babel-and-browserify.js', function(){
+    var headers
+
+    before(done => {
+      supertest(server)
+        .get('/babel-and-browserify.js')
+        .end((err, res) => {
+          headers = res.headers
+          return done()
+        })
+    })
+
+    it('returns a JS mime type', function(){
+      expect(headers['content-type']).to.equal('application/javascript; charset=utf-8')
+    })
+
+  })
+
 
   describe('redirects', function() {
 
