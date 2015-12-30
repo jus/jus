@@ -120,6 +120,16 @@ describe('jus', function () {
       expect($('a[href="https://digestion.com"]').text()).to.equal('digestion')
     })
 
+    they('get a titlecased version of their filename as a title, if not set', function () {
+      var page = pages['/other/papayas']
+      var $ = page.$
+      expect(page.title).to.equal('Papayas')
+
+      // <title> tag is set after render
+      var $ = cheerio.load(page.render(context))
+      expect($('title').text()).to.equal('Papayas')
+    })
+
     describe.skip('`src` attributes in the DOM', function() {
       var input
       var output
