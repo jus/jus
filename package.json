@@ -69,7 +69,6 @@
     "open": "0.0.5",
     "require-dir": "^0.3.0",
     "stylus": "^0.52.4",
-    "titlecase": "^1.0.2",
     "walkdir": "0.0.10"
   }
 }
