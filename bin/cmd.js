@@ -11,8 +11,11 @@ process.env.JUS_DIR = args._[1] ? path.resolve(process.cwd(), args._[1]) : proce
 process.env.JUS_PORT = args.port || args.p || 3000
 
 switch(command) {
+  case 'sers':
   case 'serve':
   case 'server':
+  case 'servez':
+  case 'servons':
     server.start(process.env.JUS_DIR)
     break
   default:
