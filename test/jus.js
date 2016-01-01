@@ -353,16 +353,20 @@ describe('jus', function () {
       expect(styles.output).to.include('background: yellow;')
     })
 
-    they('can be written in Stylus', function(){
-      var styles = files['/styles-stylus.css']
-      expect(styles.input).to.include('background color')
-      expect(styles.output).to.include('background: #f00;')
-    })
+    describe('written in stylus', function() {
 
-    they('can use Stylus require statements', function(){
-      var styles = files['/styles-stylus.css']
-      expect(styles.input).to.include('border-color otherColor')
-      expect(styles.output).to.include('border-color: #00f;')
+      they('can use variables', function(){
+        var styles = files['/styles-stylus.css']
+        expect(styles.input).to.include('background color')
+        expect(styles.output).to.include('background: #f00;')
+      })
+
+      they('can require other stylus files in the same directory', function(){
+        var styles = files['/styles-stylus.css']
+        expect(styles.input).to.include('border-color otherColor')
+        expect(styles.output).to.include('border-color: #00f;')
+      })
+
     })
 
   })
