@@ -367,6 +367,11 @@ describe('jus', function () {
         expect(styles.output).to.include('border-color: #00f;')
       })
 
+      they('can require stylus files from different directories', function(){
+        var styles = files['/styles-stylus.css']
+        expect(styles.input).to.include('font-size fontSize')
+        expect(styles.output).to.include('font-size: 1.5rem;')
+      })
     })
 
   })
