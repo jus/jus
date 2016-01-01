@@ -345,6 +345,12 @@ describe('jus', function () {
       expect(styles.output).to.include('background: #f00;')
     })
 
+    they('can use Stylus require statements', function(){
+      var styles = files['/styles-stylus.css']
+      expect(styles.input).to.include('border-color otherColor')
+      expect(styles.output).to.include('border-color: #00f;')
+    })
+
   })
 
   describe('scripts', function(){
