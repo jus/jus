@@ -87,13 +87,19 @@ describe('jus', function () {
         expect(path.name).to.equal('apples')
       })
 
-      it('includes target filenames', function () {
+      it('includes target.relative', function () {
         expect(files['/apples'].path.target.relative).to.equal('/apples.html')
         expect(files['/styles.css'].path.target.relative).to.equal('/styles.css')
         expect(files['/babel-and-browserify.js'].path.target.relative).to.equal('/babel-and-browserify.js')
       })
 
-      it('includes target extensions', function () {
+      it('includes target.full', function () {
+        expect(files['/apples'].path.target.full).to.include('test/fixtures/apples.html')
+        expect(files['/styles.css'].path.target.full).to.include('test/fixtures/styles.css')
+        expect(files['/babel-and-browserify.js'].path.target.full).to.include('test/fixtures/babel-and-browserify.js')
+      })
+
+      it('includes target.ext', function () {
         expect(files['/apples'].path.target.ext).to.equal('.html')
         expect(files['/styles.css'].path.target.ext).to.equal('.css')
         expect(files['/babel-and-browserify.js'].path.target.ext).to.equal('.js')
