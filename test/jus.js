@@ -275,7 +275,7 @@ describe('jus', function () {
     })
 
     they('have a type', function(){
-      expect(layouts['/layout'].type).to.equal('layout')
+      expect(layouts.default.type).to.equal('layout')
     })
 
     they('use /layout.html as the default layout, if present', function(){
