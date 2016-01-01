@@ -81,7 +81,7 @@ describe('jus', function () {
         expect(path.relative).to.equal('/apples.md')
         expect(path.processRelative).to.equal('test/fixtures/apples.md')
         expect(path.root).to.equal('/')
-        // expect(path.dir).to.equal('text/fixtures/apples.md')
+        expect(path.dir).to.equal('/')
         expect(path.base).to.equal('apples.md')
         expect(path.ext).to.equal('.md')
         expect(path.name).to.equal('apples')
