@@ -18,7 +18,6 @@ describe('jus', function () {
     jus(__dirname + '/fixtures')
       .on('squeezed', (_context) => {
         context = _context
-        files = context.files
         done()
       })
   })
@@ -267,10 +266,12 @@ describe('jus', function () {
 
   describe('layouts', function(){
     var layouts
+    var pages
+
 
     before(function(){
-      pages = context.pages
       layouts = context.layouts
+      pages = context.pages
     })
 
     they('have a type', function(){
@@ -310,6 +311,11 @@ describe('jus', function () {
   })
 
   describe('stylesheets', function(){
+    var files
+
+    before(function(){
+      files = context.files
+    })
 
     they('have a `.css` extension in their href', function(){
       var stylesheet = files['/styles.css']
@@ -345,7 +351,7 @@ describe('jus', function () {
     var script
 
     before(function(){
-      script = files['/babel-and-browserify.js']
+      script = context.files['/babel-and-browserify.js']
     })
 
     they('preserve js extension in href', function(){
@@ -373,7 +379,7 @@ describe('jus', function () {
     var data
 
     before(function(){
-      page = pages['/thumbs']
+      page = context.pages['/thumbs']
       output = page.render(context)
       data = page.data
     })

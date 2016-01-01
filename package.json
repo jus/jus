@@ -5,7 +5,7 @@
   "main": "lib/jus.js",
   "bin": "bin/cmd.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha"
+    "test": "NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index"
   },
   "repository": "github:zeke/jus",
   "keywords": [
