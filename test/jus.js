@@ -74,16 +74,30 @@ describe('jus', function () {
       expect(files['/other/UPPERCASE']).to.exist
     })
 
-    they('have target filenames', function () {
-      expect(files['/apples'].path.target.relative).to.equal('/apples.html')
-      expect(files['/styles.css'].path.target.relative).to.equal('/styles.css')
-      expect(files['/babel-and-browserify.js'].path.target.relative).to.equal('/babel-and-browserify.js')
-    })
+    describe('path', function() {
+      it('is an object with a bunch of sliced and diced info about the filename', function(){
+        var path = files['/apples'].path
+        expect(path.full).to.include('/test/fixtures/apples.md')
+        expect(path.relative).to.equal('/apples.md')
+        expect(path.processRelative).to.equal('test/fixtures/apples.md')
+        expect(path.root).to.equal('/')
+        // expect(path.dir).to.equal('text/fixtures/apples.md')
+        expect(path.base).to.equal('apples.md')
+        expect(path.ext).to.equal('.md')
+        expect(path.name).to.equal('apples')
+      })
 
-    they('have target extensions', function () {
-      expect(files['/apples'].path.target.ext).to.equal('.html')
-      expect(files['/styles.css'].path.target.ext).to.equal('.css')
-      expect(files['/babel-and-browserify.js'].path.target.ext).to.equal('.js')
+      it('includes target filenames', function () {
+        expect(files['/apples'].path.target.relative).to.equal('/apples.html')
+        expect(files['/styles.css'].path.target.relative).to.equal('/styles.css')
+        expect(files['/babel-and-browserify.js'].path.target.relative).to.equal('/babel-and-browserify.js')
+      })
+
+      it('includes target extensions', function () {
+        expect(files['/apples'].path.target.ext).to.equal('.html')
+        expect(files['/styles.css'].path.target.ext).to.equal('.css')
+        expect(files['/babel-and-browserify.js'].path.target.ext).to.equal('.js')
+      })
     })
   })
 
