@@ -118,10 +118,6 @@ describe('jus', function () {
       pages = context.pages
     })
 
-    they('have a relative path', function () {
-      expect(pages['/other/papayas'].path.relative).to.equal('/other/papayas.markdown')
-    })
-
     they('ingest HTML frontmatter', function () {
       expect(pages['/apples'].title).to.equal('Apples!')
       expect(pages['/apples'].keywords).to.deep.equal(['fruit', 'doctors'])
@@ -131,6 +127,11 @@ describe('jus', function () {
       expect(pages['/other/papayas'].input).to.be.a('string')
     })
 
+    they('convert markdown to HTML', function () {
+      var $ = pages['/other/papayas'].$
+      expect($('a[href="https://digestion.com"]').text()).to.equal('digestion')
+    })
+
     they('have a cheerio DOM object ($)', function () {
       var $ = pages['/other/papayas'].$
       expect($).to.exist
@@ -138,12 +139,7 @@ describe('jus', function () {
       expect($.html).to.be.a('function')
     })
 
-    they('convert markdown to HTML', function () {
-      var $ = pages['/other/papayas'].$
-      expect($('a[href="https://digestion.com"]').text()).to.equal('digestion')
-    })
-
-    they('get a titlecased version of their filename as a title, if not set', function () {
+    they('get a titlecased version of their filename as a default title, if not set', function () {
       var page = pages['/other/papayas']
       var $ = page.$
       expect(page.title).to.equal('Papayas')
