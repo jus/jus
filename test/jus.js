@@ -149,7 +149,7 @@ describe('jus', function () {
       expect($('title').text()).to.equal('Papayas')
     })
 
-    describe.skip('`src` attributes in the DOM', function() {
+    describe('`src` attributes in the DOM', function() {
       var input
       var output
 
@@ -160,10 +160,10 @@ describe('jus', function () {
 
       it('converts relative', function(){
         expect(input).to.include('<img src="guava.png">')
-        expect(output).to.include('<img src="/other/guava.png">')
+        expect(output).to.include('<img src="other/guava.png">')
 
         expect(input).to.include('<script src="banana.js">')
-        expect(output).to.include('<script src="/other/banana.js">')
+        expect(output).to.include('<script src="other/banana.js">')
       })
 
       it('ignores relative with leading slash', function(){
@@ -183,7 +183,7 @@ describe('jus', function () {
 
     })
 
-    describe.skip('`href` attributes in the DOM', function() {
+    describe('`href` attributes in the DOM', function() {
       var input
       var output
 
@@ -194,7 +194,7 @@ describe('jus', function () {
 
       it('converts relative', function(){
         expect(input).to.include('<a href="papayas">papayas</a>')
-        expect(output).to.include('<a href="/other/papayas">papayas</a>')
+        expect(output).to.include('<a href="other/papayas">papayas</a>')
       })
 
       it('ignores relative with leading slash', function(){

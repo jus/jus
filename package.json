@@ -56,6 +56,7 @@
     "express": "^4.13.3",
     "get-image-colors": "^1.3.0",
     "handlebars": "^4.0.5",
+    "href-type": "^1.0.0",
     "html-frontmatter": "^1.5.1",
     "image-size": "^0.4.0",
     "inflection": "^1.8.0",
