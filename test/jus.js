@@ -14,9 +14,13 @@ describe('jus', function () {
     expect(jus).to.be.a('function')
   })
 
-  it("emits a `squeezed` event when all files have been imported", function (done) {
+  it("emits a series of lifecycle events, ultimately emitting a squeezed context object", function (done) {
+    var events = []
     jus(__dirname + '/fixtures')
+      .on('started', () => events.push('started'))
+      .on('squeezing', () => events.push('squeezing'))
       .on('squeezed', (_context) => {
+        expect(events).to.deep.equal(['started', 'squeezing'])
         context = _context
         done()
       })
