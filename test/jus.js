@@ -2,7 +2,7 @@
 
 const expect    = require('chai').expect
 const cheerio   = require('cheerio')
-const _         = require('lodash')
+const tmp       = require('tmp')
 const jus       = require('..')
 const they      = it
 var context
@@ -16,7 +16,7 @@ describe('jus', function () {
 
   it("emits a series of lifecycle events, ultimately emitting a squeezed context object", function (done) {
     var events = []
-    jus(__dirname + '/fixtures')
+    jus(__dirname + '/fixtures', tmp.dirSync().name)
       .on('started', () => events.push('started'))
       .on('squeezing', () => events.push('squeezing'))
       .on('squeezed', (_context) => {
