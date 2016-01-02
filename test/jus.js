@@ -160,10 +160,10 @@ describe('jus', function () {
 
       it('converts relative', function(){
         expect(input).to.include('<img src="guava.png">')
-        expect(output).to.include('<img src="other/guava.png">')
+        expect(output).to.include('<img src="/other/guava.png">')
 
         expect(input).to.include('<script src="banana.js">')
-        expect(output).to.include('<script src="other/banana.js">')
+        expect(output).to.include('<script src="/other/banana.js">')
       })
 
       it('ignores relative with leading slash', function(){
