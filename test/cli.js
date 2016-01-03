@@ -1,6 +1,5 @@
 /* globals describe, it */
 
-const assert = require('assert')
 const nixt = require('nixt')
 
 describe('jus CLI', function () {

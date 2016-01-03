@@ -1,6 +1,5 @@
-/* globals before, after, describe, it */
+/* globals before, describe, it */
 
-const assert      = require('assert')
 const expect      = require('chai').expect
 const path        = require('path')
 const supertest   = require('supertest')
@@ -57,8 +56,8 @@ describe('server', function () {
 
     it('responds with a specific file object', function(){
       var page = context.page
-      assert.equal(page.href, '/apples')
-      assert.equal(page.title, 'Apples!')
+      expect(page.href).to.equal('/apples')
+      expect(page.title).to.equal('Apples!')
     })
 
     it('returns a JSON mime type', function(){
@@ -82,7 +81,7 @@ describe('server', function () {
     })
 
     it('responds with an HTML page', function(){
-      assert.equal($('p').text(), 'How do you like them?')
+      expect($('p').text()).to.equal('How do you like them?')
     })
 
     it('returns an HTML mime type', function(){
