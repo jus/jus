@@ -25,17 +25,19 @@ describe('server', function () {
         .expect('Content-Type', /json/)
         .end((err, res) => {
           context = res.body
-          context.files.forEach(file => context.files[file.href] = file)
           return done()
         })
     })
 
-    it('responds with a JSON array of file objects', function(){
-      var files = context.files
-      assert(Array.isArray(files))
-      assert(files.length)
-      assert(files['/apples'])
-      assert(files['/styles.css'])
+    it('responds with an object array of file objects', function(){
+      expect(context).to.be.an('object')
+      expect(context.files).to.exist
+      expect(context.pages).to.exist
+      expect(context.stylesheets).to.exist
+      expect(context.scripts).to.exist
+      expect(context.images).to.exist
+      expect(context.datafiles).to.exist
+      expect(context.layouts).to.exist
     })
   })
 

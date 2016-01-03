@@ -54,33 +54,9 @@ describe('jus', function () {
       expect(files).to.be.an('array')
     })
 
-    they('include .md files', function () {
-      expect(files['/apples'].path.ext).to.equal('.md')
-    })
-
-    they('include .markdown files', function () {
-      expect(files['/other/papayas'].path.ext).to.equal('.markdown')
-    })
-
-    they('include .html files', function () {
-      expect(files['/oranges'].path.ext).to.equal('.html')
-    })
-
-    they('have and href with the "index" suffix removed', function () {
-      expect(files['/other'].path.relative).to.equal('/other/index.md')
-    })
-
-    they('have a root-level href', function () {
-      expect(files['/']).to.exist
-    })
-
-    they('are loaded regardless of case', function () {
-      expect(files['/other/UPPERCASE']).to.exist
-    })
-
     describe('path', function() {
       it('is an object with a bunch of sliced and diced info about the filename', function(){
-        var path = files['/apples'].path
+        var path = files['/apples.md'].path
         expect(path.full).to.include('/test/fixtures/apples.md')
         expect(path.relative).to.equal('/apples.md')
         expect(path.processRelative).to.equal('test/fixtures/apples.md')
@@ -92,20 +68,20 @@ describe('jus', function () {
       })
 
       it('includes target.relative', function () {
-        expect(files['/apples'].path.target.relative).to.equal('/apples.html')
-        expect(files['/styles.css'].path.target.relative).to.equal('/styles.css')
+        expect(files['/apples.md'].path.target.relative).to.equal('/apples.html')
+        expect(files['/styles.scss'].path.target.relative).to.equal('/styles.css')
         expect(files['/babel-and-browserify.js'].path.target.relative).to.equal('/babel-and-browserify.js')
       })
 
       it('includes target.full', function () {
-        expect(files['/apples'].path.target.full).to.include('test/fixtures/apples.html')
-        expect(files['/styles.css'].path.target.full).to.include('test/fixtures/styles.css')
+        expect(files['/apples.md'].path.target.full).to.include('test/fixtures/apples.html')
+        expect(files['/styles.scss'].path.target.full).to.include('test/fixtures/styles.css')
         expect(files['/babel-and-browserify.js'].path.target.full).to.include('test/fixtures/babel-and-browserify.js')
       })
 
       it('includes target.ext', function () {
-        expect(files['/apples'].path.target.ext).to.equal('.html')
-        expect(files['/styles.css'].path.target.ext).to.equal('.css')
+        expect(files['/apples.md'].path.target.ext).to.equal('.html')
+        expect(files['/styles.scss'].path.target.ext).to.equal('.css')
         expect(files['/babel-and-browserify.js'].path.target.ext).to.equal('.js')
       })
     })
@@ -118,29 +94,53 @@ describe('jus', function () {
       pages = context.pages
     })
 
+    they('have a "clean URL" href', function () {
+      expect(pages['/apples.md'].href).to.equal('/apples')
+    })
+
+    they('have a "clean URL" href', function () {
+      expect(pages['/thumbs/index.html'].href).to.equal('/thumbs')
+    })
+
+    they('include .md files', function () {
+      expect(pages['/apples.md']).to.exist
+    })
+
+    they('include .markdown files', function () {
+      expect(pages['/other/papayas.markdown']).to.exist
+    })
+
+    they('include .html files', function () {
+      expect(pages['/oranges.html']).to.exist
+    })
+
+    they('are loaded regardless of case', function () {
+      expect(pages['/other/UPPERCASE.HTML']).to.exist
+    })
+
     they('ingest HTML frontmatter', function () {
-      expect(pages['/apples'].title).to.equal('Apples!')
-      expect(pages['/apples'].keywords).to.deep.equal(['fruit', 'doctors'])
+      expect(pages['/apples.md'].title).to.equal('Apples!')
+      expect(pages['/apples.md'].keywords).to.deep.equal(['fruit', 'doctors'])
     })
 
     they('preserve original content in `input`', function () {
-      expect(pages['/other/papayas'].input).to.be.a('string')
+      expect(pages['/other/papayas.markdown'].input).to.be.a('string')
     })
 
     they('convert markdown to HTML', function () {
-      var $ = pages['/other/papayas'].$
+      var $ = pages['/other/papayas.markdown'].$
       expect($('a[href="https://digestion.com"]').text()).to.equal('digestion')
     })
 
     they('have a cheerio DOM object ($)', function () {
-      var $ = pages['/other/papayas'].$
+      var $ = pages['/other/papayas.markdown'].$
       expect($).to.exist
       expect($.text).to.be.a('function')
       expect($.html).to.be.a('function')
     })
 
     they('get a titlecased version of their filename as a default title, if not set', function () {
-      var page = pages['/other/papayas']
+      var page = pages['/other/papayas.markdown']
       var $ = page.$
       expect(page.title).to.equal('Papayas')
 
@@ -154,8 +154,8 @@ describe('jus', function () {
       var output
 
       before(function() {
-        input = pages['/other'].input
-        output = pages['/other'].$.html()
+        input = pages['/other/index.md'].input
+        output = pages['/other/index.md'].$.html()
       })
 
       it('converts relative', function(){
@@ -188,8 +188,8 @@ describe('jus', function () {
       var output
 
       before(function() {
-        input = pages['/other'].input
-        output = pages['/other'].$.html()
+        input = pages['/other/index.md'].input
+        output = pages['/other/index.md'].$.html()
       })
 
       it('converts relative', function(){
@@ -216,28 +216,19 @@ describe('jus', function () {
 
     describe('title', function(){
       it('is derived from HTML frontmatter', function () {
-        expect(pages['/apples'].title).to.equal('Apples!')
+        expect(pages['/apples.md'].title).to.equal('Apples!')
       })
 
       it('falls back to <title> tag, if present', function () {
-        expect(pages['/oranges'].title).to.equal('We are Oranges')
+        expect(pages['/oranges.html'].title).to.equal('We are Oranges')
       })
 
       it('falls back lastly to titlecased basename', function () {
-        expect(pages['/other/papayas'].title).to.equal('Papayas')
+        expect(pages['/other/papayas.markdown'].title).to.equal('Papayas')
       })
 
       it('injects <title> tag into HTML, if absent', function () {
-        expect(pages['/oranges'].output).to.include('<title>We are Oranges</title>')
-      })
-    })
-
-    describe('isIndex', function(){
-      it('is true if file is a directory index', function () {
-        expect(pages['/other'].isIndex).to.be.true
-      })
-      it('is false if file is NOT a directory index', function () {
-        expect(pages['/other/papayas'].isIndex).to.be.false
+        expect(pages['/oranges.html'].output).to.include('<title>We are Oranges</title>')
       })
     })
   })
@@ -250,35 +241,35 @@ describe('jus', function () {
     })
 
     it("are attached to pages in the same directory", function () {
-      expect(pages['/thumbs/png'].images.thumb.href).to.equal('/thumbs/png/thumb.png')
+      expect(pages['/thumbs/png/index.md'].images.thumb).to.exist
     })
 
     they('can be SVGs', function () {
-      expect(pages['/thumbs/svg'].images.thumbnail.href).to.equal('/thumbs/svg/thumbnail.svg')
+      expect(pages['/thumbs/svg/index.md'].images.thumbnail).to.exist
     })
 
     they('can be JPGs', function () {
-      expect(pages['/thumbs/jpg'].images.thumb.href).to.equal('/thumbs/jpg/thumb.jpg')
+      expect(pages['/thumbs/jpg/index.html'].images.thumb).to.exist
     })
 
     they('can be GIFs', function () {
-      expect(pages['/thumbs/gif'].images.thumb.href).to.equal('/thumbs/gif/thumb.gif')
+      expect(pages['/thumbs/gif/index.md'].images.thumb).to.exist
     })
 
     they('include width and height dimensions', function() {
-      const jpg = pages['/thumbs/jpg'].images.thumb
+      const jpg = pages['/thumbs/jpg/index.html'].images.thumb
       expect(jpg.dimensions.width).to.equal(170)
       expect(jpg.dimensions.height).to.equal(170)
     })
 
     they('include exif data', function(){
-      const jpg = pages['/thumbs/jpg'].images.thumb
+      const jpg = pages['/thumbs/jpg/index.html'].images.thumb
       expect(jpg.exif.imageSize.width).to.equal(170)
       expect(jpg.exif.imageSize.height).to.equal(170)
     })
 
     they('include color data as hex strings', function(){
-      var colors = pages['/thumbs/gif'].images.thumb.colors
+      var colors = pages['/thumbs/gif/index.md'].images.thumb.colors
       expect(colors).to.be.an('array')
       expect(colors[0]).to.match(/^#[0-9a-f]{3,6}$/i)
     })
@@ -299,13 +290,13 @@ describe('jus', function () {
     })
 
     they('use /layout.html as the default layout, if present', function(){
-      var $ = cheerio.load(pages['/'].render(context))
+      var $ = cheerio.load(pages['/index.md'].render(context))
       expect($('html').length).to.equal(1)
       expect($('#default-layout').text()).to.include('I am the fixtures index\n')
     })
 
     they("can be specified in a page's HTML frontmatter", function(){
-      var page = pages['/custom']
+      var page = pages['/custom.md']
       expect(page).to.exist
       expect(page.layout).to.equal('simple')
       var $ = cheerio.load(page.render(context))
@@ -313,7 +304,7 @@ describe('jus', function () {
     })
 
     they('are not used if specified layout does not exist', function(){
-      var page = pages['/misguided']
+      var page = pages['/misguided.md']
       expect(page).to.exist
       var $ = cheerio.load(page.render(context))
       expect($('p').length).to.equal(1)
@@ -321,7 +312,7 @@ describe('jus', function () {
     })
 
     they('are not used if set to `false` in HTML frontmatter', function(){
-      var page = pages['/standalone']
+      var page = pages['/standalone.md']
       expect(page).to.exist
       var $ = cheerio.load(page.render(context))
       expect($('p').length).to.equal(1)
@@ -337,24 +328,18 @@ describe('jus', function () {
       files = context.files
     })
 
-    they('have a `.css` extension in their href', function(){
-      var stylesheet = files['/styles.css']
-      expect(stylesheet.href).to.equal('/styles.css')
-      expect(stylesheet.path.ext).to.equal('.scss')
-    })
-
     they('have a type', function(){
-      expect(files['/styles.css'].type).to.equal('stylesheet')
+      expect(files['/styles.scss'].type).to.equal('stylesheet')
     })
 
     they('can be written in SCSS', function(){
-      var styles = files['/styles.css']
+      var styles = files['/styles.scss']
       expect(styles.input).to.include('background: $color;')
       expect(styles.output).to.include('background: green;')
     })
 
     they('can be written in Sass', function(){
-      var styles = files['/styles-sass.css']
+      var styles = files['/styles-sass.sass']
       expect(styles.input).to.include('background: $color')
       expect(styles.output).to.include('background: yellow;')
     })
@@ -362,19 +347,19 @@ describe('jus', function () {
     describe('written in stylus', function() {
 
       they('can use variables', function(){
-        var styles = files['/styles-stylus.css']
+        var styles = files['/styles-stylus.styl']
         expect(styles.input).to.include('background color')
         expect(styles.output).to.include('background: #f00;')
       })
 
       they('can require other stylus files in the same directory', function(){
-        var styles = files['/styles-stylus.css']
+        var styles = files['/styles-stylus.styl']
         expect(styles.input).to.include('border-color otherColor')
         expect(styles.output).to.include('border-color: #00f;')
       })
 
       they('can require stylus files from different directories', function(){
-        var styles = files['/styles-stylus.css']
+        var styles = files['/styles-stylus.styl']
         expect(styles.input).to.include('font-size fontSize')
         expect(styles.output).to.include('font-size: 1.5rem;')
       })
@@ -387,10 +372,6 @@ describe('jus', function () {
 
     before(function(){
       script = context.files['/babel-and-browserify.js']
-    })
-
-    they('preserve js extension in href', function(){
-      expect(script.href).to.equal('/babel-and-browserify.js')
     })
 
     they('have a type', function(){
@@ -414,7 +395,7 @@ describe('jus', function () {
     var data
 
     before(function(){
-      page = context.pages['/thumbs']
+      page = context.pages['/thumbs/index.html']
       output = page.render(context)
       data = page.data
     })
