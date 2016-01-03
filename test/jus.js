@@ -5,6 +5,9 @@ const cheerio   = require('cheerio')
 const tmp       = require('tmp')
 const jus       = require('..')
 const they      = it
+
+const sourceDir = __dirname + '/fixtures'
+const targetDir = tmp.dirSync().name
 var context
 
 describe('jus', function () {
@@ -16,7 +19,7 @@ describe('jus', function () {
 
   it("emits a series of lifecycle events, ultimately emitting a squeezed context object", function (done) {
     var events = []
-    jus(__dirname + '/fixtures', tmp.dirSync().name)
+    jus(sourceDir, targetDir)
       .on('started', () => events.push('started'))
       .on('squeezing', () => events.push('squeezing'))
       .on('squeezed', (_context) => {
@@ -74,9 +77,9 @@ describe('jus', function () {
       })
 
       it('includes target.full', function () {
-        expect(files['/apples.md'].path.target.full).to.include('test/fixtures/apples.html')
-        expect(files['/styles.scss'].path.target.full).to.include('test/fixtures/styles.css')
-        expect(files['/babel-and-browserify.js'].path.target.full).to.include('test/fixtures/babel-and-browserify.js')
+        expect(files['/apples.md'].path.target.full).to.equal(`${targetDir}/apples.html`)
+        expect(files['/styles.scss'].path.target.full).to.equal(`${targetDir}/styles.css`)
+        expect(files['/babel-and-browserify.js'].path.target.full).to.equal(`${targetDir}/babel-and-browserify.js`)
       })
 
       it('includes target.ext', function () {

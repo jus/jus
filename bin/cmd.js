@@ -3,6 +3,7 @@
 const path            = require('path')
 const tmp             = require('tmp')
 const server          = require('../lib/server')
+const compiler        = require('../lib/compiler')
 const args            = require('minimist')(process.argv.slice(2))
 const command         = args._[0]
 
@@ -20,6 +21,11 @@ switch(command) {
   case 'servons':
     server.start(sourceDir, targetDir)
     break
+  case 'compile':
+  case 'build':
+  case 'squeeze':
+    compiler.start(sourceDir, targetDir)
+    break
   default:
     console.log(`Unrecognized command: ${command}\n`)
     usage()
@@ -32,6 +38,8 @@ function usage() {
 jus serve
 jus serve <sourceDir>
 jus serve <sourceDir> --port 1337
+
+jus compile <sourceDir> <targetDir>
 
 default sourceDir: .
 default port: 3000
