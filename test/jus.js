@@ -68,6 +68,10 @@ describe('jus', function () {
         expect(path.base).to.equal('apples.md')
         expect(path.ext).to.equal('.md')
         expect(path.name).to.equal('apples')
+
+        expect(path.target.relative).to.equal('/apples.html')
+        expect(path.target.full).to.equal(`${targetDir}/apples.html`)
+        expect(path.target.ext).to.equal(`.html`)
       })
 
       it('includes target.relative', function () {
