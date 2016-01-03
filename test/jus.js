@@ -340,35 +340,43 @@ describe('jus', function () {
     })
 
     they('can be written in SCSS', function(){
-      var styles = files['/styles.scss']
-      expect(styles.input).to.include('background: $color;')
-      expect(styles.output).to.include('background: green;')
+      var input = files['/styles.scss'].input
+      var output = files['/styles.scss'].render()
+      expect(input).to.include('background: $color;')
+      expect(output).to.include('background: green;')
     })
 
     they('can be written in Sass', function(){
-      var styles = files['/styles-sass.sass']
-      expect(styles.input).to.include('background: $color')
-      expect(styles.output).to.include('background: yellow;')
+      var input = files['/styles-sass.sass'].input
+      var output = files['/styles-sass.sass'].render()
+      expect(input).to.include('background: $color')
+      expect(output).to.include('background: yellow;')
     })
 
     describe('written in stylus', function() {
+      var input
+      var output
+
+      before(function(){
+        input = files['/styles-stylus.styl'].input
+        output = files['/styles-stylus.styl'].render()
+      })
 
       they('can use variables', function(){
-        var styles = files['/styles-stylus.styl']
-        expect(styles.input).to.include('background color')
-        expect(styles.output).to.include('background: #f00;')
+        expect(input).to.include('background color')
+        expect(output).to.include('background: #f00;')
       })
 
       they('can require other stylus files in the same directory', function(){
         var styles = files['/styles-stylus.styl']
-        expect(styles.input).to.include('border-color otherColor')
-        expect(styles.output).to.include('border-color: #00f;')
+        expect(input).to.include('border-color otherColor')
+        expect(output).to.include('border-color: #00f;')
       })
 
       they('can require stylus files from different directories', function(){
         var styles = files['/styles-stylus.styl']
-        expect(styles.input).to.include('font-size fontSize')
-        expect(styles.output).to.include('font-size: 1.5rem;')
+        expect(input).to.include('font-size fontSize')
+        expect(output).to.include('font-size: 1.5rem;')
       })
     })
 
