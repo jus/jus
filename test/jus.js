@@ -146,14 +146,16 @@ describe('jus', function () {
       expect($.html).to.be.a('function')
     })
 
-    they('get a titlecased version of their filename as a default title, if not set', function () {
+    they('get a titlecased version of their filename as a default title, if not set', function (done) {
       var page = pages['/other/papayas.markdown']
-      var $ = page.$
       expect(page.title).to.equal('Papayas')
 
       // <title> tag is set after render
-      var $ = cheerio.load(page.render(context))
-      expect($('title').text()).to.equal('Papayas')
+      page.render(context, function(err, output){
+        var $ = cheerio.load(output)
+        expect($('title').text()).to.equal('Papayas')
+        done()
+      })
     })
 
     describe('`src` attributes in the DOM', function() {
@@ -234,8 +236,11 @@ describe('jus', function () {
         expect(pages['/other/papayas.markdown'].title).to.equal('Papayas')
       })
 
-      it('injects <title> tag into HTML, if absent', function () {
-        expect(pages['/oranges.html'].output).to.include('<title>We are Oranges</title>')
+      it('injects <title> tag into HTML, if absent', function (done) {
+        pages['/oranges.html'].render(context, function(err, output){
+          expect(output).to.include('<title>We are Oranges</title>')
+          done()
+        })
       })
     })
   })
@@ -296,34 +301,48 @@ describe('jus', function () {
       expect(layouts.default.type).to.equal('layout')
     })
 
-    they('use /layout.html as the default layout, if present', function(){
-      var $ = cheerio.load(pages['/index.md'].render(context))
-      expect($('html').length).to.equal(1)
-      expect($('#default-layout').text()).to.include('I am the fixtures index\n')
+    they('use /layout.html as the default layout, if present', function(done){
+      var page = pages['/index.md']
+      page.render(context, function(err, output) {
+        var $ = cheerio.load(output)
+        expect($('html').length).to.equal(1)
+        expect($('#default-layout').text()).to.include('I am the fixtures index\n')
+        done()
+      })
     })
 
-    they("can be specified in a page's HTML frontmatter", function(){
+    they("can be specified in a page's HTML frontmatter", function(done){
       var page = pages['/custom.md']
       expect(page).to.exist
       expect(page.layout).to.equal('simple')
-      var $ = cheerio.load(page.render(context))
-      expect($('#simple-layout').length).to.equal(1)
+
+      page.render(context, function(err, output){
+        var $ = cheerio.load(output)
+        expect($('#simple-layout').length).to.equal(1)
+        done()
+      })
     })
 
-    they('are not used if specified layout does not exist', function(){
+    they('are not used if specified layout does not exist', function(done){
       var page = pages['/misguided.md']
       expect(page).to.exist
-      var $ = cheerio.load(page.render(context))
-      expect($('p').length).to.equal(1)
-      expect($('body').length).to.equal(0)
+      page.render(context, function(err, output){
+        var $ = cheerio.load(output)
+        expect($('p').length).to.equal(1)
+        expect($('body').length).to.equal(0)
+        done()
+      })
     })
 
-    they('are not used if set to `false` in HTML frontmatter', function(){
+    they('are not used if set to `false` in HTML frontmatter', function(done){
       var page = pages['/standalone.md']
       expect(page).to.exist
-      var $ = cheerio.load(page.render(context))
-      expect($('p').length).to.equal(1)
-      expect($('#default-layout').length).to.equal(0)
+      page.render(context, function(err, output){
+        var $ = cheerio.load(output)
+        expect($('p').length).to.equal(1)
+        expect($('#default-layout').length).to.equal(0)
+        done()
+      })
     })
 
   })
@@ -339,27 +358,36 @@ describe('jus', function () {
       expect(files['/styles.scss'].type).to.equal('stylesheet')
     })
 
-    they('can be written in SCSS', function(){
-      var input = files['/styles.scss'].input
-      var output = files['/styles.scss'].render()
-      expect(input).to.include('background: $color;')
-      expect(output).to.include('background: green;')
+    they('can be written in SCSS', function(done){
+      var page = files['/styles.scss']
+      expect(page.input).to.include('background: $color;')
+
+      page.render(context, function(err, output){
+        expect(output).to.include('background: green;')
+        done()
+      })
     })
 
-    they('can be written in Sass', function(){
-      var input = files['/styles-sass.sass'].input
-      var output = files['/styles-sass.sass'].render()
-      expect(input).to.include('background: $color')
-      expect(output).to.include('background: yellow;')
+    they('can be written in Sass', function(done){
+      var page = files['/styles-sass.sass']
+      expect(page.input).to.include('background: $color')
+
+      files['/styles-sass.sass'].render(context, function(err, output){
+        expect(output).to.include('background: yellow;')
+        done()
+      })
     })
 
     describe('written in stylus', function() {
       var input
       var output
 
-      before(function(){
+      before(function(done){
         input = files['/styles-stylus.styl'].input
-        output = files['/styles-stylus.styl'].render()
+        files['/styles-stylus.styl'].render(context, function(err, _output){
+          output = _output
+          done()
+        })
       })
 
       they('can use variables', function(){
@@ -384,9 +412,14 @@ describe('jus', function () {
 
   describe('scripts', function(){
     var script
+    var output
 
-    before(function(){
+    before(function(done){
       script = context.files['/babel-and-browserify.js']
+      script.render(context, function(err, _output){
+        output = _output
+        done()
+      })
     })
 
     they('have a type', function(){
@@ -395,12 +428,12 @@ describe('jus', function () {
 
     they('browserify', function(){
       expect(script.input).to.include("const url = require('url')")
-      expect(script.output).to.include('Url.prototype.parse = function(')
+      expect(output).to.include('Url.prototype.parse = function(')
     })
 
     they('babelify', function(){
       expect(script.input).to.include("`I am an ES2015 string`")
-      expect(script.output).to.include("'I am an ES2015 string'")
+      expect(output).to.include("'I am an ES2015 string'")
     })
   })
 
@@ -409,10 +442,13 @@ describe('jus', function () {
     var output
     var data
 
-    before(function(){
+    before(function(done){
       page = context.pages['/thumbs/index.html']
-      output = page.render(context)
       data = page.data
+      page.render(context, function(err, _output){
+        output = _output
+        done()
+      })
     })
 
     it("attaches data from JSON files to files in the same directory", function () {
