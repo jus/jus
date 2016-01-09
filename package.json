@@ -39,6 +39,7 @@
     "chai": "^3.4.1",
     "mocha": "^2.3.3",
     "nixt": "^0.4.1",
+    "path-exists": "^2.1.0",
     "supertest": "^1.1.0"
   },
   "dependencies": {

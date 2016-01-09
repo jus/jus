@@ -3,6 +3,7 @@
 const expect    = require('chai').expect
 const cheerio   = require('cheerio')
 const tmp       = require('tmp')
+const exists    = require('path-exists').sync
 const jus       = require('..')
 const they      = it
 
@@ -55,6 +56,19 @@ describe('jus', function () {
 
     they('are in an array', function () {
       expect(files).to.be.an('array')
+    })
+
+    they('ignore npm-debug.log, redirects.json, etc', function(){
+      var file = __dirname + '/fixtures/redirects.json'
+      expect(exists(file)).to.be.true
+
+      file = __dirname + '/fixtures/npm-debug.log'
+      expect(exists(file)).to.be.true
+
+      var filenames = files.map(f => f.path.relative)
+      expect(filenames).to.contain('/index.md')
+      expect(filenames).to.not.contain('/redirects.json')
+      expect(filenames).to.not.contain('/npm-debug.log')
     })
 
     describe('path', function() {
