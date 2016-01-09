@@ -397,11 +397,21 @@ describe('jus', function () {
       })
     })
 
+    they('can be written in Less', function(done){
+      var page = files['/styles-less.less']
+      expect(page.input).to.include('color: @light-blue;')
+
+      page.render(context, function(err, output){
+        expect(output).to.include('color: #6c94be;')
+        done()
+      })
+    })
+
     they('can be written in Sass', function(done){
       var page = files['/styles-sass.sass']
       expect(page.input).to.include('background: $color')
 
-      files['/styles-sass.sass'].render(context, function(err, output){
+      page.render(context, function(err, output){
         expect(output).to.include('background: yellow;')
         done()
       })
