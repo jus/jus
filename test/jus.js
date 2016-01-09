@@ -44,6 +44,7 @@ describe('jus', function () {
       expect(context.pages).to.be.an('array')
       expect(context.scripts).to.be.an('array')
       expect(context.stylesheets).to.be.an('array')
+      expect(context.unknowns).to.be.an('array')
     })
   })
 
@@ -58,17 +59,13 @@ describe('jus', function () {
       expect(files).to.be.an('array')
     })
 
-    they('ignore npm-debug.log, redirects.json, etc', function(){
+    they('are sometimes ignored', function(){
       var file = __dirname + '/fixtures/redirects.json'
-      expect(exists(file)).to.be.true
-
-      file = __dirname + '/fixtures/npm-debug.log'
       expect(exists(file)).to.be.true
 
       var filenames = files.map(f => f.path.relative)
       expect(filenames).to.contain('/index.md')
       expect(filenames).to.not.contain('/redirects.json')
-      expect(filenames).to.not.contain('/npm-debug.log')
     })
 
     describe('path', function() {
@@ -105,6 +102,24 @@ describe('jus', function () {
         expect(files['/styles.scss'].path.target.ext).to.equal('.css')
         expect(files['/babel-and-browserify.js'].path.target.ext).to.equal('.js')
       })
+    })
+  })
+
+  describe('unknowns', function () {
+    var unknowns
+    var filenames
+
+    before(function(){
+      unknowns = context.unknowns
+      filenames = unknowns.map(f => f.path.relative)
+    })
+
+    they('include extensionless files like CNAME', function(){
+      expect(filenames).to.contain('/CNAME')
+    })
+
+    they('include zip files', function(){
+      expect(filenames).to.contain('/archive.zip')
     })
   })
 
