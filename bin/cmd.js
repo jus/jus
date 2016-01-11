@@ -8,6 +8,7 @@ const compiler        = require('../lib/compiler')
 const args            = require('minimist')(process.argv.slice(2))
 const command         = args._[0]
 
+if (args.v || args.version) version()
 if (!command) usage()
 
 if (args._[1]) const sourceDir = path.resolve(process.cwd(), args._[1])
@@ -44,7 +45,13 @@ function usage() {
   jus serve <sourceDir>                   Start server is a specific directory
   jus serve <sourceDir> --port 1337       Start server with a custom port. Default is 3000
   jus compile <sourceDir> <targetDir>     Compile project to static assets (HTML, JS and CSS)
+  jus -v                                  Output the installed version number
   jus help                                Open jus.js.org in your browser
 `)
-  process.exit(1)
+  process.exit()
+}
+
+function version() {
+  console.log(require('../package.json').version)
+  process.exit()
 }
