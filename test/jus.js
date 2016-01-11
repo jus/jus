@@ -387,31 +387,42 @@ describe('jus', function () {
       expect(files['/styles.scss'].type).to.equal('stylesheet')
     })
 
-    they('can be written in SCSS', function(done){
-      var page = files['/styles.scss']
-      expect(page.input).to.include('background: $color;')
+    they('are processed with Myth if extension is .css', function(done){
+      var stylesheet = files['/styles-myth.css']
+      // console.log('stylesheet', stylesheet.input)
+      expect(stylesheet.input).to.include('color: var(--green);')
 
-      page.render(context, function(err, output){
+      stylesheet.render(context, function(err, output){
+        expect(output).to.include('color: #a6c776;')
+        done()
+      })
+    })
+
+    they('can be written in SCSS', function(done){
+      var stylesheet = files['/styles.scss']
+      expect(stylesheet.input).to.include('background: $color;')
+
+      stylesheet.render(context, function(err, output){
         expect(output).to.include('background: green;')
         done()
       })
     })
 
     they('can be written in Less', function(done){
-      var page = files['/styles-less.less']
-      expect(page.input).to.include('color: @light-blue;')
+      var stylesheet = files['/styles-less.less']
+      expect(stylesheet.input).to.include('color: @light-blue;')
 
-      page.render(context, function(err, output){
+      stylesheet.render(context, function(err, output){
         expect(output).to.include('color: #6c94be;')
         done()
       })
     })
 
     they('can be written in Sass', function(done){
-      var page = files['/styles-sass.sass']
-      expect(page.input).to.include('background: $color')
+      var stylesheet = files['/styles-sass.sass']
+      expect(stylesheet.input).to.include('background: $color')
 
-      page.render(context, function(err, output){
+      stylesheet.render(context, function(err, output){
         expect(output).to.include('background: yellow;')
         done()
       })
@@ -435,13 +446,11 @@ describe('jus', function () {
       })
 
       they('can require other stylus files in the same directory', function(){
-        var styles = files['/styles-stylus.styl']
         expect(input).to.include('border-color otherColor')
         expect(output).to.include('border-color: #00f;')
       })
 
       they('can require stylus files from different directories', function(){
-        var styles = files['/styles-stylus.styl']
         expect(input).to.include('font-size fontSize')
         expect(output).to.include('font-size: 1.5rem;')
       })
