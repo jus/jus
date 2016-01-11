@@ -8,6 +8,7 @@
     "test": "NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index"
   },
   "repository": "github:zeke/jus",
+  "website": "http://jus.js.org",
   "keywords": [
     "es6",
     "es2015",
@@ -15,10 +16,13 @@
     "browserify",
     "markdown",
     "HTML",
+    "frontmatter",
     "handlebars",
+    "less",
     "sass",
     "scss",
     "stylus",
+    "css",
     "tree",
     "directory",
     "static",
