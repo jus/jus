@@ -1,6 +1,6 @@
 {
   "name": "jus",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Squeeze delicious data out of a directory full of files, then serve it or transpile it to HTML, CSS, and Javascript files.",
   "main": "lib/jus.js",
   "bin": "bin/cmd.js",
