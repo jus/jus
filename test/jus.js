@@ -6,6 +6,7 @@ const tmp       = require('tmp')
 const exists    = require('path-exists').sync
 const jus       = require('..')
 const they      = it
+const test      = it
 
 const sourceDir = __dirname + '/fixtures'
 const targetDir = tmp.dirSync().name
@@ -185,6 +186,48 @@ describe('jus', function () {
         expect($('title').text()).to.equal('Papayas')
         done()
       })
+    })
+
+    describe('lobars handlebars helpers', function() {
+
+      test('eq', function (done) {
+        var page = pages['/other/papayas.markdown']
+
+        expect(page.flavor).to.equal('delicious')
+        expect(page.input).to.include('They are delicious')
+        expect(page.input).to.include('They are NOT delicious')
+
+        page.render(context, function(err, output){
+          expect(output).to.include('They are delicious')
+          expect(output).to.not.include('They are NOT delicious')
+          done()
+        })
+      })
+
+      test('lowerCase', function (done) {
+        var page = pages['/other/papayas.markdown']
+
+        expect(page.input).to.include('--Foo-Bar')
+        expect(page.input).to.not.include('foo bar')
+
+        page.render(context, function(err, output){
+          expect(output).to.not.include('--Foo-Bar')
+          expect(output).to.include('foo bar')
+          done()
+        })
+      })
+
+      test('endsWith', function (done) {
+        var page = pages['/other/papayas.markdown']
+
+        expect(page.input).to.include('abc does end with c')
+
+        page.render(context, function(err, output){
+          expect(output).to.include('abc does end with c')
+          done()
+        })
+      })
+
     })
 
     describe('`src` attributes in the DOM', function() {
