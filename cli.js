@@ -3,6 +3,8 @@
 const path            = require('path')
 const tmp             = require('tmp')
 const open            = require('open')
+const chalk           = require('chalk')
+const pkg             = require('./package.json')
 const server          = require('./lib/server')
 const compiler        = require('./lib/compiler')
 const args            = require('minimist')(process.argv.slice(2))
@@ -39,19 +41,19 @@ switch(command) {
 
 function usage() {
   console.log(
-`Usage:
-
-  jus serve                               Start server in the current directory
-  jus serve <sourceDir>                   Start server is a specific directory
-  jus serve <sourceDir> --port 1337       Start server with a custom port. Default is 3000
-  jus compile <sourceDir> <targetDir>     Compile project to static assets (HTML, JS and CSS)
-  jus -v                                  Output the installed version number
-  jus help                                Open jus.js.org in your browser
+`
+  jus serve                         Serve the current directory
+  jus serve <source>                Serve a specific directory
+  jus serve <source> --port 1337    Use a custom port. Default is 3000
+  jus compile <source> <target>     Compile source files to static assets
+  jus help                          Open jus.js.org in your browser
 `)
+
+  console.log(chalk.dim(`  version ${pkg.version}`))
   process.exit()
 }
 
 function version() {
-  console.log(require('./package.json').version)
+  console.log(pkg.version)
   process.exit()
 }
