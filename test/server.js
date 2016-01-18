@@ -90,6 +90,33 @@ describe('server', function () {
 
   })
 
+  describe('GET /apples?json', function(){
+    var page
+    var headers
+
+    before(done => {
+      supertest(server)
+        .get('/apples?json')
+        .end((err, res) => {
+          page = res.body
+          headers = res.headers
+          return done()
+        })
+    })
+
+    it('responds with a JSON object', function(){
+      expect(page).to.be.an('object')
+      expect(page.title).to.equal('Apples!')
+      expect(page.keywords).to.deep.equal(['fruit', 'doctors'])
+    })
+
+    it('returns a JSON MIME type', function(){
+      expect(headers['content-type']).to.equal('application/json; charset=utf-8')
+    })
+
+  })
+
+
   describe.skip('GET /apples.json', function(){
     var page
     var headers
