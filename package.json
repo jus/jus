@@ -3,7 +3,7 @@
   "version": "0.14.0",
   "description": "Squeeze delicious data out of a directory full of files, then serve it or transpile it to HTML, CSS, and Javascript files.",
   "main": "lib/jus.js",
-  "bin": "bin/cmd.js",
+  "bin": "cli.js",
   "scripts": {
     "test": "NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index"
   },

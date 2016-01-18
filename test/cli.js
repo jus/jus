@@ -7,7 +7,7 @@ describe('jus CLI', function () {
 
   it("outputs usage if run without a command", function(done) {
     nixt()
-      .run('./bin/cmd.js')
+      .run('./cli.js')
       .stdout(/usage/i)
       .end(done)
   })

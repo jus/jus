@@ -3,8 +3,8 @@
 const path            = require('path')
 const tmp             = require('tmp')
 const open            = require('open')
-const server          = require('../lib/server')
-const compiler        = require('../lib/compiler')
+const server          = require('./lib/server')
+const compiler        = require('./lib/compiler')
 const args            = require('minimist')(process.argv.slice(2))
 const command         = args._[0]
 
@@ -52,6 +52,6 @@ function usage() {
 }
 
 function version() {
-  console.log(require('../package.json').version)
+  console.log(require('./package.json').version)
   process.exit()
 }
