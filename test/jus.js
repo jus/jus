@@ -531,10 +531,20 @@ describe('jus', function () {
     })
   })
 
-  describe('data', function(){
+  describe('datafiles', function(){
     var page
     var output
     var data
+
+    they("get a special non-filenamey key that can accessed within a handlebars template", function(){
+      var file = __dirname + '/fixtures/other/nested/delicious_data.json'
+      expect(exists(file)).to.be.true
+
+      expect(context.datafiles).to.be.an('array')
+      expect(context.datafiles.other_nested_delicious_data.data).to.be.an('object')
+      expect(context.datafiles.other_nested_delicious_data.data.delicious).to.equal(true)
+      expect(context.datafiles.other_nested_delicious_data.data.deliciousness).to.equal(9)
+    })
 
     before(function(done){
       page = context.pages['/thumbs/index.html']
