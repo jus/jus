@@ -1,9 +1,10 @@
-/* globals describe, it */
+/* globals describe, it, beforeEach, afterEach */
 
 const nixt      = require('nixt')
 const exists    = require('path-exists').sync
 const expect    = require('chai').expect
-const fse        = require('fs-extra')
+const fs        = require('fs-extra')
+const cheerio   = require('cheerio')
 const pkg       = require('../package.json')
 
 describe('jus CLI', function () {
@@ -24,20 +25,53 @@ describe('jus CLI', function () {
       .end(done)
   })
 
-  it("builds", function(done) {
-    nixt()
-      .run('rm -rf test/fixtures-build')
-      .run('./cli.js build test/fixtures test/fixtures-build')
-      .stdout(pkg.version)
-      .end(function(){
-        var sourceFile = './test/fixtures/index.md'
-        expect(exists(sourceFile)).to.equal(true)
+  describe('build', function(){
 
-        var targetFile = './test/fixtures-build/index.html'
-        expect(exists(targetFile)).to.equal(true)
+    beforeEach(function(){
+      fs.removeSync('./test/builds')
+    })
 
-        fse.removeSync('./test/fixtures-build')
-        done()
-      })
+    afterEach(function(){
+      fs.removeSync('./test/builds')
+    })
+
+    it("builds files in the target directory", function(done) {
+      nixt()
+        .run('./cli.js build test/fixtures test/builds/basic')
+        .end(function(){
+          expect(exists('./test/fixtures/index.md')).to.equal(true)
+          expect(exists('./test/builds/basic/index.html')).to.equal(true)
+          done()
+        })
+    })
+
+    it("prepends basedir to relative paths, if --basedir option is present", function(done) {
+      nixt()
+        .run('./cli.js build test/fixtures test/builds/basey --basedir foo-project')
+        .end(function(){
+          const page = './test/builds/basey/index.html'
+          expect(exists(page)).to.equal(true)
+
+          const $ = cheerio.load(fs.readFileSync(page, 'utf8'))
+          expect($('a[href="foo-project/other/nested/coconut"]').length).to.equal(1)
+          done()
+        })
+    })
+
+    // it("ignores files in the target directory, if it is a child of the source directory", function(done) {
+    //   nixt()
+    //     .run('mkdirp ./cli.js build test/fixtures test/fixtures/thumbs')
+    //     .run('./cli.js build test/fixtures test/fixtures/thumbs')
+    //     .end(function(){
+    //       const page = './test/builds/basey/index.html'
+    //       expect(exists(page)).to.equal(true)
+    //
+    //       const $ = cheerio.load(fs.readFileSync(page, 'utf8'))
+    //       expect($('a[href="foo-project/other/nested/coconut"]').length).to.equal(1)
+    //       done()
+    //     })
+    // })
+
   })
+
 })
