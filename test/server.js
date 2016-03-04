@@ -7,7 +7,7 @@ const cheerio     = require('cheerio')
 const server      = require('../lib/server')
 
 describe('server', function () {
-  this.timeout(5000)
+  this.timeout(10000)
 
   before(function(done){
     server.start(path.resolve(__dirname, 'fixtures'), done)

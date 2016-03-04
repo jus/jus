@@ -13,7 +13,7 @@ const targetDir = tmp.dirSync().name
 var context
 
 describe('jus', function () {
-  this.timeout(5000)
+  this.timeout(10000)
 
   it('is a function', function () {
     expect(jus).to.be.a('function')
