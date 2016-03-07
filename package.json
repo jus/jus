@@ -1,7 +1,7 @@
 {
   "name": "jus",
   "version": "0.18.1",
-  "description": "Squeeze delicious data out of a directory full of files, then serve it or transpile it to HTML, CSS, and Javascript files.",
+  "description": "A tool for building static websites with no configuration and no boilerplate code",
   "main": "lib/jus.js",
   "bin": "cli.js",
   "scripts": {
