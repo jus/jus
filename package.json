@@ -8,7 +8,7 @@
     "test": "NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index"
   },
   "repository": "github:zeke/jus",
-  "website": "http://jus.js.org",
+  "homepage": "http://jus.js.org",
   "keywords": [
     "es6",
     "es2015",
@@ -82,6 +82,7 @@
     "myth": "^1.5.0",
     "node-sass": "^3.4.2",
     "open": "0.0.5",
+    "packpath": "^0.1.0",
     "require-dir": "^0.3.0",
     "stylus": "^0.54.0",
     "tmp": "0.0.28"

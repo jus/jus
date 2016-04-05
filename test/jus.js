@@ -176,7 +176,16 @@ describe('jus', function () {
       expect($.html).to.be.a('function')
     })
 
-    they('get a titlecased version of their filename as a default title, if not set', function (done) {
+    they('have an absolute URL, derived in part from package.json `website` field', function () {
+      var page = pages['/other/papayas.markdown']
+      console.log(page)
+      console.log(require('packpath').self())
+      expect(page.href).to.equal('/other/papayas')
+
+      expect(page.absoluteUrl).to.equal('http://jus.js.org/other/papayas')
+    })
+
+    they('get a titlecased version of their filename as a default title tag in the document head, if not set', function (done) {
       var page = pages['/other/papayas.markdown']
       expect(page.title).to.equal('Papayas')
 
@@ -187,6 +196,19 @@ describe('jus', function () {
         done()
       })
     })
+
+    they('get twitter card meta tags injected into the head', function (done) {
+      var page = pages['/custom.md']
+      expect(page.title).to.equal('Custom Layout')
+
+      page.render(context, function(err, output){
+        var $ = cheerio.load(output)
+        expect($('meta[name="twitter:title"]').attr('content')).to.equal('Custom Layout')
+        expect($('meta[name="twitter:description"]').attr('content')).to.equal("Like a custom motorcycle, except a layout")
+        done()
+      })
+    })
+
 
     describe('lobars handlebars helpers', function() {
 
