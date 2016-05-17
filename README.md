@@ -39,8 +39,6 @@ npm i -g jus && jus
 - [lil-env-thing](https://github.com/zeke/lil-env-thing): A tiny convenience module for managing process.env.NODE_ENV
 - [lobars](https://github.com/zeke/lobars): lodash functions as handlebars helpers
 - [lodash](https://github.com/lodash/lodash): Lodash modular utilities.
-- [lodash.get](https://github.com/lodash/lodash): The lodash method `_.get` exported as a module.
-- [lodash.snakecase](https://github.com/lodash/lodash): The lodash method `_.snakeCase` exported as a module.
 - [marky-markdown](https://github.com/npm/marky-markdown): npm&#39;s markdown parser
 - [minimist](https://github.com/substack/minimist): parse argument options
 - [morgan](https://github.com/expressjs/morgan): HTTP request logger middleware for node.js
