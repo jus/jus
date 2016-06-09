@@ -13,8 +13,8 @@ const command         = args._[0]
 if (args.v || args.version) version()
 if (!command) usage()
 
-if (args._[1]) const sourceDir = path.resolve(process.cwd(), args._[1])
-if (args._[2]) const targetDir = path.resolve(process.cwd(), args._[2])
+if (args._[1]) var sourceDir = path.resolve(process.cwd(), args._[1])
+if (args._[2]) var targetDir = path.resolve(process.cwd(), args._[2])
 process.env.JUS_PORT = args.port || args.p || 3000
 process.env.JUS_BASEDIR = args.basedir || args.b || '/'
 
