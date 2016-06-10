@@ -4,6 +4,8 @@ jus is a development server and build tool for making static websites with no co
 
 Learn all about it at [jus.js.org](http://jus.js.org)
 
+[![Build Status](https://travis-ci.org/zeke/jus.svg?branch=master)](https://travis-ci.org/zeke/jus)
+
 ## TLDR
 
 ```sh
