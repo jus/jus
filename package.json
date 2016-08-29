@@ -1,6 +1,6 @@
 {
   "name": "jus",
-  "version": "0.20.1",
+  "version": "0.20.2",
   "description": "A tool for building static websites with no configuration and no boilerplate code",
   "main": "lib/jus.js",
   "bin": "cli.js",
