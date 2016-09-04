@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const path            = require('path')
+const path            = require('upath')
 const tmp             = require('tmp')
 const open            = require('open')
 const chalk           = require('chalk')
