@@ -1,5 +1,6 @@
 /* globals describe, it */
 
+const upath      = require('upath')
 const expect    = require('chai').expect
 const cheerio   = require('cheerio')
 const tmp       = require('tmp')
@@ -8,8 +9,8 @@ const jus       = require('..')
 const they      = it
 const test      = it
 
-const sourceDir = __dirname + '/fixtures'
-const targetDir = tmp.dirSync().name
+const sourceDir = upath.join(__dirname, 'fixtures')
+const targetDir = upath.normalize(tmp.dirSync().name)
 var context
 
 describe('jus', function () {
