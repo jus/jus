@@ -8,11 +8,11 @@ const cheerio   = require('cheerio')
 const pkg       = require('../package.json')
 
 describe('jus CLI', function () {
-  this.timeout(10000)
+  this.timeout(60000)
 
   it("outputs usage if run without a command", function(done) {
     nixt()
-      .run('./cli.js')
+      .run('node cli.js')
       .stdout(/Serve the current directory/i)
       .stdout(/Serve a specific directory/i)
       .end(done)
@@ -20,7 +20,7 @@ describe('jus CLI', function () {
 
   it("outputs package version if -v flag is passed", function(done) {
     nixt()
-      .run('./cli.js -v')
+      .run('node cli.js -v')
       .stdout(pkg.version)
       .end(done)
   })
@@ -37,7 +37,7 @@ describe('jus CLI', function () {
 
     it("builds files in the target directory", function(done) {
       nixt()
-        .run('./cli.js build test/fixtures test/builds/basic')
+        .run('node cli.js build test/fixtures test/builds/basic')
         .end(function(){
           expect(exists('./test/fixtures/index.md')).to.equal(true)
           expect(exists('./test/builds/basic/index.html')).to.equal(true)
@@ -47,7 +47,7 @@ describe('jus CLI', function () {
 
     it("prepends basedir to relative paths, if --basedir option is present", function(done) {
       nixt()
-        .run('./cli.js build test/fixtures test/builds/basey --basedir foo-project')
+        .run('node cli.js build test/fixtures test/builds/basey --basedir foo-project')
         .end(function(){
           const page = './test/builds/basey/index.html'
           expect(exists(page)).to.equal(true)
