@@ -1,7 +1,7 @@
 /* globals before, describe, it */
 
 const expect      = require('chai').expect
-const path        = require('path')
+const path        = require('upath')
 const supertest   = require('supertest')
 const cheerio     = require('cheerio')
 const server      = require('../lib/server')

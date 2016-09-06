@@ -1,5 +1,6 @@
 /* globals describe, it */
 
+const path      = require('upath')
 const expect    = require('chai').expect
 const cheerio   = require('cheerio')
 const tmp       = require('tmp')
@@ -8,8 +9,8 @@ const jus       = require('..')
 const they      = it
 const test      = it
 
-const sourceDir = __dirname + '/fixtures'
-const targetDir = tmp.dirSync().name
+const sourceDir = path.join(__dirname, 'fixtures')
+const targetDir = path.normalize(tmp.dirSync().name)
 var context
 
 describe('jus', function () {
@@ -71,19 +72,18 @@ describe('jus', function () {
 
     describe('path', function() {
       it('is an object with a bunch of sliced and diced info about the filename', function(){
-        var path = files['/apples.md'].path
-        expect(path.full).to.include('/test/fixtures/apples.md')
-        expect(path.relative).to.equal('/apples.md')
-        expect(path.processRelative).to.equal('test/fixtures/apples.md')
-        expect(path.root).to.equal('/')
-        expect(path.dir).to.equal('/')
-        expect(path.base).to.equal('apples.md')
-        expect(path.ext).to.equal('.md')
-        expect(path.name).to.equal('apples')
+        expect(files['/apples.md'].path.full).to.include('/test/fixtures/apples.md')
+        expect(files['/apples.md'].path.relative).to.equal('/apples.md')
+        expect(files['/apples.md'].path.processRelative).to.equal('test/fixtures/apples.md')
+        expect(files['/apples.md'].path.root).to.equal('/')
+        expect(files['/apples.md'].path.dir).to.equal('/')
+        expect(files['/apples.md'].path.base).to.equal('apples.md')
+        expect(files['/apples.md'].path.ext).to.equal('.md')
+        expect(files['/apples.md'].path.name).to.equal('apples')
 
-        expect(path.target.relative).to.equal('/apples.html')
-        expect(path.target.full).to.equal(`${targetDir}/apples.html`)
-        expect(path.target.ext).to.equal(`.html`)
+        expect(files['/apples.md'].path.target.relative).to.equal('/apples.html')
+        expect(files['/apples.md'].path.target.full).to.equal(`${targetDir}/apples.html`)
+        expect(files['/apples.md'].path.target.ext).to.equal(`.html`)
       })
 
       it('includes target.relative', function () {
