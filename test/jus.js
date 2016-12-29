@@ -434,6 +434,14 @@ describe('jus', function () {
       expect(partials.simple.type).to.equal('partial')
     })
 
+    they('have a partialName', function(){
+      expect(partials.simple.name).to.equal('simple')
+    })
+
+    they('have read file content', function(){
+      expect(partials.simple.input).to.contain('By {{author.firstName}}')
+    })
+
   })
 
   describe('stylesheets', function(){
