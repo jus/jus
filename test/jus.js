@@ -425,62 +425,15 @@ describe('jus', function () {
 
   describe('partials', function(){
     var partials
-    var pages
-
 
     before(function(){
       partials = context.partials
-      pages = context.pages
     })
 
     they('have a type', function(){
       expect(partials.simple.type).to.equal('partial')
     })
-/*
-    they('use /layout.html as the default layout, if present', function(done){
-      var page = pages['/index.md']
-      page.render(context, function(err, output) {
-        var $ = cheerio.load(output)
-        expect($('html').length).to.equal(1)
-        expect($('#default-layout').text()).to.include('I am the fixtures index\n')
-        done()
-      })
-    })
 
-    they("can be specified in a page's HTML frontmatter", function(done){
-      var page = pages['/custom.md']
-      expect(page).to.exist
-      expect(page.layout).to.equal('simple')
-
-      page.render(context, function(err, output){
-        var $ = cheerio.load(output)
-        expect($('#simple-layout').length).to.equal(1)
-        done()
-      })
-    })
-
-    they('are not used if specified layout does not exist', function(done){
-      var page = pages['/misguided.md']
-      expect(page).to.exist
-      page.render(context, function(err, output){
-        var $ = cheerio.load(output)
-        expect($('p').length).to.equal(1)
-        expect($('body').length).to.equal(0)
-        done()
-      })
-    })
-
-    they('are not used if set to `false` in HTML frontmatter', function(done){
-      var page = pages['/standalone.md']
-      expect(page).to.exist
-      page.render(context, function(err, output){
-        var $ = cheerio.load(output)
-        expect($('p').length).to.equal(1)
-        expect($('#default-layout').length).to.equal(0)
-        done()
-      })
-    })
-*/
   })
 
   describe('stylesheets', function(){
