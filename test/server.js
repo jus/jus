@@ -117,7 +117,7 @@ describe('server', function () {
   })
 
 
-  describe.skip('GET /apples.json', function(){
+  describe('GET /apples.json', function(){
     var page
     var headers
 
@@ -200,7 +200,7 @@ describe('server', function () {
     })
   })
 
-  describe('Development 404 page', function(){
+  describe('GET 404 HTTP status with Development 404 page', function(){
     var $
     var headers
 
