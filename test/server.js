@@ -200,4 +200,31 @@ describe('server', function () {
     })
   })
 
+  describe('Development 404 page', function(){
+    var page
+    var headers
+
+    before(done => {
+      supertest(server)
+        .get('/contact.html')
+        .expect(404)
+        .end((err, res) => {
+          page = res.body
+          headers = res.headers
+          return done()
+        })
+    })
+
+    it('has response page with title containing "Error 404"', function(){
+      expect(page.title).to.contain('>Error 404')
+    })
+
+    it('returns a HTML mime type', function(){
+      expect(headers['content-type']).to.equal('text/html; charset=UTF-8')
+    })
+
+  })
+
+
+
 })
