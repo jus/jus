@@ -201,7 +201,7 @@ describe('server', function () {
   })
 
   describe('Development 404 page', function(){
-    var page
+    var $
     var headers
 
     before(done => {
@@ -209,18 +209,18 @@ describe('server', function () {
         .get('/contact.html')
         .expect(404)
         .end((err, res) => {
-          page = res.body
+          $ = cheerio.load(res.text)
           headers = res.headers
           return done()
         })
     })
 
     it('has response page with title containing "Error 404"', function(){
-      expect(page.title).to.contain('>Error 404')
+      expect($('title').text()).to.include('Error 404')
     })
 
     it('returns a HTML mime type', function(){
-      expect(headers['content-type']).to.equal('text/html; charset=UTF-8')
+      expect(headers['content-type'].toLowerCase()).to.equal('text/html; charset=utf-8')
     })
 
   })
