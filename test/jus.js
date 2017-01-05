@@ -43,6 +43,7 @@ describe('jus', function () {
       expect(context.files).to.be.an('array')
       expect(context.images).to.be.an('array')
       expect(context.layouts).to.be.an('array')
+      expect(context.partials).to.be.an('array')
       expect(context.pages).to.be.an('array')
       expect(context.scripts).to.be.an('array')
       expect(context.stylesheets).to.be.an('array')
@@ -418,6 +419,27 @@ describe('jus', function () {
         expect($('#default-layout').length).to.equal(0)
         done()
       })
+    })
+
+  })
+
+  describe('partials', function(){
+    var partials
+
+    before(function(){
+      partials = context.partials
+    })
+
+    they('have a type', function(){
+      expect(partials.simple.type).to.equal('partial')
+    })
+
+    they('have a partialName', function(){
+      expect(partials.simple.name).to.equal('simple')
+    })
+
+    they('have read file content', function(){
+      expect(partials.simple.input).to.contain('By {{author.firstName}}')
     })
 
   })
