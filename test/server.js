@@ -13,12 +13,12 @@ describe('server', function () {
     server.start(path.resolve(__dirname, 'fixtures'), done)
   })
 
-  describe('GET /api', function(){
+  describe('GET /jus>api', function(){
     var context
 
     before(done => {
       supertest(server)
-        .get('/api')
+        .get('/jus>api')
         .set('Accept', 'application/json')
         .expect(200)
         .expect('Content-Type', /json/)
@@ -40,13 +40,13 @@ describe('server', function () {
     })
   })
 
-  describe('GET /api/files/apples', function(){
+  describe('GET /jus>api>pages>/apples', function(){
     var context
     var headers
 
     before(done => {
       supertest(server)
-        .get('/api/files/apples')
+        .get('/jus>api>pages>/apples')
         .end((err, res) => {
           context = res.body
           headers = res.headers
@@ -55,9 +55,59 @@ describe('server', function () {
     })
 
     it('responds with a specific file object', function(){
-      var page = context.page
+      var page = context
       expect(page.href).to.equal('/apples')
       expect(page.title).to.equal('Apples!')
+    })
+
+    it('returns a JSON mime type', function(){
+      expect(headers['content-type']).to.equal('application/json; charset=utf-8')
+    })
+
+  })
+
+  describe('GET /jus>api>pages>/stones', function(){
+    var context
+    var headers
+
+    before(done => {
+      supertest(server)
+        .get('/jus>api>pages>/stones')
+        .end((err, res) => {
+          context = res.text
+          headers = res.headers
+          return done()
+        })
+    })
+
+    it('responds with text representing an empty object "{}"', function(){
+      var page = context
+      expect(page).to.equal('{}')
+    })
+
+    it('returns a JSON mime type', function(){
+      expect(headers['content-type']).to.equal('application/json; charset=utf-8')
+    })
+
+  })
+
+  describe('GET /jus>api>stylesheets>href=/styles.css', function(){
+    var context
+    var headers
+
+    before(done => {
+      supertest(server)
+        .get('/jus>api>stylesheets>href=/styles.css')
+        .end((err, res) => {
+          context = res.body
+          headers = res.headers
+          return done()
+        })
+    })
+
+    it('responds with a specific file object', function(){
+      var stylesheet = context
+      expect(stylesheet.input).to.include('background: $color;')
     })
 
     it('returns a JSON mime type', function(){
