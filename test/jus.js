@@ -161,6 +161,14 @@ describe('jus', function () {
       expect(pages['/apples.md'].keywords).to.deep.equal(['fruit', 'doctors'])
     })
 
+    they('ingest HTML frontmatter in YAML syntax also', function () {
+      expect(pages['/family.hbs'].sons).to.deep.equal([
+        {name: 'John', age: 13, working: false},
+        {name: 'Mary', age: 25, working: true},
+        {name: 'Paul', age: 40, working: true}
+      ])
+    })
+
     they('preserve original content in `input`', function () {
       expect(pages['/other/papayas.markdown'].input).to.be.a('string')
     })
@@ -425,9 +433,11 @@ describe('jus', function () {
 
   describe('partials', function(){
     var partials
+    var pages
 
     before(function(){
       partials = context.partials
+      pages = context.pages
     })
 
     they('have a type', function(){
@@ -440,6 +450,19 @@ describe('jus', function () {
 
     they('have read file content', function(){
       expect(partials.simple.input).to.contain('By {{author.firstName}}')
+    })
+
+    they("are called to render a complex list of objects", function(done){
+      var page = pages['/family.hbs']
+      expect(page).to.exist
+
+      page.render(context, function(err, output){
+        var $ = cheerio.load(output)
+        expect($('#default-layout')).to.exist
+        expect($('p').length).to.equal(3)
+        expect(output).to.include('John is 13 years old and is not working')
+        done()
+      })
     })
 
   })
@@ -558,7 +581,7 @@ describe('jus', function () {
     var output
     var data
 
-    they("get a special non-filenamey key that can accessed within a handlebars template", function(){
+    they("get a special non-filename key that can accessed within a handlebars template", function(){
       var file = __dirname + '/fixtures/other/nested/delicious_data.json'
       expect(exists(file)).to.be.true
 

@@ -1,0 +1,19 @@
+<!--
+sons:
+- name: John
+  age: 13
+  working: false
+- name: Mary
+  age: 25
+  working: true
+- name: Paul
+  age: 40
+  working: true
+-->
+
+I have {{page.sons.length}} sons.
+They are:
+{{#each page.sons}}
+{{>renderSon}}
+{{/each}}
+I am so proud of them.
