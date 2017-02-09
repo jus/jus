@@ -117,7 +117,7 @@ describe('server', function () {
   })
 
 
-  describe.skip('GET /apples.json', function(){
+  describe('GET /apples.json', function(){
     var page
     var headers
 
@@ -199,5 +199,32 @@ describe('server', function () {
         })
     })
   })
+
+  describe('GET 404 HTTP status with Development 404 page', function(){
+    var $
+    var headers
+
+    before(done => {
+      supertest(server)
+        .get('/contact.html')
+        .expect(404)
+        .end((err, res) => {
+          $ = cheerio.load(res.text)
+          headers = res.headers
+          return done()
+        })
+    })
+
+    it('has response page with title containing "Error 404"', function(){
+      expect($('title').text()).to.include('Error 404')
+    })
+
+    it('returns a HTML mime type', function(){
+      expect(headers['content-type'].toLowerCase()).to.equal('text/html; charset=utf-8')
+    })
+
+  })
+
+
 
 })
