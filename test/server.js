@@ -264,7 +264,6 @@ describe('server', function () {
     })
 
     it('got valid original data', function(){
-      datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
       expect(['sunny', 'rainy']).to.include(original)
     })
 
