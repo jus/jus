@@ -249,15 +249,13 @@ describe('server', function () {
     var updated
 
     before(done => {
-      var different
-
       supertest(server)
         .get('/api/files')
         .end((err, res) => {
           context = res.body
           datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
           original = datafile.data.today
-          original === 'sunny' ? different = 'rainy' : different = 'sunny'
+          var different = original === 'sunny' ? 'rainy' : 'sunny'
           fs.writeJsonSync(DATAFILE_PATH, {today: different})
           return done()
         })
