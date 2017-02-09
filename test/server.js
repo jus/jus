@@ -200,4 +200,37 @@ describe('server', function () {
     })
   })
 
+  describe('GET 404 HTTP status with Development 404 page', function(){
+    const PAGE_TITLE = 'Error 404'
+    const MISSING_HREF = '/contact.html'
+    var $
+    var headers
+    var text
+
+    before(done => {
+      supertest(server)
+        .get(MISSING_HREF)
+        .expect(404)
+        .end((err, res) => {
+          text = res.text
+          $ = cheerio.load(text)
+          headers = res.headers
+          return done()
+        })
+    })
+
+    it('returns a HTML mime type', function(){
+      expect(headers['content-type'].toLowerCase()).to.equal('text/html; charset=utf-8')
+    })
+
+    it('has response page with title containing "' + PAGE_TITLE + '"', function(){
+      expect($('title').text()).to.include(PAGE_TITLE)
+    })
+
+    it('has response text containing the missing href', function(){
+      expect(text).to.include(MISSING_HREF)
+    })
+
+  })
+
 })
