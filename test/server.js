@@ -1,6 +1,7 @@
 /* globals before, describe, it */
 
 const expect      = require('chai').expect
+const fs          = require('fs-extra')
 const path        = require('upath')
 const supertest   = require('supertest')
 const cheerio     = require('cheerio')
@@ -229,6 +230,69 @@ describe('server', function () {
 
     it('has response text containing the missing href', function(){
       expect(text).to.include(MISSING_HREF)
+    })
+
+  })
+
+  // Steps to test refresh datafile in page object
+  // (server is running so squeezing files happens immediately after updating them)
+  // Inquire 'page' object to obtain actual data and save as 'original'
+  // Update 'always-changing-data.json' file with different data
+  // Cycle inquiring 'page' object until 'squeezed' to obtain updated data as 'updated'
+  // Assert that they are different
+  describe('Refresh datafile in page object', function(){
+    const DATAFILE_HREF = '/always-changing-data.json'
+    const DATAFILE_PATH = path.resolve(__dirname, 'fixtures', '.' + DATAFILE_HREF)
+    var context
+    var datafile
+    var original
+    var updated
+
+    before(done => {
+      var different
+
+      supertest(server)
+        .get('/api/files')
+        .end((err, res) => {
+          context = res.body
+          datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
+          original = datafile.data.today
+          original === 'sunny' ? different = 'rainy' : different = 'sunny'
+          fs.writeJsonSync(DATAFILE_PATH, {today: different})
+          return done()
+        })
+    })
+
+    it('got valid original data', function(){
+      datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
+      updated = datafile.data.today
+      expect(['sunny', 'rainy']).to.include(updated)
+    })
+
+    describe('GET data from updated (and squeezed) datafile', function(){
+
+      // Polls `datafile.squeezed` every 1s
+      var check = function(done) {
+        supertest(server)
+          .get('/api/files')
+          .end((err, res) => {
+            context = res.body
+            datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
+            if (datafile.squeezed) done();
+            else setTimeout( function(){ check(done) }, 1000 );
+          })
+      }
+
+      before(function( done ){
+        check( done );
+      });
+
+      it('got valid updated data (and different than the original)', function(){
+        datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
+        updated = datafile.data.today
+        expect(['sunny', 'rainy']).to.include(updated)
+        expect(updated).to.not.equal(original)
+      })
     })
 
   })
