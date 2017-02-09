@@ -286,7 +286,6 @@ describe('server', function () {
       });
 
       it('got valid updated data (and different than the original)', function(){
-        datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
         updated = datafile.data.today
         expect(['sunny', 'rainy']).to.include(updated)
         expect(updated).to.not.equal(original)
