@@ -274,7 +274,11 @@ describe('server', function () {
           .end((err, res) => {
             context = res.body
             datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
-            if (datafile.squeezed) done();
+            if (datafile.squeezed) {
+              // Keep the 'squeezed' semaphore false to avoid any race condition
+              datafile.squeezed = false
+              done()
+            }
             else setTimeout( function(){ check(done) }, 1000 );
           })
       }
