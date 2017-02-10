@@ -275,7 +275,7 @@ describe('server', function () {
             context = res.body
             datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
             if (datafile.squeezed) {
-              // Keep the 'squeezed' semaphore false to avoid any race condition
+              // Keep the 'squeezed' flag false to avoid any race condition
               datafile.squeezed = false
               done()
             }
