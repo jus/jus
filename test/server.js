@@ -289,6 +289,9 @@ describe('server', function () {
 
       it('got valid updated data (and different than the original)', function(){
         updated = datafile.data.today
+        // Reset file to default value before expectations
+        // ...to prevent any test failure case
+        fs.writeJsonSync(DATAFILE_PATH, {today: "rainy"})
         expect(['sunny', 'rainy']).to.include(updated)
         expect(updated).to.not.equal(original)
       })
