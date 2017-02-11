@@ -255,13 +255,14 @@ describe('server', function () {
           context = res.body
           datafile = context.datafiles.filter(file => file.href === DATAFILE_HREF)[0]
           original = datafile.data.today
-          fs.writeJsonSync(DATAFILE_PATH, {today: "rainy"})
+          var different = original === 'sunny' ? 'rainy' : 'sunny'
+          fs.writeJsonSync(DATAFILE_PATH, {today: different})
           return done()
         })
     })
 
     it('got valid original data', function(){
-      expect(original).to.equal("sunny")
+      expect(['sunny', 'rainy']).to.include(original)
     })
 
     describe('GET data from updated (and squeezed) datafile', function(){
@@ -286,15 +287,12 @@ describe('server', function () {
         check( done );
       });
 
-      after(done => {
-        fs.writeJsonSync(DATAFILE_PATH, {today: "sunny"})
-        done()
-      })
-
       it('got valid updated data (and different than the original)', function(){
         updated = datafile.data.today
-        // one of the two following expectations is redundant
-        expect(updated).to.equal("rainy")
+        // Reset file to default value before expectations
+        // ...to prevent any test failure case
+        fs.writeJsonSync(DATAFILE_PATH, {today: "rainy"})
+        expect(['sunny', 'rainy']).to.include(updated)
         expect(updated).to.not.equal(original)
       })
     })
