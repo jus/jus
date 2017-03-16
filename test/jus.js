@@ -420,6 +420,17 @@ describe('jus', function () {
       })
     })
 
+    they('can be nested', function(done){
+      var page = pages['/nested.md']
+      expect(page).to.exist
+      page.render(context, function(err, output){
+        var $ = cheerio.load(output)
+        expect($('p').length).to.equal(1)
+        expect($('#default-layout').length).to.equal(1)
+        expect($('#nested-layout').length).to.equal(1)
+        done()
+      })
+    })
   })
 
   describe('stylesheets', function(){

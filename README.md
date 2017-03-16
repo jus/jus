@@ -1,4 +1,4 @@
-# jus [![Build Status](https://travis-ci.org/zeke/jus.svg?branch=master)](https://travis-ci.org/zeke/jus)
+# jus [![Build Status](https://travis-ci.org/jus/jus.svg?branch=master)](https://travis-ci.org/jus/jus)
 
 jus is a development server and build tool for making static websites with no configuration and no boilerplate code. It has built-in support for [browserify](https://github.com/substack/browserify-handbook#readme), ES6 and ES2015 with [Babel](http://babeljs.io/), [React JSX](http://babeljs.io/docs/plugins/preset-react/), GitHub Flavored markdown, syntax highlighting, [Sass](http://sass-lang.com/), [Less](http://lesscss.org/), [Stylus](http://stylus-lang.com/), [Myth](http://www.myth.io/), [Handlebars](http://handlebarsjs.com/), [browsersync](https://browsersync.io/) and more.
 

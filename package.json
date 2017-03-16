@@ -1,13 +1,13 @@
 {
   "name": "jus",
-  "version": "0.21.0",
+  "version": "0.24.0",
   "description": "A tool for building static websites with no configuration and no boilerplate code",
   "main": "lib/jus.js",
   "bin": "cli.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index"
   },
-  "repository": "github:zeke/jus",
+  "repository": "github:jus/jus",
   "website": "http://jus.js.org",
   "keywords": [
     "es6",
@@ -36,9 +36,9 @@
   "author": "zeke",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zeke/jus/issues"
+    "url": "https://github.com/jus/jus/issues"
   },
-  "homepage": "https://github.com/zeke/jus#readme",
+  "homepage": "https://github.com/jus/jus#readme",
   "devDependencies": {
     "chai": "^3.4.1",
     "cross-env": "^2.0.0",
@@ -68,7 +68,7 @@
     "handlebars": "^4.0.5",
     "href-type": "^1.0.0",
     "html-frontmatter": "^1.6.0",
-    "image-size": "^0.4.0",
+    "image-size": "^0.5.0",
     "inflection": "^1.8.0",
     "js-yaml": "^3.4.6",
     "less": "^2.6.1",
@@ -85,5 +85,8 @@
     "stylus": "^0.54.0",
     "tmp": "0.0.28",
     "upath": "^0.2.0"
+  },
+  "engines": {
+    "node": ">=4"
   }
 }
