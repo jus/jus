@@ -5,7 +5,7 @@
   "main": "lib/jus.js",
   "bin": "cli.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index"
+    "test": "cross-env NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index,__grim__"
   },
   "repository": "github:jus/jus",
   "website": "http://jus.js.org",
