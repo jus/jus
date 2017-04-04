@@ -45,7 +45,7 @@ describe('jus', function () {
       expect(context.layouts).to.be.an('array')
       expect(context.pages).to.be.an('array')
       expect(context.scripts).to.be.an('array')
-//      expect(context.stylesheets).to.be.an('array')
+      expect(context.stylesheets).to.be.an('array')
       expect(context.unknowns).to.be.an('array')
     })
   })
@@ -441,7 +441,7 @@ describe('jus', function () {
     })
 
     they('have a type', function(){
-      expect(files['/styles.scss'].type).to.equal('stylesheetscss')
+      expect(files['/styles.scss'].type).to.equal('stylesheet')
     })
 
     they('are processed with Myth if extension is .css', function(done){
