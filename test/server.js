@@ -33,7 +33,7 @@ describe('server', function () {
       expect(context).to.be.an('object')
       expect(context.files).to.exist
       expect(context.pages).to.exist
-//      expect(context.stylesheets).to.exist
+      expect(context.stylesheets).to.exist
       expect(context.scripts).to.exist
       expect(context.images).to.exist
       expect(context.datafiles).to.exist
