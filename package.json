@@ -1,6 +1,6 @@
 {
   "name": "jus",
-  "version": "0.24.0",
+  "version": "0.24.1",
   "description": "A tool for building static websites with no configuration and no boilerplate code",
   "main": "lib/jus.js",
   "bin": "cli.js",
@@ -66,8 +66,8 @@
     "fs-extra": "^0.26.3",
     "get-image-colors": "^1.5.0",
     "handlebars": "^4.0.5",
-    "href-type": "^1.0.0",
     "html-frontmatter": "^1.6.0",
+    "identicon": "^2.1.1",
     "image-size": "^0.5.0",
     "inflection": "^1.8.0",
     "js-yaml": "^3.4.6",
