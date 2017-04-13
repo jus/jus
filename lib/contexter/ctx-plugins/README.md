@@ -1,20 +1,19 @@
 # Plugins API
 A plugin is a module that exports an object with functions to process a particular file type
-- `check()` - Function that calls back with a boolean indicating whether this plugin should process the given file
+- `check()` - Function that calls back with a result indicating whether this plugin should process the given file
 - `parse()` - Function that interprets/extracts file data
 - `render()` - Function externally called by `express` server to answer a file `GET` HTTP request
-- `toExtension()` - Function to change the filename extension in accordance with `parse()` output like converting ` .sass ` to ` .css `
 - ... and some support data like `filetype` , `name` and `priority`
 
 ---
 
 ### check()
 
-- Example from `datafile-std.js`
+- Example from `ctx-datafile.js`
 
 ```
   . . .
-  // calls back with a boolean indicating whether this class should process the given file.
+  // calls back with a result indicating whether this class should process the given file.
   check: (filename, callback) => {
     const extension = path.extname(filename).toLowerCase()
     const allowedExtensions = ['.json', '.yml', '.yaml']
@@ -27,13 +26,27 @@ A plugin is a module that exports an object with functions to process a particul
 - **Mandatory**
 - Receives a `filename`. It is the full path to the file including name and extension
 - Returns a callback function with signature `(err, result) => {}`
-    - `result` is boolean indicating whether the plugin should process the given file. `filename`
+    - `result` is a `string` or `boolean` indicating whether the plugin should process the given file. `filename`. It is a string, it is evaluated as `true` and the string value is used as the target file extension when `render()` is available
+
+- Example returning a `string` from `page.js`
+
+```
+  . . .
+  // calls back with a result indicating whether this class should process the given file.
+  check (filename, callback) {
+    const extension = path.extname(filename).toLowerCase()
+    const allowedExtensions = ['.html', '.md', '.mdown', '.markdown', '.handlebars', '.hbs']
+    let isFound = allowedExtensions.indexOf(extension) > -1
+    return callback(null, isFound ? '.html' : false)
+  },
+  . . .
+```
 
 ---
 
 ### parse()
 
-- Example from `datafile-std.js`
+- Example from `ctx-datafile.js`
 
 ```
   . . .
@@ -72,7 +85,7 @@ A plugin is a module that exports an object with functions to process a particul
 ### render()
 
 
-- Example from `stylesheet-std.js`
+- Example from `app-stylesheet.js`
 
 ```
   . . .
@@ -132,28 +145,9 @@ Note:
 
 ---
 
-### toExtension()
-
-- Example from `stylesheet-std.js`
-
-```
-  . . .
-  toExtension: (oldExt) => {
-    // Simple rule, force to '.css'
-    return '.css'
-  },
-  . . .
-```
-
-- **Optional**
-- Receives a `oldExt` string. It is the original filename extension
-- Returns a string that may o may not depend on `oldExt` value to change the target file path extension
-
----
-
 ### priority
 
-- Example from `layout-std.js`
+- Example from `app-layout.js`
 
 ```
   . . .
@@ -170,7 +164,7 @@ Note:
 
 ### filetype
 
-- Example from `script-std.js`
+- Example from `app-script.js`
 
 ```
   . . .
@@ -186,7 +180,7 @@ Note:
 
 ### name
 
-- Example from `stylesheet-std.js`
+- Example from `app-stylesheet.js`
 
 ```
   . . .

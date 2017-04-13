@@ -15,8 +15,8 @@ if (!command) usage()
 
 if (args._[1]) var sourceDir = path.resolve(process.cwd(), args._[1])
 if (args._[2]) var targetDir = path.resolve(process.cwd(), args._[2])
-process.env.JUS_PORT = args.port || args.p || 3000
-process.env.JUS_BASEDIR = args.basedir || args.b || '/'
+process.env.CTXR_PORT = args.port || args.p || 3000
+process.env.CTXR_BASEDIR = args.basedir || args.b || '/'
 
 switch(command) {
   case 'sers':
@@ -28,26 +28,31 @@ switch(command) {
     break
   case 'compile':
   case 'build':
-  case 'squeeze':
+  case 'extract':
     compiler.start(sourceDir, targetDir)
     break
+
+// TODO: Direct to repository README
+/*
   case 'help':
   case 'docs':
     open('http://jus.js.org')
     break
+*/
   default:
     console.log(`Unrecognized command: ${command}\n`)
     usage()
 }
 
 function usage() {
+// TODO: Add the following
+// `  contexter help                          Open Github README in your browser`
   console.log(
 `
-  jus serve                         Serve the current directory
-  jus serve <source>                Serve a specific directory
-  jus serve <source> --port 1337    Use a custom port. Default is 3000
-  jus compile <source> <target>     Compile source files to static assets
-  jus help                          Open jus.js.org in your browser
+  contexter serve                         Serve the current directory
+  contexter serve <source>                Serve a specific directory
+  contexter serve <source> --port 1337    Use a custom port. Default is 3000
+  contexter compile <source> <target>     Compile source files to static assets
 `)
 
   console.log(chalk.dim(`  version ${pkg.version}`))

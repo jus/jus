@@ -1,44 +1,18 @@
 {
-  "name": "jus",
-  "version": "0.24.1",
-  "description": "A tool for building static websites with no configuration and no boilerplate code",
-  "main": "lib/jus.js",
+  "name": "contexter-cli",
+  "version": "0.1.0",
+  "description": "CLI to reactively extract all available data from files in a directory to one javascript object",
+  "main": "lib/contexter/index.js",
   "bin": "cli.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index"
+    "test": "cross-env NODE_ENV=test mocha --check-leaks"
   },
-  "repository": "github:jus/jus",
-  "website": "http://jus.js.org",
-  "keywords": [
-    "es6",
-    "es2015",
-    "babel",
-    "browserify",
-    "markdown",
-    "HTML",
-    "frontmatter",
-    "handlebars",
-    "less",
-    "sass",
-    "scss",
-    "stylus",
-    "css",
-    "tree",
-    "directory",
-    "static",
-    "website",
-    "content",
-    "EXIF",
-    "geodata",
-    "images",
-    "CMS"
-  ],
-  "author": "zeke",
+  "repository": "github:elingerojo/contexter",
+  "author": "elingerojo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jus/jus/issues"
+    "url": "https://github.com/elingerojo/contexter/issues"
   },
-  "homepage": "https://github.com/jus/jus#readme",
   "devDependencies": {
     "chai": "^3.4.1",
     "cross-env": "^2.0.0",

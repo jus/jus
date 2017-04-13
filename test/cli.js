@@ -7,7 +7,7 @@ const fs        = require('fs-extra')
 const cheerio   = require('cheerio')
 const pkg       = require('../package.json')
 
-describe('jus CLI', function () {
+describe('app CLI', function () {
   this.timeout(60000)
 
   it("outputs usage if run without a command", function(done) {

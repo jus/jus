@@ -5,7 +5,7 @@ const expect    = require('chai').expect
 const cheerio   = require('cheerio')
 const tmp       = require('tmp')
 const exists    = require('path-exists').sync
-const jus       = require('..')
+const app       = require('../lib/app')
 const they      = it
 const test      = it
 
@@ -13,16 +13,17 @@ const sourceDir = path.join(__dirname, 'fixtures')
 const targetDir = path.normalize(tmp.dirSync().name)
 var context
 
-describe('jus', function () {
+describe('app', function () {
   this.timeout(10000)
 
   it('is a function', function () {
-    expect(jus).to.be.a('function')
+    expect(app).to.be.a('function')
   })
 
   it("emits a series of lifecycle events, ultimately emitting a squeezed context object", function (done) {
     var events = []
-    jus(sourceDir, targetDir)
+
+    app(sourceDir, targetDir)
       .on('started', () => events.push('started'))
       .on('squeezing', () => events.push('squeezing'))
       .on('squeezed', (_context) => {
@@ -446,7 +447,6 @@ describe('jus', function () {
 
     they('are processed with Myth if extension is .css', function(done){
       var stylesheet = files['/styles-myth.css']
-      // console.log('stylesheet', stylesheet.input)
       expect(stylesheet.input).to.include('color: var(--green);')
 
       stylesheet.render(context, function(err, output){
