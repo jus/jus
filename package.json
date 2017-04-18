@@ -33,6 +33,7 @@
     "chokidar": "^1.4.1",
     "concat-stream": "^1.5.1",
     "connect-browser-sync": "^2.0.1",
+    "contexter": "^0.1.0",
     "cors": "^2.7.1",
     "event-emitter": "^0.3.4",
     "exif-parser": "^0.1.9",
