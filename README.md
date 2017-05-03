@@ -30,8 +30,9 @@ npm i -g jus && jus
 - [fs-extra](https://github.com/jprichardson/node-fs-extra): fs-extra contains methods that aren&#39;t included in the vanilla Node.js fs package. Such as mkdir -p, cp -r, and rm -rf.
 - [get-image-colors](https://github.com/zeke/get-image-colors): Extract colors from images. Supports GIF, JPG, PNG, and even SVG!
 - [handlebars](https://github.com/wycats/handlebars.js): Handlebars provides the power necessary to let you build semantic templates effectively with no frustration
-- [href-type](https://github.com/zeke/href-type): Test whether an href string is absolute, relative, protocol-relative, mailto:, tel:, sms:, etc
+- [highlight.js](https://github.com/isagalaev/highlight.js): Syntax highlighter written in JavaScript
 - [html-frontmatter](https://github.com/zeke/html-frontmatter): Extract key-value metadata from HTML comments
+- [identicon](https://github.com/Ajido/node-identicon): Identicon generator for Node.js
 - [image-size](https://github.com/image-size/image-size): get dimensions of any image file
 - [inflection](https://github.com/dreamerslab/node.inflection): A port of inflection-js to node.js module
 - [js-yaml](https://github.com/nodeca/js-yaml): YAML 1.2 parser and serializer
@@ -39,7 +40,8 @@ npm i -g jus && jus
 - [lil-env-thing](https://github.com/zeke/lil-env-thing): A tiny convenience module for managing process.env.NODE_ENV
 - [lobars](https://github.com/zeke/lobars): lodash functions as handlebars helpers
 - [lodash](https://github.com/lodash/lodash): Lodash modular utilities.
-- [marky-markdown](https://github.com/npm/marky-markdown): npm&#39;s markdown parser
+- [markdown-it](https://github.com/markdown-it/markdown-it): Markdown parser done right. Fast and easy to extend
+- [markdown-it-named-headers](https://github.com/leff/markdown-it-named-headers): A plugin for markdown-it. Makes header elments have identifer attributes.
 - [minimist](https://github.com/substack/minimist): parse argument options
 - [morgan](https://github.com/expressjs/morgan): HTTP request logger middleware for node.js
 - [myth](https://github.com/segmentio/myth): A CSS preprocessor that acts like a polyfill for future versions of the spec.
@@ -48,13 +50,13 @@ npm i -g jus && jus
 - [require-dir](https://github.com/aseemk/requireDir): Helper to require() directories.
 - [stylus](https://github.com/stylus/stylus): Robust, expressive, and feature-rich CSS superset
 - [tmp](https://github.com/raszi/node-tmp): Temporary file and directory creator
+- [upath](https://github.com/anodynos/upath): A drop-in replacement / proxy to nodejs&#39;s path
 
 ## Dev Dependencies
 
 - [chai](https://github.com/chaijs/chai): BDD/TDD assertion library for node.js and the browser. Test framework agnostic.
+- [cross-env](https://github.com/kentcdodds/cross-env): a single command without worrying about setting or using the environment variable
 - [mocha](https://github.com/mochajs/mocha): simple, flexible, fun test framework
 - [nixt](https://github.com/vesln/nixt): Simple and powerful testing for command-line apps
 - [path-exists](https://github.com/sindresorhus/path-exists): Check if a path exists
 - [supertest](https://github.com/visionmedia/supertest): Super-agent driven library for testing HTTP servers
-
-[![Build Status Images](https://travis-ci.org/zeke/jus.svg)](https://travis-ci.org/zeke/jus)
