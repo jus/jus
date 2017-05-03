@@ -41,7 +41,6 @@ npm i -g jus && jus
 - [lobars](https://github.com/zeke/lobars): lodash functions as handlebars helpers
 - [lodash](https://github.com/lodash/lodash): Lodash modular utilities.
 - [markdown-it](https://github.com/markdown-it/markdown-it): Markdown parser done right. Fast and easy to extend
-- [markdown-it-named-headers](https://github.com/leff/markdown-it-named-headers): A plugin for markdown-it. Makes header elments have identifer attributes.
 - [minimist](https://github.com/substack/minimist): parse argument options
 - [morgan](https://github.com/expressjs/morgan): HTTP request logger middleware for node.js
 - [myth](https://github.com/segmentio/myth): A CSS preprocessor that acts like a polyfill for future versions of the spec.
