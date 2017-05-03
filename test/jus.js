@@ -176,6 +176,12 @@ describe('jus', function () {
       expect($.html).to.be.a('function')
     })
 
+    they('apply syntax highlighting to GitHub-flavored fenced code blocks', function () {
+      var $ = pages['/fenced.md'].$
+      expect($).to.exist
+      expect($('pre code').text()).to.contain('"notice the blank line before this function?"')
+    })
+
     they('get a titlecased version of their filename as a default title, if not set', function (done) {
       var page = pages['/other/papayas.markdown']
       expect(page.title).to.equal('Papayas')
