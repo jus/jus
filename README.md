@@ -39,13 +39,14 @@ npm i -g jus && jus
 - [lil-env-thing](https://github.com/zeke/lil-env-thing): A tiny convenience module for managing process.env.NODE_ENV
 - [lobars](https://github.com/zeke/lobars): lodash functions as handlebars helpers
 - [lodash](https://github.com/lodash/lodash): Lodash modular utilities.
-- [marky-markdown](https://github.com/npm/marky-markdown): npm&#39;s markdown parser
 - [minimist](https://github.com/substack/minimist): parse argument options
 - [morgan](https://github.com/expressjs/morgan): HTTP request logger middleware for node.js
 - [myth](https://github.com/segmentio/myth): A CSS preprocessor that acts like a polyfill for future versions of the spec.
 - [node-sass](https://github.com/sass/node-sass): Wrapper around libsass
 - [open](https://github.com/pwnall/node-open): open a file or url in the user&#39;s preferred application
 - [require-dir](https://github.com/aseemk/requireDir): Helper to require() directories.
+- [remark](https://github.com/wooorm/remark): a markdown processor powered by plug-ins
+- [remark-html](https://github.com/wooorm/remark-html): Compile markdown to HTML with remark
 - [stylus](https://github.com/stylus/stylus): Robust, expressive, and feature-rich CSS superset
 - [tmp](https://github.com/raszi/node-tmp): Temporary file and directory creator
 
