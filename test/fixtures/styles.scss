@@ -1,5 +1,10 @@
+@import 'scss-partial';
+@import 'mixins/scss-typography';
+
 $color: green;
 
 body {
   background: $color;
+  border-color: $otherColor;
+  font-size: $fontSize;
 }
