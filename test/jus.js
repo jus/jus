@@ -230,6 +230,19 @@ describe('jus', function () {
 
     })
 
+    describe('handlebars-helpers', function () {
+      test('pascalcase', function (done) {
+        var page = pages['/other/mango.markdown']
+
+        expect(page.description).to.include('try me with lime and chile')
+
+        page.render(context, function (err, output) {
+          expect(output).to.include('TryMeWithLimeAndChile')
+          done()
+        })
+      })
+    })
+
     describe('`src` attributes in the DOM', function() {
       var $input
       var $output
