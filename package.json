@@ -1,11 +1,13 @@
 {
   "name": "jus",
-  "version": "0.24.1",
+  "version": "0.0.0-development",
   "description": "A tool for building static websites with no configuration and no boilerplate code",
   "main": "lib/jus.js",
   "bin": "cli.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index"
+    "test": "cross-env NODE_ENV=test mocha --check-leaks --globals __core-js_shared__,index",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "repository": "github:jus/jus",
   "website": "http://jus.js.org",
@@ -45,7 +47,9 @@
     "mocha": "^2.3.3",
     "nixt": "^0.4.1",
     "path-exists": "^2.1.0",
-    "supertest": "^1.1.0"
+    "supertest": "^1.1.0",
+    "travis-deploy-once": "^4.3.3",
+    "semantic-release": "^12.4.1"
   },
   "dependencies": {
     "async": "^1.5.1",
