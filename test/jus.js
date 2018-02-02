@@ -455,13 +455,31 @@ describe('jus', function () {
       })
     })
 
-    they('can be written in SCSS', function(done){
-      var stylesheet = files['/styles.scss']
-      expect(stylesheet.input).to.include('background: $color;')
+    describe('written in SCSS', function(){
+      var input
+      var output
 
-      stylesheet.render(context, function(err, output){
-        expect(output).to.include('background: green;')
-        done()
+      before(function(done){
+        input = files['/styles.scss'].input
+        files['/styles.scss'].render(context, function(err, _output){
+          output = _output
+          done()
+        })
+      })
+
+      they('can be compiled', function(){
+        expect(input).to.include('background: $color;')
+        expect(output).to.include('background: green')
+      })
+
+      they('can require other SCSS files in the same directory', function(){
+        expect(input).to.include('border-color: $otherColor')
+        expect(output).to.include('border-color: blue;')
+      })
+
+      they('can require SCSS files from different directories', function(){
+        expect(input).to.include('font-size: $fontSize')
+        expect(output).to.include('font-size: 1.5rem;')
       })
     })
 
@@ -475,13 +493,31 @@ describe('jus', function () {
       })
     })
 
-    they('can be written in Sass', function(done){
-      var stylesheet = files['/styles-sass.sass']
-      expect(stylesheet.input).to.include('background: $color')
+    describe('written in SASS', function(){
+      var input
+      var output
 
-      stylesheet.render(context, function(err, output){
-        expect(output).to.include('background: yellow;')
-        done()
+      before(function(done){
+        input = files['/styles-sass.sass'].input
+        files['/styles-sass.sass'].render(context, function(err, _output){
+          output = _output
+          done()
+        })
+      })
+
+      they('can be compiled', function(){
+        expect(input).to.include('background: $color;')
+        expect(output).to.include('background: yellow')
+      })
+
+      they('can require other SASS files in the same directory', function(){
+        expect(input).to.include('border-color: $otherColor')
+        expect(output).to.include('border-color: blue;')
+      })
+
+      they('can require SASS files from different directories', function(){
+        expect(input).to.include('font-size: $fontSize')
+        expect(output).to.include('font-size: 1.5rem;')
       })
     })
 
