@@ -57,5 +57,3 @@ npm i -g jus && jus
 - [nixt](https://github.com/vesln/nixt): Simple and powerful testing for command-line apps
 - [path-exists](https://github.com/sindresorhus/path-exists): Check if a path exists
 - [supertest](https://github.com/visionmedia/supertest): Super-agent driven library for testing HTTP servers
-
-[![Build Status Images](https://travis-ci.org/zeke/jus.svg)](https://travis-ci.org/zeke/jus)
