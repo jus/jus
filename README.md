@@ -30,8 +30,9 @@ npm i -g jus && jus
 - [fs-extra](https://github.com/jprichardson/node-fs-extra): fs-extra contains methods that aren&#39;t included in the vanilla Node.js fs package. Such as mkdir -p, cp -r, and rm -rf.
 - [get-image-colors](https://github.com/zeke/get-image-colors): Extract colors from images. Supports GIF, JPG, PNG, and even SVG!
 - [handlebars](https://github.com/wycats/handlebars.js): Handlebars provides the power necessary to let you build semantic templates effectively with no frustration
-- [href-type](https://github.com/zeke/href-type): Test whether an href string is absolute, relative, protocol-relative, mailto:, tel:, sms:, etc
+- [handlebars-helpers](https://github.com/helpers/handlebars-helpers): More than 180 handlebars helpers in ~20 categories. Can be used with Assemble, Ghost, YUI, express.js, etc.
 - [html-frontmatter](https://github.com/zeke/html-frontmatter): Extract key-value metadata from HTML comments
+- [identicon](https://github.com/victorgama/identicon): A Ruby library that generates GitHub-like identicons
 - [image-size](https://github.com/image-size/image-size): get dimensions of any image file
 - [inflection](https://github.com/dreamerslab/node.inflection): A port of inflection-js to node.js module
 - [js-yaml](https://github.com/nodeca/js-yaml): YAML 1.2 parser and serializer
@@ -44,11 +45,14 @@ npm i -g jus && jus
 - [myth](https://github.com/segmentio/myth): A CSS preprocessor that acts like a polyfill for future versions of the spec.
 - [node-sass](https://github.com/sass/node-sass): Wrapper around libsass
 - [open](https://github.com/pwnall/node-open): open a file or url in the user&#39;s preferred application
-- [require-dir](https://github.com/aseemk/requireDir): Helper to require() directories.
 - [remark](https://github.com/wooorm/remark): a markdown processor powered by plug-ins
+- [remark-highlight.js](https://github.com/ben-eb/remark-highlight.js): Highlight code blocks in Markdown files with highlight.js.
 - [remark-html](https://github.com/wooorm/remark-html): Compile markdown to HTML with remark
+- [remark-slug](https://github.com/remarkjs/remark-slug): Add slugs to headings in remark
+- [require-dir](https://github.com/aseemk/requireDir): Helper to require() directories.
 - [stylus](https://github.com/stylus/stylus): Robust, expressive, and feature-rich CSS superset
 - [tmp](https://github.com/raszi/node-tmp): Temporary file and directory creator
+- [upath](https://github.com/anodynos/upath): A proxy to `path`, replacing `\` with `/` for all results & methods to add, change, default, trim file extensions.
 
 ## Dev Dependencies
 
