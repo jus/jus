@@ -58,4 +58,4 @@ npm i -g jus && jus
 - [path-exists](https://github.com/sindresorhus/path-exists): Check if a path exists
 - [supertest](https://github.com/visionmedia/supertest): Super-agent driven library for testing HTTP servers
 
-[![Build Status Images](https://travis-ci.org/zeke/jus.svg)](https://travis-ci.org/zeke/jus)
+[![Build Status](https://travis-ci.org/jus/jus.svg?branch=master)](https://travis-ci.org/jus/jus)
