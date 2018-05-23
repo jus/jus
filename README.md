@@ -57,9 +57,11 @@ npm i -g jus && jus
 ## Dev Dependencies
 
 - [chai](https://github.com/chaijs/chai): BDD/TDD assertion library for node.js and the browser. Test framework agnostic.
+- [cross-env](https://github.com/kentcdodds/cross-env): Run scripts that set and use environment variables across platforms
 - [mocha](https://github.com/mochajs/mocha): simple, flexible, fun test framework
 - [nixt](https://github.com/vesln/nixt): Simple and powerful testing for command-line apps
 - [path-exists](https://github.com/sindresorhus/path-exists): Check if a path exists
-- [supertest](https://github.com/visionmedia/supertest): Super-agent driven library for testing HTTP servers
+- [travis-deploy-once](https://github.com/semantic-release/travis-deploy-once): Test multiple node versions on Travis. Deploy once. If all of them pass
+- [semantic-release](https://github.com/semantic-release/semantic-release): Fully automated version management and package publishing
 
 [![Build Status](https://travis-ci.org/jus/jus.svg?branch=master)](https://travis-ci.org/jus/jus)
