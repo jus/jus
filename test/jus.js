@@ -444,6 +444,17 @@ describe('jus', function () {
         done()
       })
     })
+
+    they('render layout with two {{{body}}}', function(done){
+      var page = pages['/article.md']
+      expect(page).to.exist
+      page.render(context, function(err, output){
+        var $ = cheerio.load(output)
+        expect($('#article-preview').text()).to.include('I am simple article\n')
+        expect($('#article-body').text()).to.include('I am simple article\n')
+        done()
+      })
+    })
   })
 
   describe('stylesheets', function(){
